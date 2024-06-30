@@ -96,3 +96,83 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+:root {
+    --background-main: #141416;
+    --color-light: #e3e3e3;
+}
+
+body {
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-light);
+    background-color: var(--background-main);
+    padding-top: 50px;
+}
+.navbar {
+    color: var(--color-light);
+    background-color: var(--background-main);
+}
+.nav-link, .navbar-brand{
+    color: var(--color-light);
+
+}
+h1 {
+    font-size: 2em;
+    color: var(--color-light);
+}
+h2 {
+    font-size: 1.5em;
+    color: var(--color-light);
+}
+h3 {
+    font-size: 1.17em;
+    color: var(--color-light);
+}
+h4 {
+    font-size: 1em;
+    color: var(--color-light);
+}
+h5 {
+    font-size: 0.83em;
+    color: var(--color-light);
+}
+h6 {
+    font-size: 0.67em;
+    color: var(--color-light);
+}
+a{
+    color: var(--color-light);
+    background-color: var(--background-main);
+}
+
+section {
+    padding: 2em;
+}
+/* Animation  */
+
+/* Custom Styles */
+.button-rounded{
+    border-radius: 50px;
+    padding: 5px 20px;
+    background-color: var(--color-light);
+    color: var(--background-main);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.nav-outline-rounded{
+    border-radius: 50px;
+    padding: 5px 20px;
+    background-color: var(--background-main);
+    color: var(--color-light);
+    text-decoration: none;
+    display: inline-flex ;
+    margin-top: 20px;
+    border: 1px solid var(--color-light);
+}
+.nav-outline-rounded li{
+    margin: 0 10px;
+}
