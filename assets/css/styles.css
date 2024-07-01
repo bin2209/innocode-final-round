@@ -110,7 +110,7 @@ body {
     background-color: var(--background-main);
 }
 
-}
+
 h1 {
     font-size: 2em;
     color: var(--color-light);
@@ -187,20 +187,11 @@ header{
     margin-top: 20px;
 }
 
-.nav-outline-rounded{
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    /* background-color: #e3e3e324; */
-    border-radius: 50px;
-    padding: 5px 20px;
-    color: var(--color-light);
-    text-decoration: none;
-    display: inline-flex ;
-    margin-top: 20px;
-    border: 1px solid var(--color-light);
+
+.navbar{
+    border-bottom: 1px solid #e3e3e327;
 }
-
-
-.nav-outline-rounded li{
+.navbar li{
     margin: 0 20px;
 }
 .overplay-blur{
@@ -229,6 +220,21 @@ header{
     border-radius: 5px;
 }
 
+/* Button  */
+.new-button {
+    padding: 8px 17px;
+    border-radius: 10px;
+    color: var(--color-light);
+    border: none;
+    background: radial-gradient(231.94% 231.94% at 50% 100%, #8a6cff 0, rgba(53, 41, 128, 0) 25.24%), linear-gradient(180deg, rgba(243, 238, 255, 0), rgba(243, 238, 255, .04)), rgba(147, 130, 255, .01);
+    box-shadow: 0 0 0 0 rgba(16, 0, 51, .4), 0 2px 5px 0 rgba(16, 0, 51, .39), 0 8px 8px 0 rgba(16, 0, 51, .34), 0 19px 11px 0 rgba(16, 0, 51, .2), 0 34px 14px 0 rgba(16, 0, 51, .06), 0 53px 15px 0 rgba(16, 0, 51, .01), inset 0 0 12px 0 hsla(0, 0%, 100%, .08), inset 0 -8px 32px 0 #1e0d49;
+}
+.new-button:hover{
+    background: radial-gradient(231.94% 231.94% at 50% 100%, #8a6cff 0, rgba(53, 41, 128, 0) 25.24%), linear-gradient(180deg, rgba(243, 238, 255, 0), rgba(243, 238, 255, .04)), rgba(147, 130, 255, .6);
+    box-shadow: inset 0 0 12px 0 hsla(0, 0%, 100%, .08), inset 0 -8px 32px 0 #1e0d49, 0 0 0 0 rgba(16, 0, 51, .4), 0 2px 5px 0 rgba(16, 0, 51, .39), 0 8px 8px 0 rgba(16, 0, 51, .34), 0 19px 11px 0 rgba(16, 0, 51, .2), 0 34px 14px 0 rgba(16, 0, 51, .06), 0 53px 15px 0 rgba(16, 0, 51, .01);
+}
+
+
 footer a {
     text-decoration: none;
 }
@@ -237,5 +243,8 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.text-gradient{
+    background: linear-gradient(50deg,#714dff,#9c83ff 31.28%,#e151ff 77.97%,#fff759 95.64%);
+}
 
 /* Animation  */

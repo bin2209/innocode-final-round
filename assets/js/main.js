@@ -1,7 +1,7 @@
 // Glass navbar when scroll navbar fixed
 
 $(document).ready(function () {
-    var $nav = $('.nav-outline-rounded');
+    var $nav = $('#nav');
     var navOffset = $nav.offset().top; // Get the initial offset position of the navbar
 
     function onScroll() {
