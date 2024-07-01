@@ -1,4 +1,4 @@
-/* CSS Reset */
+/*  ----------- CSS Reset ----------- */
 html,
 body,
 div,
@@ -109,12 +109,6 @@ body {
     color: var(--color-light);
     background-color: var(--background-main);
 }
-.navbar {
-    color: var(--color-light);
-    background-color: var(--background-main);
-}
-.nav-link, .navbar-brand{
-    color: var(--color-light);
 
 }
 h1 {
@@ -149,23 +143,55 @@ a{
 section {
     padding: 2em;
 }
-/* Animation  */
 
-/* Custom Styles */
+
+/* ----------- Custom Styles  ----------- */
+
+/* Nav bar  */
+.navbar {
+    position: fixed;
+    width: 100%;
+    color: var(--color-light);
+    z-index: 999;
+   
+
+}
+.nav-link, .navbar-brand{
+    color: var(--color-light);
+}
+.navbar-brand{
+    background: none;
+}
+.navbar-toggler{
+    border: none;
+    color: var(--color-light);
+}
+
+/* Section  */
+section{
+    padding: 100px 20px;
+}
+
+header{
+    height: 100vh;
+}
 .button-rounded{
     border-radius: 50px;
-    padding: 5px 20px;
-    background-color: var(--color-light);
-    color: var(--background-main);
+    padding: 15px 30px !important;
+    /* background-color: var(--color-light); */
+    background:none;
+    border: 1px solid var(--color-light);
+    color: var(--color-light);
     text-decoration: none;
     display: inline-block;
     margin-top: 20px;
 }
 
 .nav-outline-rounded{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* background-color: #e3e3e324; */
     border-radius: 50px;
     padding: 5px 20px;
-    background-color: var(--background-main);
     color: var(--color-light);
     text-decoration: none;
     display: inline-flex ;
@@ -175,9 +201,12 @@ section {
 
 
 .nav-outline-rounded li{
-    margin: 0 10px;
+    margin: 0 20px;
 }
-
+.overplay-blur{
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
 
 
 
@@ -187,9 +216,7 @@ section {
     padding: 100px 0;
 }
 
-.how-to-use {
-    background: #f8f9fa;
-}
+
 
 .pricing .card {
     border: none;
@@ -209,3 +236,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+
+/* Animation  */
