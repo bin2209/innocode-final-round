@@ -5,9 +5,10 @@ $(document).ready(function () {
     // Swiper 
 
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 5,
-        spaceBetween: 30,  // Adjust this value to set the space between slides
-        loop: true,
+        loop: true, // Enable looping
+        autoplay: {
+            delay: 5000, // 5 seconds delay for automatic slide change
+        },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -16,7 +17,18 @@ $(document).ready(function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            768: { // When window width is >= 768px (tablet and larger devices)
+                slidesPerView: 4,
+                spaceBetween: 60,
+            },
+            0: { // When window width is < 768px (mobile devices)
+                slidesPerView: 2,
+                spaceBetween: 40,
+            }
+        }
     });
+    
 });
 
 

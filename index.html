@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,173 +19,238 @@
     <!-- SWIPER -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
+    <!-- Lazyload  -->
+    <script src="https://cdn.jsdelivr.net/npm/@lazyload/js@2.0.0/dist/lazyload.min.js"></script>
 
 </head>
 
 <body>
-<nav id="nav" class="navbar navbar-expand-lg overplay-blur">
-    <div class="container ">
-        <a class="navbar-brand" href="#"><img src="/assets/images/logo-w.png" style="width: 50px;"/> </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse w-100 justify-content-between" id="navbarNav">
-            
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">about</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">contact</a>
-                </li>
-            </ul>
-            <div class="buttons">
-                <a class="btn  new-button" href="#">login</a>
-            </div>
-        </div>
-    </div>
-</nav>
+    <nav id="nav" class="navbar navbar-expand-lg overplay-blur">
+        <div class="container ">
+            <a class="navbar-brand" href="#"><img src="/assets/images/logo-w.png" style="width: 50px;" /> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse w-100 justify-content-between" id="navbarNav">
 
-<header class="hero-section text-center text-white d-flex align-items-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h1 class="display-4">Start your<span class="text-gradient"> enterprise with AI</span> in just a few minutes!</h1>
-                <p class="lead">Begin your AI-driven enterprise swiftly - initiate with advanced technology in just a few minutes for enhanced efficiency.</p>
-         
-                <div class="buttons mt-4">
-                    <a class="btn  new-button" href="#">Demo</a>
-                    <a class="btn" href="#">Demo</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-
-
-<section class="how-to-use text-center">
-    <div class="container">
-        <h2>How to use AI & Grow your business</h2>
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Data Analysis</h5>
-                        <p class="card-text">AI-driven data analysis optimizes insights, guiding informed decisions for business growth and efficiency.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">HR & Talent Management</h5>
-                        <p class="card-text">AI streamlines HR, enhancing recruitment, engagement, and skill assessment for efficient talent management and growth.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Product Development</h5>
-                        <p class="card-text">AI revolutionizes product creation, using data insights to innovate and meet market demands effectively.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section-tab">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <ul class="nav nav-tabs">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" data-bs-toggle="tab" href="#tab1">
-                            <h3>Fine-Tuning and RLHF</h3>
-                            <p>Fine-Tuning and RLHF
-                                Adapt best-in-class foundation models to your business and your specific data to build sustainable, successful AI programs and data from your enterprise.
-                                </p>
-                        </a>
+                        <a class="nav-link" href="#">home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " data-bs-toggle="tab" href="#tab2">
-                            <h3>Fine-Tuning and RLHF</h3>
-                            <p>Fine-Tuning and RLHF
-                                Adapt best-in-class foundation models to your business and your specific data to build sustainable, successful AI programs and data from your enterprise.
-                                </p>
-                        </a>
+                        <a class="nav-link" href="#">about</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " data-bs-toggle="tab" href="#tab3">
-                            <h3>Fine-Tuning and RLHF</h3>
-                            <p>Fine-Tuning and RLHF
-                                Adapt best-in-class foundation models to your business and your specific data to build sustainable, successful AI programs and data from your enterprise.
-                                </p>
-                        </a>
+                        <a class="nav-link" href="#">services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact</a>
                     </li>
                 </ul>
+                <div class="buttons">
+                    <a class="btn  new-button" href="#">login</a>
+                </div>
             </div>
-            <div class="col-md-6">
-                <div class="tab-content">
-                    <div class="tab-pane fade show active" id="tab1">
-                        <img class="img-fluid" src="assets/images/tab1.png"  alt="">
-                    </div>
-                    <div class="tab-pane fade" id="tab2">
-                        <h3>Tab 2 Content</h3>
-                        <p>This is the content for Tab 2.</p>
-                    </div>
-                    <div class="tab-pane fade" id="tab3">
-                        <h3>Tab 3 Content</h3>
-                        <p>This is the content for Tab 3.</p>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center text-white d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4">Start your<span class="text-gradient"> enterprise with AI</span> in just a few
+                        minutes!</h1>
+                    <p class="lead">Begin your AI-driven enterprise swiftly - initiate with advanced technology in just
+                        a few minutes for enhanced efficiency.</p>
+
+                    <div class="buttons mt-4">
+                        <a class="btn  new-button" href="#">Demo</a>
+                        <a class="btn" href="#">Demo</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<section class="brand-ai-section">
-    <div class="container">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img class="img-fluid brand-ai" src="assets/images/brandai/adept.webp" alt="Slide 1">
+
+
+    <section class="how-to-use text-center">
+        <div class="container">
+            <h2>How to use AI & Grow your business</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analysis</h5>
+                            <p class="card-text">AI-driven data analysis optimizes insights, guiding informed decisions
+                                for business growth and efficiency.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img class="img-fluid brand-ai" src="assets/images/brandai/anthropic.png" alt="Slide 2">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">HR & Talent Management</h5>
+                            <p class="card-text">AI streamlines HR, enhancing recruitment, engagement, and skill
+                                assessment for efficient talent management and growth.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img class="img-fluid brand-ai" src="assets/images/brandai/cohere.webp" alt="Slide 3">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Development</h5>
+                            <p class="card-text">AI revolutionizes product creation, using data insights to innovate and
+                                meet market demands effectively.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img class="img-fluid brand-ai" src="assets/images/brandai/meta.webp" alt="Slide 4">
-                </div>
-                <div class="swiper-slide">
-                    <img class="img-fluid brand-ai" src="assets/images/brandai/openai.png" alt="Slide 5">
-                </div>
-                <!-- Add more slides if needed -->
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="section-tab">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#tab1">
+                                <h3>Fine-Tuning and RLHF</h3>
+                                <p>Fine-Tuning and RLHF
+                                    Adapt best-in-class foundation models to your business and your specific data to
+                                    build sustainable, successful AI programs and data from your enterprise.
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " data-bs-toggle="tab" href="#tab2">
+                                <h3>Fine-Tuning and RLHF</h3>
+                                <p>Fine-Tuning and RLHF
+                                    Adapt best-in-class foundation models to your business and your specific data to
+                                    build sustainable, successful AI programs and data from your enterprise.
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " data-bs-toggle="tab" href="#tab3">
+                                <h3>Fine-Tuning and RLHF</h3>
+                                <p>Fine-Tuning and RLHF
+                                    Adapt best-in-class foundation models to your business and your specific data to
+                                    build sustainable, successful AI programs and data from your enterprise.
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab1">
+                            <img class="img-fluid" src="assets/images/tab1.png" alt="">
+                        </div>
+                        <div class="tab-pane fade" id="tab2">
+                            <h3>Tab 2 Content</h3>
+                            <p>This is the content for Tab 2.</p>
+                        </div>
+                        <div class="tab-pane fade" id="tab3">
+                            <h3>Tab 3 Content</h3>
+                            <p>This is the content for Tab 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brand-ai-section">
+        <div class="container">
+            <h2 class="text-center py-5 text-uppercase font-weight-light spacing-1">Brands that use AI</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="img-fluid brand-ai" src="assets/images/brandai/adept.webp" alt="Slide 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid brand-ai" src="assets/images/brandai/anthropic.png" alt="Slide 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid brand-ai" src="assets/images/brandai/cohere.webp" alt="Slide 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid brand-ai" src="assets/images/brandai/meta.webp" alt="Slide 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid brand-ai" src="assets/images/brandai/openai.png" alt="Slide 5">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gradient-c ">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 mx-auto text-center">
+                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5">BUILD AI</p>
+                    <h2 class="title">Scale Data Engine</h2>
+                    <p class="sub-title">For AI teams, Scale Data Engine improves your models by improving your data.</p>
+                </div>
+                <div class="col-12">
+                    <div class="box-content">
+                        <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </section>
 
 
-<footer>
-
-</footer>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <img class="logo" src="assets/images/logo-w.png" class="img-fluid" width="54">
+                    <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h3 class="text-uppercase">Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h3 class="text-uppercase">Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h3 class="text-uppercase">Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2021 n4c. All rights reserved.</p>
+                </div>
+                </div>
+        </div>
 
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+
 </html>
