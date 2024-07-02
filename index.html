@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>n4c</title>
 
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -15,17 +15,22 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
 </head>
 
 <body>
-<nav id="nav" class="navbar navbar-expand-lg ">
-    <div class="container">
+<nav id="nav" class="navbar navbar-expand-lg overplay-blur">
+    <div class="container ">
+        <a class="navbar-brand" href="#"><img src="/assets/images/logo-w.png" style="width: 50px;"/> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="nav-outline-rounded" class="collapse navbar-collapse w-100 justify-content-between" id="navbarNav">
-            <a class="navbar-brand" href="#"><img src="/assets/images/logo-w.png" style="width: 50px;"/> </a>
-            <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse w-100 justify-content-between" id="navbarNav">
+            
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#">home</a>
                 </li>
@@ -52,7 +57,11 @@
             <div class="col-lg-8 mx-auto">
                 <h1 class="display-4">Start your<span class="text-gradient"> enterprise with AI</span> in just a few minutes!</h1>
                 <p class="lead">Begin your AI-driven enterprise swiftly - initiate with advanced technology in just a few minutes for enhanced efficiency.</p>
-                <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+         
+                <div class="buttons mt-4">
+                    <a class="btn  new-button" href="#">Demo</a>
+                    <a class="btn" href="#">Demo</a>
+                </div>
             </div>
         </div>
     </div>
@@ -92,74 +101,80 @@
     </div>
 </section>
 
-
-<section class="how-it-works">
+<section class="section-tab">
     <div class="container">
-        <h2 class="text-center">How It Works ?</h2>
         <div class="row">
             <div class="col-md-6">
-                <div class="accordion" id="workAccordion">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Problem Definition and Understanding
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#workAccordion">
-                            <div class="card-body">
-                                Define and understand the problem to be solved using AI technology.
-                            </div>
-                        </div>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#tab1">
+                            <h3>Fine-Tuning and RLHF</h3>
+                            <p>Fine-Tuning and RLHF
+                                Adapt best-in-class foundation models to your business and your specific data to build sustainable, successful AI programs and data from your enterprise.
+                                </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " data-bs-toggle="tab" href="#tab2">
+                            <h3>Fine-Tuning and RLHF</h3>
+                            <p>Fine-Tuning and RLHF
+                                Adapt best-in-class foundation models to your business and your specific data to build sustainable, successful AI programs and data from your enterprise.
+                                </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " data-bs-toggle="tab" href="#tab3">
+                            <h3>Fine-Tuning and RLHF</h3>
+                            <p>Fine-Tuning and RLHF
+                                Adapt best-in-class foundation models to your business and your specific data to build sustainable, successful AI programs and data from your enterprise.
+                                </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tab1">
+                        <img class="img-fluid" src="assets/images/tab1.png"  alt="">
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Data Collection and Preparation
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#workAccordion">
-                            <div class="card-body">
-                                Data collection and preparation are critical stages in the development of AI systems. During this phase, relevant information is gathered through various processes and sources. This data is curated to ensure its quality and relevance.
-                            </div>
-                        </div>
+                    <div class="tab-pane fade" id="tab2">
+                        <h3>Tab 2 Content</h3>
+                        <p>This is the content for Tab 2.</p>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Deployment and Integration
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#workAccordion">
-                            <div class="card-body">
-                                Deploy and integrate AI solutions into existing systems for seamless operation and performance.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFour">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Collaboration and Teamwork
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#workAccordion">
-                            <div class="card-body">
-                                Collaboration and teamwork are essential for successful AI project implementation.
-                            </div>
-                        </div>
+                    <div class="tab-pane fade" id="tab3">
+                        <h3>Tab 3 Content</h3>
+                        <p>This is the content for Tab 3.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 text-center">
-                <img src="brain.png" alt="Data Collection and Preparation" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<section class="brand-ai-section">
+    <div class="container">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="img-fluid brand-ai" src="assets/images/brandai/adept.webp" alt="Slide 1">
+                </div>
+                <div class="swiper-slide">
+                    <img class="img-fluid brand-ai" src="assets/images/brandai/anthropic.png" alt="Slide 2">
+                </div>
+                <div class="swiper-slide">
+                    <img class="img-fluid brand-ai" src="assets/images/brandai/cohere.webp" alt="Slide 3">
+                </div>
+                <div class="swiper-slide">
+                    <img class="img-fluid brand-ai" src="assets/images/brandai/meta.webp" alt="Slide 4">
+                </div>
+                <div class="swiper-slide">
+                    <img class="img-fluid brand-ai" src="assets/images/brandai/openai.png" alt="Slide 5">
+                </div>
+                <!-- Add more slides if needed -->
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
 </section>
@@ -170,6 +185,6 @@
 </footer>
 
 </body>
-
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
 </html>

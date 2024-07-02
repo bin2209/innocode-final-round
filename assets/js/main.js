@@ -1,21 +1,24 @@
 // Glass navbar when scroll navbar fixed
 
 $(document).ready(function () {
-    var $nav = $('#nav');
-    var navOffset = $nav.offset().top; // Get the initial offset position of the navbar
+ 
+    // Swiper 
 
-    function onScroll() {
-        if ($(window).scrollTop() > 0) {
-            $nav.addClass('fixed');
-            if ($(window).scrollTop() >= navOffset) {
-                $nav.addClass('overplay-blur');
-            }
-        } else {
-            $nav.removeClass('fixed');
-            $nav.removeClass('overplay-blur');
-        }
-    }
-
-    $(window).on('scroll', onScroll);
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 5,
+        spaceBetween: 30,  // Adjust this value to set the space between slides
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 });
+
+
+
 
