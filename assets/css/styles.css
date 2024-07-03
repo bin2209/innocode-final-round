@@ -113,7 +113,7 @@ table {
 }
 
 body {
-    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 16px;
     line-height: 1.6;
     color: var(--color-light);
@@ -169,7 +169,7 @@ a:hover {
 }
 
 section {
-    padding: 150px 20px;
+    padding: 100px 20px;
 
 }
 
@@ -181,7 +181,8 @@ p{
 /* ----------- Custom Styles  ----------- */
 /* DEFINE CLASS Component */
 header {
-    height: 100vh;
+    height: 80vh;
+    
 }
 .font-weight-normal {
     font-weight: normal;
@@ -211,8 +212,6 @@ header {
     font-size: 1.25em;
     opacity: .8;
 }
-
-
 
 .text-rounded {
     color: var(--color-primary);
@@ -260,15 +259,11 @@ header {
     border-radius: 16px;
 }
 
+.bg-gradient-b{
+    background-image: radial-gradient(57% 36.46%, rgba(209, 170, 215, 0) 0px, rgba(5, 5, 11, 0) 37%), radial-gradient(41% 48.81%, rgba(282, 243, 295, 0.16) 0px, rgba(5, 5, 11, -412) 69%);
+}
 .bg-gradient-c{
     background-image: radial-gradient(100% 36.46%, rgba(209, 170, 215, 0) 0px, rgba(5, 5, 11, 0) 100%), radial-gradient(80% 56.81%, rgba(214, 170, 215, 0.16) 0px, rgba(5, 5, 11, 0) 69%);    background-position-x: 0%, 0%;
-    background-position-y: 0%, 0%;
-    background-size: auto, auto;
-    background-repeat: repeat, repeat;
-    background-attachment: scroll, scroll;
-    background-origin: padding-box, padding-box;
-    background-clip: border-box, border-box;
-    opacity: ;
 }
 
 
@@ -375,7 +370,8 @@ header {
 
 
 .hero-section {
-    background: url('/assets/images/backpink.png') no-repeat center center;
+    background-image: linear-gradient(to bottom left, rgba(209, 170, 215, 0) 26%, rgba(5, 5, 11, 0) 88%), linear-gradient(to bottom right, rgba(282, 243, 295, 0.16) 1%, rgba(5, 5, 11, -412) 47%);
+    /* background: url('/assets/images/backpink.png') no-repeat center center; */
     background-size: cover;
     padding: 100px 0;
 }
@@ -392,7 +388,7 @@ header {
     border-bottom: 1px solid var(--color-light) !important;
     color: var(--color-light) !important;
     margin: 30px 0 0 0;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .section-tab .nav-link h3,
@@ -430,6 +426,26 @@ header {
 .section-tab p {
     color: var(--color-light);
     margin: 30px 0;
+}
+
+.how-to-use .card img{
+    padding-right: 20px;
+    padding-left: 10px;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+.how-to-use .card{
+    padding: 1em 0.2em 1em 0;
+    background: none;
+    background-image: linear-gradient(to bottom left, rgba(209, 170, 215, 0) 0%, rgba(5, 5, 11, 0) 37%), linear-gradient(to bottom right, rgba(282, 243, 295, 0.16) 0%, rgba(5, 5, 11, -412) 99%);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    color: var(--color-light);
+    border-top: 2px solid rgba(255, 255, 255, 0.223);
+    border-left: 2px solid rgba(255, 255, 255, 0.162);
+    border-right: 1px solid rgba(255, 255, 255, 0.092);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.092);
 }
 
 
@@ -470,6 +486,11 @@ footer li{
 
 
 
+
+.modal-content {
+    position: relative;
+    background: rgba(255, 255, 255, 0.3); /* Optional: Add a background color with some transparency */
+}
 
 
 
@@ -523,3 +544,44 @@ footer li{
 }
 
 /* Animation  */
+  /* Animation  */
+ /* Opening Animation */
+.fadeScale {
+    animation: fadeScale 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeScale {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Closing Animation */
+.fadeScaleOut {
+    animation: fadeScaleOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeScaleOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+/* Modal Styling */
+
+#loginModal.show {
+    color: var(--color-light);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: brightness(0.5) blur(10px);
+}
