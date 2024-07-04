@@ -480,7 +480,34 @@ header {
     left:80%;
 }
 
+/* Post section  */
+.section-posts .card{
+    background:none;
+    opacity:.8;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.section-posts .card:hover{
+    opacity:1;
+}
 
+
+.section-posts .card img{
+    height:250px;
+    width:auto;
+    object-fit:cover;
+    border-top: 2px solid rgba(255, 255, 255, 0.647);
+    border-left: 1px solid rgba(255, 255, 255, 0.487);  
+    border-right: 1px solid rgba(255, 255, 255, 0.3); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 16px;
+}
+.section-posts .card h3{
+    margin: 0 0 20px 0;
+}
+.section-posts .card p{
+    color: var(--color-light);
+}
 
 .section-tab .nav-tabs {
     border: 0;
