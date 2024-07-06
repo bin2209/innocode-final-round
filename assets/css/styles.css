@@ -699,6 +699,9 @@ footer li{
     animation: fadeScaleOut 0.3s ease-in-out forwards;
 }
 
+.modal-header{
+    border: none;
+}
 
 
 .rotate{
