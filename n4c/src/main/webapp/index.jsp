@@ -260,15 +260,12 @@
     <section class="bg-gradient-a">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-8 mx-auto text-center">
-                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5">BUILD AI</p>
-                    <h2 class="title">Case Studies & Resources
-                        We've</h2>
-                    <p class="sub-title">We've worked with the world's leading AI teams for years, and delivered more
-                        high-quality data than anybody else.</p>
-                    </p>
+                <div class="col-12 col-md-6 mx-auto text-center">
+                    <p class="text-uppercase text-light text-rounded font-weight-300 mx-auto text-center my-5">BUILD AI</p>
+                    <h2 class="title text-light">Happy 25th anniversary </h2>
+                    <span class="big-num">25</span>
                 </div>
-                <div class="col-12">
+                <div class="col-12 col-md-6">
                     <div class="box-content">
                         <h2>RLHF</h2>
                         <p class="sub-title py-3">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -279,16 +276,7 @@
                     </div>
                 </div>
 
-                <div class="col-12">
-                    <div class="box-content">
-                        <h2>RLHF</h2>
-                        <p class="sub-title py-3">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </section>
