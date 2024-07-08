@@ -1,69 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<%-- 
+    Document   : index.jsp
+    Created on : Jul 8, 2024, 6:48:14 PM
+    Author     : mac
+--%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="n4c">
-    <meta name="keywords" content="n4c">
-    <meta name="author" content="n4c">
-    <link rel="icon" href="assets/images/logo-w.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <title>n4c</title>
-
-    <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- BOOTSTRAP  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <!-- SWIPER -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-    <!-- Lazyload  -->
-    <script src="https://cdn.jsdelivr.net/npm/@lazyload/js@2.0.0/dist/lazyload.min.js"></script>
-</head>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ include file="../include/header.jsp" %>
 
 <body>
-    <nav id="nav" class="navbar navbar-expand-lg overplay-blur">
-        <div class="container ">
-            <a class="navbar-brand" href="#"><img src="/assets/images/logo-w.png" style="width: 50px;" /> </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse w-100 justify-content-between" id="navbarNav">
-
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-                <div class="buttons">
-                    <a class="btn  new-button" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Log In</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <%@ include file="../include/navbar.jsp" %>
 
     <header class="hero-section text-center text-white d-flex align-items-center">
-
-
         <div class="hero-content w-100 position-absolute">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
@@ -418,7 +365,7 @@
                             <div class="col-12 col-md-6">
                                 <img class="" src="assets/upload/s13.jpeg" alt="">
                             </div>
-                           
+
 
                         </div>
                     </div>
@@ -499,8 +446,6 @@
     <!-- Modal login -->
 
 </body>
-<script src="assets/js/main.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
-</html>
+<%@ include file="../include/footer.jsp" %>
