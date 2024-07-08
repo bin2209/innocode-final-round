@@ -15,7 +15,7 @@
     <meta name="description" content="n4c">
     <meta name="keywords" content="n4c">
     <meta name="author" content="n4c">
-    <link rel="icon" href="assets/images/logo-w.png" type="image/png">
+    <link rel="icon" href="assets/images/fpt.svg" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <title>n4c</title>
@@ -28,7 +28,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/styles.css">
 
     <!-- SWIPER -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

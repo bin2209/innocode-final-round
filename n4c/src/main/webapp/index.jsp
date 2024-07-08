@@ -14,8 +14,7 @@
         <div class="hero-content w-100 position-absolute">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <h1 class="display-4">Start your<span class="text-gradient"> enterprise with AI</span> in just a few
-                        minutes!</h1>
+                    <h1 class="display-4">FPT Corporation's <span class="text-gradient">35th Anniversary</span></h1>
                     <p class="lead">Begin your AI-driven enterprise swiftly - initiate with advanced technology in just
                         a few minutes for enhanced efficiency.</p>
 
@@ -48,7 +47,7 @@
                     <div class="card mb-4 mb-md-0">
                         <div class="card-body d-flex">
                             <div class="col-4">
-                                <img class="img-fluid" src="assets/images/buildwith/Layer 1.png" alt="">
+                                <img class="img-fluid" src="${pageContext.request.contextPath}/assets/images/buildwith/Layer 1.png" alt="">
                             </div>
                             <div class="col-8">
                                 <h5 class="card-title">Java</h5>
@@ -64,7 +63,7 @@
                     <div class="card mb-4 mb-md-0">
                         <div class="card-body d-flex">
                             <div class="col-4">
-                                <img class="img-fluid" src="assets/images/buildwith/Layer 2.png" alt="">
+                                <img class="img-fluid" src="${pageContext.request.contextPath}/assets/images/buildwith/Layer 2.png" alt="">
                             </div>
                             <div class="col-8">
                                 <h5 class="card-title">MS SQL</h5>
@@ -80,7 +79,7 @@
                     <div class="card mb-4 mb-md-0">
                         <div class="card-body d-flex">
                             <div class="col-4">
-                                <img class="img-fluid" src="assets/images/buildwith/Layer 3.png" alt="">
+                                <img class="img-fluid" src="${pageContext.request.contextPath}/assets/images/buildwith/Layer 3.png" alt="">
                             </div>
                             <div class="col-8">
                                 <h5 class="card-title">Open AI</h5>
@@ -115,7 +114,7 @@
                 <div class="col-12 col-md-4 col-sm-4 p-0">
                     <div class="card p-2 mb-3">
                         <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="./assets/upload/s5.jpeg">
+                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s5.jpeg">
                         </div>
                         <div class="card-body p-1 mt-3">
                             <h3>Heading</h3>
@@ -130,7 +129,7 @@
                 <div class="col-12 col-md-4 col-sm-4 p-0">
                     <div class="card p-2 mb-3">
                         <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="./assets/upload/s6.jpeg">
+                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s6.jpeg">
                         </div>
                         <div class="card-body p-1 mt-3">
                             <h3>Heading</h3>
@@ -145,7 +144,7 @@
                 <div class="col-12 col-md-4 col-sm-4 p-0">
                     <div class="card p-2 mb-3">
                         <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="./assets/upload/s1.jpeg">
+                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s1.jpeg">
                         </div>
                         <div class="card-body p-1 mt-3">
                             <h3>Heading</h3>
@@ -160,7 +159,7 @@
                 <div class="col-12 col-md-4 col-sm-4 p-0">
                     <div class="card p-2 mb-3">
                         <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="./assets/upload/s2.jpeg">
+                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s2.jpeg">
                         </div>
                         <div class="card-body p-1 mt-3">
                             <h3>Heading</h3>
@@ -175,7 +174,7 @@
                 <div class="col-12 col-md-4 col-sm-4 p-0">
                     <div class="card p-2 mb-3">
                         <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="./assets/upload/s3.jpeg">
+                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s3.jpeg">
                         </div>
                         <div class="card-body p-1 mt-3">
                             <h3>Heading</h3>
@@ -190,7 +189,7 @@
                 <div class="col-12 col-md-4 col-sm-4 p-0">
                     <div class="card p-2 mb-3">
                         <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="./assets/upload/s4.jpeg">
+                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s4.jpeg">
                         </div>
                         <div class="card-body p-1 mt-3">
                             <h3>Heading</h3>
@@ -242,7 +241,7 @@
                 <div class="col-md-6">
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="tab1">
-                            <img class="img-fluid" src="assets/images/tab1.png" alt="">
+                            <img class="img-fluid" src="${pageContext.request.contextPath}/assets/images/tab1.png" alt="">
                         </div>
                         <div class="tab-pane fade" id="tab2">
                             <h3>Tab 2 Content</h3>
@@ -258,7 +257,7 @@
         </div>
     </section> -->
 
-    <section class="bg-gradient-b ">
+    <section class="bg-gradient-a">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center">
@@ -300,19 +299,19 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img class="img-fluid brand-ai" src="assets/images/brandai/adept.webp" alt="Slide 1">
+                        <img class="img-fluid brand-ai" src="${pageContext.request.contextPath}/assets/images/brandai/adept.webp" alt="Slide 1">
                     </div>
                     <div class="swiper-slide">
-                        <img class="img-fluid brand-ai" src="assets/images/brandai/anthropic.png" alt="Slide 2">
+                        <img class="img-fluid brand-ai" src="${pageContext.request.contextPath}/assets/images/brandai/anthropic.png" alt="Slide 2">
                     </div>
                     <div class="swiper-slide">
-                        <img class="img-fluid brand-ai" src="assets/images/brandai/cohere.webp" alt="Slide 3">
+                        <img class="img-fluid brand-ai" src="${pageContext.request.contextPath}/assets/images/brandai/cohere.webp" alt="Slide 3">
                     </div>
                     <div class="swiper-slide">
-                        <img class="img-fluid brand-ai" src="assets/images/brandai/meta.webp" alt="Slide 4">
+                        <img class="img-fluid brand-ai" src="${pageContext.request.contextPath}/assets/images/brandai/meta.webp" alt="Slide 4">
                     </div>
                     <div class="swiper-slide">
-                        <img class="img-fluid brand-ai" src="assets/images/brandai/openai.png" alt="Slide 5">
+                        <img class="img-fluid brand-ai" src="${pageContext.request.contextPath}/assets/images/brandai/openai.png" alt="Slide 5">
                     </div>
                 </div>
 
@@ -333,7 +332,7 @@
                     <div class="box-content">
                         <div class="row">
                             <div class="col-12 col-md-6">
-                                <img class="" src="assets/upload/s12.jpeg" alt="">
+                                <img class="" src="${pageContext.request.contextPath}/upload/s12.jpeg" alt="">
                             </div>
                             <div class="col-12 col-md-6 mt-4 mt-md-0 align-items-center">
                                 <h2>RLHF</h2>
@@ -363,7 +362,7 @@
                                     labore et dolore magna aliqua.</p>
                             </div>
                             <div class="col-12 col-md-6">
-                                <img class="" src="assets/upload/s13.jpeg" alt="">
+                                <img class="" src="${pageContext.request.contextPath}/upload/s13.jpeg" alt="">
                             </div>
 
 
@@ -407,4 +406,4 @@
 </body>
 
 
-<%@ include file="../include/footer.jsp" %>
+<%@ include file="../include/scripts.jsp" %>

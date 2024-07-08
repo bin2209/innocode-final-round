@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-6 col-md-3">
-                    <img class="logo" src="assets/images/logo-w.png" class="img-fluid" width="54">
+                    <img class="logo" src="assets/images/fpt.png" class="img-fluid" width="54">
                     <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore magna aliqua.</p>

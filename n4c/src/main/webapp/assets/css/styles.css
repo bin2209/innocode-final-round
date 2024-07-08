@@ -106,10 +106,10 @@ table {
 /* Re-Init class  */
 
 :root {
-    --background-main: #000000;
+    --background-main: #fff;
     --background-secondary: #1e1e1e;
-    --color-light: #e3e3e3;
-    --color-primary: rgb(209 170 215);
+    --color-light: #000;
+    --color-primary: rgb(253 112 1);
 }
 
 body {
@@ -157,12 +157,15 @@ h6 {
 }
 
 a {
-    opacity: 0.8;
+    opacity: 1;
     color: var(--color-light);
     /*background-color: var(--background-main);*/
     transition: all 0.5s ease-in-out;
 }
 
+.title{
+    color: var(--color-primary);
+}
 a:hover {
     opacity: 1;
     color: var(--color-light) !important;
@@ -240,22 +243,24 @@ header {
 
 .new-button {
     padding: 8px 17px;
-    border-radius: 10px;
+    border-radius: 20px;
     color: var(--color-light);
     border: none;
-    background: radial-gradient(231.94% 231.94% at 50% 100%, #8a6cff 0, rgba(53, 41, 128, 0) 25.24%), linear-gradient(180deg, rgba(243, 238, 255, 0), rgba(243, 238, 255, .04)), rgba(147, 130, 255, .01);
-    box-shadow: 0 0 0 0 rgba(16, 0, 51, .4), 0 2px 5px 0 rgba(16, 0, 51, .39), 0 8px 8px 0 rgba(16, 0, 51, .34), 0 19px 11px 0 rgba(16, 0, 51, .2), 0 34px 14px 0 rgba(16, 0, 51, .06), 0 53px 15px 0 rgba(16, 0, 51, .01), inset 0 0 12px 0 hsla(0, 0%, 100%, .08), inset 0 -8px 32px 0 #1e0d49;
+    /*   background: radial-gradient(231.94% 231.94% at 50% 100%, #FFA500 0, rgba(53, 41, 128, 0) 25.24%), linear-gradient(180deg, rgba(243, 238, 255, 0), rgba(243, 238, 255, .04)), rgba(147, 130, 255, .01);
+       box-shadow: 0 0 0 0 rgba(255, 165, 0, .4), 0 2px 5px 0 rgba(255, 165, 0, .39), 0 8px 8px 0 rgba(255, 165, 0, .34), 0 19px 11px 0 rgba(255, 165, 0, .2), 0 34px 14px 0 rgba(255, 165, 0, .06), 0 53px 15px 0 rgba(255, 165, 0, .01), inset 0 0 12px 0 hsla(0, 0%, 100%, .08), inset 0 -8px 32px 0 #FF8C00;*/
+    background: white;
 }
 
 .new-button:hover {
-    background: radial-gradient(231.94% 231.94% at 50% 100%, #8a6cff 0, rgba(53, 41, 128, 0) 25.24%), linear-gradient(180deg, rgba(243, 238, 255, 0), rgba(243, 238, 255, .04)), rgba(147, 130, 255, .6);
-    box-shadow: inset 0 0 12px 0 hsla(0, 0%, 100%, .08), inset 0 -8px 32px 0 #1e0d49, 0 0 0 0 rgba(16, 0, 51, .4), 0 2px 5px 0 rgba(16, 0, 51, .39), 0 8px 8px 0 rgba(16, 0, 51, .34), 0 19px 11px 0 rgba(16, 0, 51, .2), 0 34px 14px 0 rgba(16, 0, 51, .06), 0 53px 15px 0 rgba(16, 0, 51, .01);
+    /*    background: radial-gradient(231.94% 231.94% at 50% 100%, #8a6cff 0, rgba(53, 41, 128, 0) 25.24%), linear-gradient(180deg, rgba(243, 238, 255, 0), rgba(243, 238, 255, .04)), rgba(147, 130, 255, .6);
+        box-shadow: inset 0 0 12px 0 hsla(0, 0%, 100%, .08), inset 0 -8px 32px 0 #1e0d49, 0 0 0 0 rgba(16, 0, 51, .4), 0 2px 5px 0 rgba(16, 0, 51, .39), 0 8px 8px 0 rgba(16, 0, 51, .34), 0 19px 11px 0 rgba(16, 0, 51, .2), 0 34px 14px 0 rgba(16, 0, 51, .06), 0 53px 15px 0 rgba(16, 0, 51, .01);*/
+    background: #ffffffcf;
 }
 
 .box-content{
-    background: rgba(205, 118, 255, 0.018);
+    background: #fd710108;
     margin: 60px 0;
-    border: 1px solid  rgba(204, 118, 255, 0.06);
+    border: 1px solid  #fd710108;
     padding: 3em 20px;
     border-radius: 16px;
 }
@@ -267,7 +272,10 @@ header {
     border: 1px solid  rgba(204, 118, 255, 0.06);
     border-radius: 16px;
 }
-
+bg-gradient-a{
+    background-color: #FAD961;
+    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+}
 .bg-gradient-b{
     background-image: radial-gradient(57% 36.46%, rgba(209, 170, 215, 0) 0px, rgba(5, 5, 11, 0) 37%), radial-gradient(41% 48.81%, rgba(282, 243, 295, 0.16) 0px, rgba(5, 5, 11, -412) 69%);
 }
@@ -305,22 +313,7 @@ header {
 
 
 /* Section  */
-.read-page{
-    background: rgb(13, 13, 13) !important;
-}
-.read-page .box-content{
-    --border-bottom-width: 0.5px;
-    --border-color: var(--token-e36e62c1-3ebe-4212-b1e1-584cba501b77, rgb(31, 31, 31));
-    --border-left-width: 0.5px;
-    --border-right-width: 0.5px;
-    --border-style: solid;
-    --border-top-width: 0.5px;
-    background-color: var(--token-f1e41c2c-29e9-41be-821d-e06a2c29776f, rgb(18, 18, 18));
-    width: 100%;
-    border-radius: 11px;
-    box-shadow: rgb(38, 38, 38) 0px 1px 0px 0px inset;
-    opacity: 1;
-}
+
 
 .brand-ai-section .swiper-slide {
     opacity: 0.5;
@@ -344,6 +337,7 @@ header {
     height: 35px;
     object-fit: contain;
 }
+
 
 
 
@@ -378,9 +372,7 @@ header {
     height: 100vh;
 }
 
-.navbar-toggler-icon {
-    filter: brightness(200000);
-}
+
 
 .navbar .show .navbar-brand {
     padding: 16px !important;
@@ -397,14 +389,14 @@ header {
 
 
 .hero-section {
-    background-image: linear-gradient(to bottom left, rgba(209, 170, 215, 0) 26%, rgba(5, 5, 11, 0) 88%), linear-gradient(to bottom right, rgba(282, 243, 295, 0.16) 1%, rgba(5, 5, 11, -412) 47%);
-    /* background: url('/assets/images/backpink.png') no-repeat center center; */
+    /*background-image: linear-gradient(to bottom left, rgba(209, 170, 215, 0) 26%, rgba(5, 5, 11, 0) 88%), linear-gradient(to bottom right, rgba(282, 243, 295, 0.16) 1%, rgba(5, 5, 11, -412) 47%);*/
+    background: url('../images/bg.jpg') no-repeat center center;
     background-size: cover;
     padding: 100px 0;
 }
 
 .hero-section .hero-content{
-    z-index:999;
+    z-index:99;
 }
 
 
@@ -509,16 +501,20 @@ header {
 
 /* Post section  */
 .section-posts .card{
+    border:0;
     background:none;
-    opacity:.8;
+    opacity:1;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
 .section-posts .card:hover{
-    opacity:1;
+    opacity:.8;
 }
 
-
+.section-posts .card-header{
+    border-bottom: none;
+    background-color: none;
+}
 .section-posts .card img{
     height:250px;
     width:auto;
@@ -612,32 +608,28 @@ header {
 /* Footer  */
 
 footer{
+    /*background: #fe7101;*/
+    background-image: linear-gradient(174deg, #e5d8a9 0%, #fd7002 100%);
     padding: 50px 12px;
 }
 footer .logo{
-    opacity: 0.6;
+    opacity: 1;
     padding-bottom: 10px;
 }
 footer hr{
     opacity: 0.6;
     margin: 2.3em 0;
 }
-footer p{
-    opacity: 0.6;
-}
-footer h3{
-    opacity: 0.6;
 
-}
 footer a {
     text-decoration: none;
-    opacity: .6;
+    opacity: 1;
     transition: all 0.3s ease-in-out;
 }
 
 footer a:hover {
     text-decoration: underline;
-    opacity: 1;
+    opacity: .8;
 }
 
 footer li{
