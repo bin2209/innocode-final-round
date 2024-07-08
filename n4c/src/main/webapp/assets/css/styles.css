@@ -159,7 +159,7 @@ h6 {
 a {
     opacity: 0.8;
     color: var(--color-light);
-    background-color: var(--background-main);
+    /*background-color: var(--background-main);*/
     transition: all 0.5s ease-in-out;
 }
 
@@ -182,7 +182,7 @@ p{
 /* DEFINE CLASS Component */
 header {
     height: 80vh;
-    
+
 }
 .font-weight-normal {
     font-weight: normal;
@@ -237,6 +237,7 @@ header {
     color: var(--color-light);
 }
 
+
 .new-button {
     padding: 8px 17px;
     border-radius: 10px;
@@ -271,7 +272,8 @@ header {
     background-image: radial-gradient(57% 36.46%, rgba(209, 170, 215, 0) 0px, rgba(5, 5, 11, 0) 37%), radial-gradient(41% 48.81%, rgba(282, 243, 295, 0.16) 0px, rgba(5, 5, 11, -412) 69%);
 }
 .bg-gradient-c{
-    background-image: radial-gradient(100% 36.46%, rgba(209, 170, 215, 0) 0px, rgba(5, 5, 11, 0) 100%), radial-gradient(80% 56.81%, rgba(214, 170, 215, 0.16) 0px, rgba(5, 5, 11, 0) 69%);    background-position-x: 0%, 0%;
+    background-image: radial-gradient(100% 36.46%, rgba(209, 170, 215, 0) 0px, rgba(5, 5, 11, 0) 100%), radial-gradient(80% 56.81%, rgba(214, 170, 215, 0.16) 0px, rgba(5, 5, 11, 0) 69%);
+    background-position-x: 0%, 0%;
 }
 
 
@@ -303,6 +305,23 @@ header {
 
 
 /* Section  */
+.read-page{
+    background: rgb(13, 13, 13) !important;
+}
+.read-page .box-content{
+    --border-bottom-width: 0.5px;
+    --border-color: var(--token-e36e62c1-3ebe-4212-b1e1-584cba501b77, rgb(31, 31, 31));
+    --border-left-width: 0.5px;
+    --border-right-width: 0.5px;
+    --border-style: solid;
+    --border-top-width: 0.5px;
+    background-color: var(--token-f1e41c2c-29e9-41be-821d-e06a2c29776f, rgb(18, 18, 18));
+    width: 100%;
+    border-radius: 11px;
+    box-shadow: rgb(38, 38, 38) 0px 1px 0px 0px inset;
+    opacity: 1;
+}
+
 .brand-ai-section .swiper-slide {
     opacity: 0.5;
     text-align: center;
@@ -411,7 +430,7 @@ header {
 }
 
 .hero-section .liquid .item{
-    
+
 }
 
 
@@ -505,9 +524,9 @@ header {
     width:auto;
     object-fit:cover;
     border-top: 2px solid rgba(255, 255, 255, 0.647);
-    border-left: 1px solid rgba(255, 255, 255, 0.487);  
-    border-right: 1px solid rgba(255, 255, 255, 0.3); 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    border-left: 1px solid rgba(255, 255, 255, 0.487);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
 }
 .section-posts .card h3{
@@ -601,13 +620,13 @@ footer .logo{
 }
 footer hr{
     opacity: 0.6;
-margin: 2.3em 0;
+    margin: 2.3em 0;
 }
 footer p{
     opacity: 0.6;
 }
 footer h3{
-   opacity: 0.6;
+    opacity: 0.6;
 
 }
 footer a {
@@ -685,8 +704,8 @@ footer li{
 }
 
 /* Animation  */
-  /* Animation  */
- /* Opening Animation */
+/* Animation  */
+/* Opening Animation */
 .fadeScale {
     animation: fadeScale 0.3s ease-in-out forwards;
 }
@@ -768,7 +787,7 @@ footer li{
 
     100%{
         transform: scale(1);
-       
+
     }
 }
 
