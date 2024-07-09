@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="col-12 col-md-6">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <ul class="nav mb-3" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="btn active" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="true">Sign Up</button>
                         </li>
