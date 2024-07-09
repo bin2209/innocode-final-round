@@ -15,22 +15,24 @@
 
     <section>
         <div class="container mt-3">
-            <div class="box-content row">
-                <div class=" col-12 col-md-6">
-                    <img src=""/>
+            <div class="box-content row px-5">
+                <div class="col-12 col-md-6 position-relative p-0">
+
+                    <img src="${pageContext.request.contextPath}/assets/images/alpha.png"/>
+                    <div class="cel-overlay"></div>
                 </div>
 
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 mt-3 ps-5">
                     <ul class="nav mb-3" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="btn active" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="true">Sign Up</button>
+                        <li class="nav-item me-2 " role="presentation">
+                            <button class="btn rounded active" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="true">Sign Up</button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="btn " id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="false">Log In</button>
+                        <li class="nav-item " role="presentation">
+                            <button class="btn rounded " id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="false">Log In</button>
                         </li>
                     </ul>
 
-                    <div class="tab-content" id="myTabContent">
+                    <div class="tab-content " id="myTabContent">
                         <div class="tab-pane fade show active" id="signup" role="tabpanel" aria-labelledby="signup-tab">
                             <h2 class="mb-3">Sign Up</h2>
                             <form>
@@ -43,7 +45,7 @@
                                     <label for="signupPassword" class="form-label">Password</label>
                                     <input type="password" class="rounded form-control" id="signupPassword">
                                 </div>
-                                <button type="submit" class="btn btn-primary rounded">Sign Up</button>
+                                <button type="submit" class="btn btn-primary rounded w-50">Sign Up</button>
                             </form>
                         </div>
 
@@ -59,13 +61,20 @@
                                     <input type="password" class="form-control rounded" id="loginPassword">
                                 </div>
                                 <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="rememberMe">
-                                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                                    <input type="checkbox" class="rounded form-check-input" id="rememberMe">
+                                    <label class=" form-check-label" for="rememberMe">Remember me</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary rounded">Log In</button>
+                                <button type="submit" class="btn btn-primary rounded w-50">Log In</button>
                                 <p class="mt-3"><a href="#">Forgot Password?</a></p>
                             </form>
                         </div>
+
+                        <a href="">
+                            <button class="btn btn-light rounded mt-3 w-50 border d-flex justify-content-center">
+                                <img class="me-3" src="${pageContext.request.contextPath}/assets/images/gg.svg" style="width: 22px;"/>
+                                Continues with Google</button>
+                        </a>
+
                     </div>
                 </div>
 
