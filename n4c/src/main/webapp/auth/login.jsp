@@ -15,19 +15,31 @@
 
     <section>
         <div class="container mt-3">
-            <div class="box-content">
-                <div>
-                    <div>
-                        <h2 class="framer-text framer-styles-preset-t66p7y">Start learning from Zero to Hero</h2>
-                    </div>
-                    <div>
-                        <p class="framer-text framer-styles-preset-1j25qsd">Showing you how to build your own online businesses by yourself in my personal newsletter called Creative Prosperity.</p>
-                    </div>
+            <div class="box-content row">
+                <div class=" col-12 col-md-6">
+                    <img src=""/>
                 </div>
-                <form method="POST" action="login">
-                    <input type="text" name="username">
-                    <input type="password" name="password">
-                </form>
+                
+                 <div class=" col-12 col-md-6">
+                    <h2 class="mb-3">Login</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary rounded">Login</button>
+                    </form>
+                </div>
+                
             </div>
         </div>
 
