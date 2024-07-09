@@ -19,27 +19,56 @@
                 <div class=" col-12 col-md-6">
                     <img src=""/>
                 </div>
-                
-                 <div class=" col-12 col-md-6">
-                    <h2 class="mb-3">Login</h2>
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
+                <div class="col-12 col-md-6">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="btn active" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="true">Sign Up</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="btn " id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="false">Log In</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                            <h2 class="mb-3">Sign Up</h2>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="signupEmail" class="form-label">Email address</label>
+                                    <input type="email" class="rounded form-control" id="signupEmail" aria-describedby="signupEmailHelp">
+                                    <div id="signupEmailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signupPassword" class="form-label">Password</label>
+                                    <input type="password" class="rounded form-control" id="signupPassword">
+                                </div>
+                                <button type="submit" class="btn btn-primary rounded">Sign Up</button>
+                            </form>
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+
+                        <div class="tab-pane fade" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <h2 class="mb-3">Log In</h2>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control rounded" id="loginEmail" aria-describedby="loginEmailHelp">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control rounded" id="loginPassword">
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary rounded">Log In</button>
+                                <p class="mt-3"><a href="#">Forgot Password?</a></p>
+                            </form>
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary rounded">Login</button>
-                    </form>
+                    </div>
                 </div>
-                
+
             </div>
         </div>
 
