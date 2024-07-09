@@ -9,10 +9,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-6 col-md-3">
-                    <img class="logo" src="assets/images/fpt.png" class="img-fluid" width="54">
-                    <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua.</p>
+                    <img class="logo" src="assets/images/edu.svg" class="img-fluid" width="200">
+                    <p>As one of the member units, holding number 1 in the 3 core operating areas of FPT Corporation - the first departmental group in the IT field of Vietnam..</p>
                 </div>
                 <div class="col-6 col-md-3">
                     <h3 class="text-uppercase">Company</h3>

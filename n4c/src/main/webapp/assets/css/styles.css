@@ -172,7 +172,7 @@ a:hover {
 }
 
 section {
-    padding: 80px 20px;
+    padding: 80px 20px 100px;
 
 }
 
@@ -274,7 +274,7 @@ header {
 }
 .bg-gradient-a{
     background-color: #FAD961;
-       background-image: linear-gradient(174deg, #e5d8a9 0%, #fd7002 100%);
+    background-image: linear-gradient(174deg, #e5d8a9 0%, #fd7002 100%);
     padding: 50px 12px;
 }
 .bg-gradient-b{
@@ -286,9 +286,14 @@ header {
 }
 .big-num{
     font-size: 200px;
-    color: white;
+    /* border: 1px solid black; */
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
 }
-
+.outline-text{
+    color: transparent !important;
+    -webkit-text-stroke: 1px #ffffff;
+}
 
 /* Nav bar  */
 .navbar {
@@ -318,14 +323,23 @@ header {
 
 
 /* Section  */
-
+.swiper-slide-active{
+    opacity:1 !important;
+}
+.hidden {
+    display: none;
+}
+.swiper-slide:first-child{
+    opacity:0 !important;
+}
 
 .brand-ai-section .swiper-slide {
-    opacity: 0.5;
+    opacity: .8;
     text-align: center;
-    border: 2px solid white;
+    border: 1px solid black;
     padding: 1.8em 1em;
     border-radius: 30px;
+    background: white;
     transition: all 0.3s ease-in-out;
 }
 
@@ -395,7 +409,9 @@ header {
 
 .hero-section {
     /*background-image: linear-gradient(to bottom left, rgba(209, 170, 215, 0) 26%, rgba(5, 5, 11, 0) 88%), linear-gradient(to bottom right, rgba(282, 243, 295, 0.16) 1%, rgba(5, 5, 11, -412) 47%);*/
-    background: url('../images/bg.jpg') no-repeat center center;
+    /*background: url('../images/bg.jpg') no-repeat center center;*/
+    background-color: #FAD961;
+    background-image: linear-gradient(174deg, #e5d8a9 0%, #fd7002 100%);
     background-size: cover;
     padding: 100px 0;
 }
@@ -546,7 +562,7 @@ header {
     background-color: none;
     padding: 0;
     border: 0;
-    border-bottom: 1px solid var(--color-light) !important;
+    border-bottom: .1px solid var(--color-light) !important;
     color: var(--color-light) !important;
     margin: 30px 0 0 0;
     opacity: 0.6;
@@ -571,7 +587,7 @@ header {
     background: none !important;
     padding: 0;
     border: 0;
-    border-bottom: 1px solid var(--color-light) !important;
+    border-bottom: .1px solid var(--color-light) !important;
     color: var(--color-light) !important;
     opacity: 1;
 }
@@ -587,6 +603,9 @@ header {
 .section-tab p {
     color: var(--color-light);
     margin: 30px 0;
+}
+.how-to-use {
+    background: #ff9a47;
 }
 
 .how-to-use .card img{
@@ -616,6 +635,7 @@ footer{
     /*background: #fe7101;*/
     background-image: linear-gradient(174deg, #e5d8a9 0%, #fd7002 100%);
     padding: 50px 12px;
+    font-size: 14px;
 }
 footer .logo{
     opacity: 1;
