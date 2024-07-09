@@ -1,6 +1,6 @@
 <%-- 
-    Document   : navbar
-    Created on : Jul 8, 2024, 4:35:24 PM
+    Document   : navbar_logged
+    Created on : Jul 9, 2024, 7:17:56 PM
     Author     : mac
 --%>
 
@@ -27,10 +27,8 @@
                 </li>
             </ul>
             <div class="buttons">
-
-                <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login">Log In</a>
+                <a class="btn rounded new-button" href="${pageContext.request.contextPath}/logout">Logout</a>
             </div>
         </div>
     </div>
 </nav>
-
