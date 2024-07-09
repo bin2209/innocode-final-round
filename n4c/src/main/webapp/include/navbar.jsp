@@ -27,7 +27,7 @@
                 </li>
             </ul>
             <div class="buttons">
-                <a class="btn  new-button" href="${pageContext.request.contextPath}/login">Log In</a>
+                <a class="btn  new-button" href="${pageContext.request.contextPath}/login?value=loginwithgoogle">Log In</a>
             </div>
         </div>
     </div>

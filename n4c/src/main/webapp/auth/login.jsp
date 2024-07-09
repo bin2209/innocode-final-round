@@ -14,6 +14,29 @@
     <%@ include file="../include/navbar.jsp" %>
 
     <section>
+
+        <script>
+            // Check if the message variable is set or not
+            document.addEventListener("DOMContentLoaded", (event) => {
+                var errorMessage = "${message}";
+                // Kiểm tra nếu errorMessage không rỗng, hiển thị thông báo lỗi
+                if (errorMessage == "Registration Success" && errorMessage != "") {
+                    swal({
+                        title: "Success!",
+                        text: errorMessage,
+                        icon: "success",
+                        button: "OK",
+                    });
+                } else if (errorMessage != "") {
+                    swal({
+                        title: "Error!",
+                        text: errorMessage,
+                        icon: "error",
+                        button: "OK",
+                    });
+                }
+            });
+        </script>
         <div class="container mt-3">
             <div class="box-content row px-5">
                 <div class="col-12 col-md-6 position-relative p-0">
@@ -21,6 +44,12 @@
                     <img src="${pageContext.request.contextPath}/assets/images/alpha.png"/>
                     <div class="cel-overlay"></div>
                 </div>
+
+                <c:if test="${not empty message}">
+                    <%
+                        session.removeAttribute("message");
+                    %>
+                </c:if>
 
                 <div class="col-12 col-md-6 mt-3 ps-5">
                     <ul class="nav mb-3" id="myTab" role="tablist">
@@ -69,7 +98,7 @@
                             </form>
                         </div>
 
-                        <a href="">
+                        <a href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/n4c/login&response_type=code&client_id=244022125519-vt7oljom48jfdkene79prdon4im71p5n.apps.googleusercontent.com&approval_prompt=force">
                             <button class="btn btn-light rounded mt-3 w-50 border d-flex justify-content-center">
                                 <img class="me-3" src="${pageContext.request.contextPath}/assets/images/gg.svg" style="width: 22px;"/>
                                 Continues with Google</button>

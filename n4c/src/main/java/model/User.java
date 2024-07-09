@@ -1,6 +1,9 @@
 package model;
 
+import model.DAO.User_DB;
+
 public class User {
+
     private int userId;
     private String username;
     private String email;
@@ -10,7 +13,6 @@ public class User {
 
     public User() {
     }
-    
 
     public User(int userId, String username, String email, String password, int xp, int level) {
         this.userId = userId;
@@ -67,6 +69,14 @@ public class User {
 
     public void setLevel(int level) {
         this.level = level;
+    }
+
+    public static User login(String email, String inputMatKhau) {
+        User user = User_DB.getUserByEmail(email);
+        if (user != null && user.getPassword().equals(inputMatKhau)) {
+            return user;
+        }
+        return null;
     }
 
     @Override
