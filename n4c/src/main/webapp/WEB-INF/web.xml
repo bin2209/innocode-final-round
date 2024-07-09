@@ -8,6 +8,10 @@
         <servlet-name>User_Dashboard</servlet-name>
         <servlet-class>controller.User_Dashboard</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>User_Dashboard_Exam</servlet-name>
+        <servlet-class>controller.User_Dashboard_Exam</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>User_Login</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>User_Dashboard</servlet-name>
         <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>User_Dashboard_Exam</servlet-name>
+        <url-pattern>/dashboard/exam</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
