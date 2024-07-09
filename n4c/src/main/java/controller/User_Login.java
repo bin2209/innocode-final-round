@@ -46,7 +46,7 @@ public class User_Login extends HttpServlet {
         } else {
             String msg = "Email account has not been created yet! ";
             session.setAttribute("message", msg);
-            response.sendRedirect("login?value=loginwithgoogle");
+            response.sendRedirect("login?value=login");
 
         }
     }

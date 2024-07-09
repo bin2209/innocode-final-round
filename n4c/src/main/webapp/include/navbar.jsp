@@ -28,7 +28,7 @@
             </ul>
             <div class="buttons">
 
-                <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login">Log In</a>
+                <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login?value=login">Log In</a>
             </div>
         </div>
     </div>
