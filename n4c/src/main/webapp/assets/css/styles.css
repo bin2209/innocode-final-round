@@ -109,7 +109,7 @@ table {
     --background-main: #fff;
     --background-secondary: #1e1e1e;
     --color-light: #000;
-    --color-primary: rgb(253 112 1);
+    --color-primary: rgb(243 168 85);
 }
 
 body {
@@ -256,6 +256,9 @@ header {
         box-shadow: inset 0 0 12px 0 hsla(0, 0%, 100%, .08), inset 0 -8px 32px 0 #1e0d49, 0 0 0 0 rgba(16, 0, 51, .4), 0 2px 5px 0 rgba(16, 0, 51, .39), 0 8px 8px 0 rgba(16, 0, 51, .34), 0 19px 11px 0 rgba(16, 0, 51, .2), 0 34px 14px 0 rgba(16, 0, 51, .06), 0 53px 15px 0 rgba(16, 0, 51, .01);*/
     background: #ffffffcf;
 }
+.bg-blue{
+    background: rgb(30, 42, 85);
+}
 .cel-overlay {
     border-radius: 1.2em;
     position: absolute;
@@ -269,6 +272,9 @@ header {
 }
 .btn{
     padding: 10px 20px;
+}
+.dashboard .user-info{
+
 }
 
 .btn-primary{
@@ -542,7 +548,29 @@ header {
     top:80%;
     left:80%;
 }
+.row{
+    flex-direction: row;
+}
+.avatar {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    border: 2px solid #efefef;
+}
+.badge {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.badge.grayscale {
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
 
+.badge:empty{
+    display: block;
+}
 /* Post section  */
 .section-posts .card{
     border:0;
@@ -553,6 +581,16 @@ header {
 }
 .section-posts .card:hover{
     opacity:.8;
+}
+
+.course-content {
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+.course-button {
+    display: flex;
+    justify-content: center;
 }
 
 .section-posts .card-header{
@@ -650,9 +688,14 @@ header {
     border-right: 1px solid rgba(255, 255, 255, 0.092);
     border-bottom: 1px solid rgba(255, 255, 255, 0.092);
 }
-
+.rounded-3{
+    border-radius: 30px !important;
+}
 .rounded{
     border-radius: 50px !important;
+}
+.rounded-top{
+    border-radius: 30px 30px 0 0  !important;
 }
 /* Footer  */
 

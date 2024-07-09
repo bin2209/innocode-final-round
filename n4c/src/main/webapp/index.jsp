@@ -103,7 +103,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center mb-5">
-                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Vison</p>
+                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Vision</p>
+                     <h2 class="title">Strategic </h2>
+                    <p class="sub-title">FPT continues to pursue the larger goal of becoming a digital enterprise and ranking in the Top 50 companies in the world in providing comprehensive digital transformation services and solutions by 2030.</p>
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -112,36 +115,28 @@
                         <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="tab" href="#tab1">
                                 <h3>Insdustry Relevent</h3>
-                                <p>Fine-Tuning and RLHF
-                                    Adapt best-in-class foundation models to your business and your specific data to
-                                    build sustainable, successful AI programs and data from your enterprise.
+                                <p>This vision emphasizes aligning educational programs with the evolving needs of various industries. By integrating practical skills and knowledge demanded by the job market, education systems can better prepare students for successful careers.
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " data-bs-toggle="tab" href="#tab2">
                                 <h3>Global</h3>
-                                <p>Fine-Tuning and RLHF
-                                    Adapt best-in-class foundation models to your business and your specific data to
-                                    build sustainable, successful AI programs and data from your enterprise.
+                                <p>A global perspective in education encourages an understanding of diverse cultures and international collaboration. This vision aims to equip students with the skills and mindset needed to thrive in a interconnected world.
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " data-bs-toggle="tab" href="#tab3">
                                 <h3>Smart Education</h3>
-                                <p>Fine-Tuning and RLHF
-                                    Adapt best-in-class foundation models to your business and your specific data to
-                                    build sustainable, successful AI programs and data from your enterprise.
+                                <p>Smart education leverages technology to enhance learning experiences. This vision includes utilizing digital tools, personalized learning, and data analytics to create more effective and engaging educational environments.
                                 </p>
                             </a>
                         </li>
                          <li class="nav-item">
                             <a class="nav-link " data-bs-toggle="tab" href="#tab3">
                                 <h3>Mega</h3>
-                                <p>Fine-Tuning and RLHF
-                                    Adapt best-in-class foundation models to your business and your specific data to
-                                    build sustainable, successful AI programs and data from your enterprise.
+                                <p>Recognizing and adapting to mega trends, such as technological advancements and societal shifts, is crucial for modern education. This vision involves staying ahead of significant global changes to ensure education systems remain relevant and future-proof.
                                 </p>
                             </a>
                         </li>
@@ -176,7 +171,7 @@
 
                 </div>
                 <div class="col-12 col-md-9     ">
-                    <h2 class="text-uppercase mb-3 ">trusted</h2>
+                    <h2 class="text-uppercase mb-3 text-light">trusted</h2>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -219,8 +214,9 @@
                 <!-- Loop this post in back-end -->
                 <div class="col-12 col-md-4 col-sm-4 p-0">
                     <div class="card p-2 mb-3">
-                        <div class="card-header p-1">
+                        <div class="card-header p-1 position-relative">
                             <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s5.jpeg">
+                             <!--<div class="cel-overlay"></div>-->
                         </div>
                         <div class="card-body p-1 mt-3">
                             <h3>Heading</h3>
