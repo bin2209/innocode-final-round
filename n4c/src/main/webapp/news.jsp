@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index.jsp
-    Created on : Jul 8, 2024, 6:48:14 PM
+    Document   : news
+    Created on : Jul 10, 2024, 10:39:29 AM
     Author     : mac
 --%>
 
@@ -99,104 +99,6 @@
 
 
 
-    <section class="section-tab">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8 mx-auto text-center mb-5">
-                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Vision</p>
-                     <h2 class="title">Strategic </h2>
-                    <p class="sub-title">FPT continues to pursue the larger goal of becoming a digital enterprise and ranking in the Top 50 companies in the world in providing comprehensive digital transformation services and solutions by 2030.</p>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#tab1">
-                                <h3>Insdustry Relevent</h3>
-                                <p>This vision emphasizes aligning educational programs with the evolving needs of various industries. By integrating practical skills and knowledge demanded by the job market, education systems can better prepare students for successful careers.
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " data-bs-toggle="tab" href="#tab2">
-                                <h3>Global</h3>
-                                <p>A global perspective in education encourages an understanding of diverse cultures and international collaboration. This vision aims to equip students with the skills and mindset needed to thrive in a interconnected world.
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " data-bs-toggle="tab" href="#tab3">
-                                <h3>Smart Education</h3>
-                                <p>Smart education leverages technology to enhance learning experiences. This vision includes utilizing digital tools, personalized learning, and data analytics to create more effective and engaging educational environments.
-                                </p>
-                            </a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link " data-bs-toggle="tab" href="#tab3">
-                                <h3>Mega</h3>
-                                <p>Recognizing and adapting to mega trends, such as technological advancements and societal shifts, is crucial for modern education. This vision involves staying ahead of significant global changes to ensure education systems remain relevant and future-proof.
-                                </p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="tab1">
-                            <img class="img-fluid" src="${pageContext.request.contextPath}/assets/images/tab1.png" alt="">
-                        </div>
-                        <div class="tab-pane fade" id="tab2">
-                            <h3>Tab 2 Content</h3>
-                            <p>This is the content for Tab 2.</p>
-                        </div>
-                        <div class="tab-pane fade" id="tab3">
-                            <h3>Tab 3 Content</h3>
-                            <p>This is the content for Tab 3.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-gradient-a brand-ai-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-3 mx-auto text-center">
-                    <span class="big-num">25</span>
-                    <!--<p class="text-uppercase text-light text-rounded font-weight-300 mx-auto text-center my-5">BUILD AI</p>-->
-                    <h2 class=" text-light outline-text text-uppercase mb-5">Anniversary</h2>
-
-                </div>
-                <div class="col-12 col-md-9     ">
-                    <h2 class="text-uppercase mb-3 text-light">trusted</h2>
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img class="img-fluid brand-ai" src="${pageContext.request.contextPath}/assets/images/uni/1.png" alt="Slide 1">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="img-fluid brand-ai" src="${pageContext.request.contextPath}/assets/images/uni/2.png" alt="Slide 2">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="img-fluid brand-ai" src="${pageContext.request.contextPath}/assets/images/uni/3.webp" alt="Slide 3">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="img-fluid brand-ai" src="${pageContext.request.contextPath}/assets/images/uni/4.svg" alt="Slide 4">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="img-fluid brand-ai" src="${pageContext.request.contextPath}/assets/images/uni/5.webp" alt="Slide 5">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
 
     <section class="section-posts bg-gradient-c">
         <div class="container">
@@ -306,59 +208,7 @@
 
     </section>
 
-    <section class="bg-gradient-c ">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8 mx-auto text-center">
-                   <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Timeline</p>
-                    <h2 class="title">How We Growth</h2>
-                    <p class="sub-title">For AI teams, Scale Data Engine improves your models by improving your data.
-                    </p>
-                </div>
-                <div class="col-12">
-                    <div class="box-content">
-                        <div class="row">
-                            <div class="col-12 col-md-6">
-                                <img class="" src="${pageContext.request.contextPath}/upload/s12.jpeg" alt="">
-                            </div>
-                            <div class="col-12 col-md-6 mt-4 mt-md-0 align-items-center">
-                                <h2>RLHF</h2>
-                                <p class="sub-title py-3">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do
-                                    eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua.</p>
-                                <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut
-                                    labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="box-content">
-                        <div class="row">
-                            <div class="col-12 col-md-6 mt-4 mt-md-0 align-items-center">
-                                <h2>RLHF</h2>
-                                <p class="sub-title py-3">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do
-                                    eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua.</p>
-                                <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut
-                                    labore et dolore magna aliqua.</p>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <img class="" src="${pageContext.request.contextPath}/upload/s13.jpeg" alt="">
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  
 
 
 

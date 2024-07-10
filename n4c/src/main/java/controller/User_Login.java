@@ -68,8 +68,7 @@ public class User_Login extends HttpServlet {
     public static UserGoogleDto getUserInfo(final String accessToken) throws ClientProtocolException, IOException {
         String link = Constants.GOOGLE_LINK_GET_USER_INFO + accessToken;
         String response = Request.Get(link).execute().returnContent().asString();
-
-        UserGoogleDto googlePojo = new Gson().fromJson(response, UserGoogleDto.class);
+UserGoogleDto googlePojo = new Gson().fromJson(response, UserGoogleDto.class);
 
         return googlePojo;
     }

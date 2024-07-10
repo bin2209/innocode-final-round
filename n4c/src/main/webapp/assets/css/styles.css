@@ -215,6 +215,10 @@ header {
     font-size: 1.25em;
     opacity: .8;
 }
+.nav-login button{
+    width: 100%;
+    
+}
 
 .text-rounded {
     color: var(--color-primary);
@@ -301,6 +305,16 @@ header {
     /*border: 1px solid  rgba(204, 118, 255, 0.06);*/
     border-radius: 1.2em;
 }
+.bg-stock{
+        filter: blur(5px);
+       background: url(../../assets/images/stock-bg2.png);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: calc(100% - 200px);
+    background-position: center;
+    opacity: 0.5;
+}
 .bg-gradient-a{
     background-color: #FAD961;
     background-image: linear-gradient(174deg, #e5d8a9 0%, #fd7002 100%);
@@ -323,7 +337,31 @@ header {
     color: transparent !important;
     -webkit-text-stroke: 1px #ffffff;
 }
-
+.hotnews{
+        /*padding: 20px;*/
+    border: 0px solid white;
+    width: 100%;
+    border-radius: 50px;
+    object-fit: contain;
+}
+.cel-overlay-hotnews{
+        height: calc(100% - 7px);
+     /*padding: 20px;*/
+     border-radius: 50px !important;
+}
+.read-more{
+        right: 0px;
+    padding: 2em 3em;
+    z-index: 99;
+}
+.hotnews-title{
+        font-size: 23px;
+    color: white;
+    bottom: 3em;
+    text-transform: capitalize;
+    z-index: 99;
+    padding: 10px 43px;
+}
 /* Nav bar  */
 .navbar {
     position: fixed;
@@ -936,6 +974,45 @@ footer li{
         transform:translate(0,0) rotate(359deg);
     }
 }
+
+@keyframes swipeRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes swipeLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.c-input{
+    padding: 10px 20px;
+}
+.tab-pane {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.tab-pane.fade.show.active.swipe-right {
+    animation-name: swipeRight !important;
+}
+
+.tab-pane.fade.show.active.swipe-left {
+    animation-name: swipeLeft !important;
+}
+
 
 /* Modal Styling */
 
