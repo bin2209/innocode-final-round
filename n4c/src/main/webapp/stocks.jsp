@@ -15,90 +15,39 @@
 <body>
     <%@ include file="../include/navbar.jsp" %>
 
-    <header class="hero-section text-center text-white d-flex align-items-center">
-        <div class="hero-content w-100 position-absolute">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h1 class="display-4">FPT Education's <span class="text-gradient">25th Anniversary</span></h1>
-                    <p class="lead">Begin your AI-driven enterprise swiftly - initiate with advanced technology in just
+    <header class="hero-section text-white d-flex align-items-center justify-content-center">
+        <div class="bg-stock w-100 h-100 position-absolute">
+            
+        </div>
+        <div class="hero-content w-100 position-absolute container">
+            <div class="row px-4">
+                <div class="col-12 col-md-6 mx-auto position-relative p-0">
+                    <div class="cel-overlay cel-overlay-hotnews p-0"></div>
+                    <img class="hotnews p-0" src="${pageContext.request.contextPath}/assets/images/hotnews.png" class="img-fluid">
+                    <h4 class="hotnews-title position-absolute">Cổ đông nội bộ FPT: Cổ phiếu FPT xứng đáng là hạng mục đầu tư lâu dài</h4>
+                    <a class="read-more bottom-0 text-light position-absolute" target="_blank" href="https://stockbiz.vn/tin-tuc/co-dong-noi-bo-fpt-co-phieu-fpt-xung-dang-la-hang-muc-dau-tu-lau-dai/24584490">Read More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+</svg></a>
+                </div>
+                    
+                
+                <div class="col-12 col-md-6 px-4 pt-4">
+                    <div class="col-8 ps-2"> 
+                    <h1 class="display-4">Invest in <span class="">HOSE: FPT.VN</span></h1>
+                    <p class="lead text-dark">Begin your AI-driven enterprise swiftly - initiate with advanced technology in just
                         a few minutes for enhanced efficiency.</p>
 
                     <div class="buttons mt-4">
-                        <a class="btn  new-button" href="#">Demo</a>
-                        <a class="btn" href="#">Demo</a>
+                        <a class="btn  new-button rounded" href="#invest">Invest Us</a>
+                     
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-        <div class="liquid ">
-            <div class="liquid-main rotate liquid-item"></div>
-            <div class="liquid-sub-right-end liquid-item zoom-in-out "></div>
-            <div class="liquid-item-1 liquid-item center-subject-out1"></div>
-            <div class="liquid-item-2 liquid-item center-subject-out2"></div>
-            <div class="liquid-item-3 liquid-item center-subject-out3"></div>
-            <div class="liquid-item-4 liquid-item center-subject-out4"></div>
-            <div class="liquid-item-5 liquid-item center-subject-out5"></div>
-        </div>
-
     </header>
 
-    <section class="how-to-use ">
-        <div class="container">
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="card mb-4 mb-md-0">
-                        <div class="card-body d-flex">
-                            <div class="col-4">
-                                <img class="img-fluid" src="${pageContext.request.contextPath}/assets/images/buildwith/Layer 1.png" alt="">
-                            </div>
-                            <div class="col-8">
-                                <h5 class="card-title">Java</h5>
-                                <p class="card-text">AI-driven data analysis optimizes insights, guiding informed
-                                    decisions
-                                    for business growth and efficiency.</p>
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 mb-md-0">
-                        <div class="card-body d-flex">
-                            <div class="col-4">
-                                <img class="img-fluid" src="${pageContext.request.contextPath}/assets/images/buildwith/Layer 2.png" alt="">
-                            </div>
-                            <div class="col-8">
-                                <h5 class="card-title">MS SQL</h5>
-                                <p class="card-text">AI-driven data analysis optimizes insights, guiding informed
-                                    decisions
-                                    for business growth and efficiency.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 mb-md-0">
-                        <div class="card-body d-flex">
-                            <div class="col-4">
-                                <img class="img-fluid" src="${pageContext.request.contextPath}/assets/images/buildwith/Layer 3.png" alt="">
-                            </div>
-                            <div class="col-8">
-                                <h5 class="card-title">Open AI</h5>
-                                <p class="card-text">AI-driven data analysis optimizes insights, guiding informed
-                                    decisions
-                                    for business growth and efficiency.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <section class="section-tab">
