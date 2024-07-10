@@ -215,6 +215,10 @@ header {
     font-size: 1.25em;
     opacity: .8;
 }
+.nav-login button{
+    width: 100%;
+    
+}
 
 .text-rounded {
     color: var(--color-primary);
@@ -936,6 +940,45 @@ footer li{
         transform:translate(0,0) rotate(359deg);
     }
 }
+
+@keyframes swipeRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes swipeLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.c-input{
+    padding: 10px 20px;
+}
+.tab-pane {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.tab-pane.fade.show.active.swipe-right {
+    animation-name: swipeRight !important;
+}
+
+.tab-pane.fade.show.active.swipe-left {
+    animation-name: swipeLeft !important;
+}
+
 
 /* Modal Styling */
 

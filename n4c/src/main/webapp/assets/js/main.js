@@ -38,3 +38,31 @@ $(document).ready(function () {
         },
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const tabs = document.querySelectorAll('[data-bs-toggle="tab"]');
+    let previousIndex = 0;
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('shown.bs.tab', (e) => {
+            const targetId = e.target.getAttribute('data-bs-target');
+            const previousTargetId = e.relatedTarget.getAttribute('data-bs-target');
+            
+            const targetPane = document.querySelector(targetId);
+            const previousPane = document.querySelector(previousTargetId);
+            
+            if (index > previousIndex) {
+                targetPane.classList.add('swipe-right');
+                targetPane.classList.remove('swipe-left');
+            } else {
+                targetPane.classList.add('swipe-left');
+                targetPane.classList.remove('swipe-right');
+            }
+            
+            previousPane.classList.remove('swipe-left', 'swipe-right');
+            
+            previousIndex = index;
+        });
+    });
+});
