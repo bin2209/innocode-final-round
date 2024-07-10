@@ -38,7 +38,7 @@
             });
         </script>
         <div class="container mt-3">
-            <div class="box-content row px-5">
+            <div class="box-content d-flex px-5">
                 <div class="col-12 col-md-6 position-relative p-0">
 
                     <img src="${pageContext.request.contextPath}/assets/images/alpha.png"/>

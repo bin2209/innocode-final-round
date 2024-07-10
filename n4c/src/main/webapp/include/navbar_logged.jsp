@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<nav id="nav" class="navbar navbar-expand-lg overplay-blur">
+<nav id="nav" class="navbar navbar-expand-lg overplay-blur shadow">
     <div class="container ">
         <a class="navbar-brand" href="#"><img src="${pageContext.request.contextPath}/assets/images/fpt.svg" style="width: 60px;" /> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

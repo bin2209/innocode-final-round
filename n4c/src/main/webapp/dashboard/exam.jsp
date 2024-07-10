@@ -12,9 +12,9 @@
 
 <body class="read-page">
     <%@ include file="../include/navbar_logged.jsp" %>
-    <section class="bg-gradient-a dashboard">
+<!--    <section class="bg-gradient-a dashboard">
 
-    </section>
+    </section>-->
 
     <section>
         <div class="container mt-5">
