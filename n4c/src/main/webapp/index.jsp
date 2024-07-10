@@ -310,8 +310,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center">
-                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">BUILD AI</p>
-                    <h2 class="title">Scale Data Engine</h2>
+                   <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Timeline</p>
+                    <h2 class="title">How We Growth</h2>
                     <p class="sub-title">For AI teams, Scale Data Engine improves your models by improving your data.
                     </p>
                 </div>

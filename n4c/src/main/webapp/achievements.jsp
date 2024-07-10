@@ -199,120 +199,14 @@
         </div>
     </section>
 
-    <section class="section-posts bg-gradient-c">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8 mx-auto text-center mb-5">
-                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">News</p>
-                    <h2 class="title">Case Studies & Resources
-                        We've</h2>
-                    <p class="sub-title">We've worked with the world's leading AI teams for years, and delivered more
-                        high-quality data than anybody else.</p>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1 position-relative">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s5.jpeg">
-                             <!--<div class="cel-overlay"></div>-->
-                        </div>
-                        <div class="card-body p-1 mt-3">
-                            <h3>Heading</h3>
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s6.jpeg">
-                        </div>
-                        <div class="card-body p-1 mt-3">
-                            <h3>Heading</h3>
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s1.jpeg">
-                        </div>
-                        <div class="card-body p-1 mt-3">
-                            <h3>Heading</h3>
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s2.jpeg">
-                        </div>
-                        <div class="card-body p-1 mt-3">
-                            <h3>Heading</h3>
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s3.jpeg">
-                        </div>
-                        <div class="card-body p-1 mt-3">
-                            <h3>Heading</h3>
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s4.jpeg">
-                        </div>
-                        <div class="card-body p-1 mt-3">
-                            <h3>Heading</h3>
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
+ 
 
     <section class="bg-gradient-c ">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center">
-                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">BUILD AI</p>
-                    <h2 class="title">Scale Data Engine</h2>
+                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Timeline</p>
+                    <h2 class="title">How We Growth</h2>
                     <p class="sub-title">For AI teams, Scale Data Engine improves your models by improving your data.
                     </p>
                 </div>

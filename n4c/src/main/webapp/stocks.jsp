@@ -101,14 +101,11 @@
     </section>
 
 
-
-
-
     <section class="section-tab">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center mb-5">
-                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Vision</p>
+                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Stocks</p>
                      <h2 class="title">Strategic </h2>
                     <p class="sub-title">FPT continues to pursue the larger goal of becoming a digital enterprise and ranking in the Top 50 companies in the world in providing comprehensive digital transformation services and solutions by 2030.</p>
                     </p>
@@ -203,199 +200,11 @@
         </div>
     </section>
 
-    <section class="section-posts bg-gradient-c">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8 mx-auto text-center mb-5">
-                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">News</p>
-                    <h2 class="title">Case Studies & Resources
-                        We've</h2>
-                    <p class="sub-title">We've worked with the world's leading AI teams for years, and delivered more
-                        high-quality data than anybody else.</p>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1 position-relative">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s5.jpeg">
-                             <!--<div class="cel-overlay"></div>-->
-                        </div>
-                        <div class="card-body p-1 mt-3">
-                            <h3>Heading</h3>
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
+ 
 
-                <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s6.jpeg">
-                        </div>
-                        <div class="card-body p-1 mt-3">
-                            <h3>Heading</h3>
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s1.jpeg">
-                        </div>
-                        <div class="card-body p-1 mt-3">
-                            <h3>Heading</h3>
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s2.jpeg">
-                        </div>
-                        <div class="card-body p-1 mt-3">
-                            <h3>Heading</h3>
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s3.jpeg">
-                        </div>
-                        <div class="card-body p-1 mt-3">
-                            <h3>Heading</h3>
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s4.jpeg">
-                        </div>
-                        <div class="card-body p-1 mt-3">
-                            <h3>Heading</h3>
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="bg-gradient-c ">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8 mx-auto text-center">
-                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">BUILD AI</p>
-                    <h2 class="title">Scale Data Engine</h2>
-                    <p class="sub-title">For AI teams, Scale Data Engine improves your models by improving your data.
-                    </p>
-                </div>
-                <div class="col-12">
-                    <div class="box-content">
-                        <div class="row">
-                            <div class="col-12 col-md-6">
-                                <img class="" src="${pageContext.request.contextPath}/upload/s12.jpeg" alt="">
-                            </div>
-                            <div class="col-12 col-md-6 mt-4 mt-md-0 align-items-center">
-                                <h2>RLHF</h2>
-                                <p class="sub-title py-3">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do
-                                    eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua.</p>
-                                <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut
-                                    labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="box-content">
-                        <div class="row">
-                            <div class="col-12 col-md-6 mt-4 mt-md-0 align-items-center">
-                                <h2>RLHF</h2>
-                                <p class="sub-title py-3">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do
-                                    eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua.</p>
-                                <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut
-                                    labore et dolore magna aliqua.</p>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <img class="" src="${pageContext.request.contextPath}/upload/s13.jpeg" alt="">
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 
     <%@ include file="../include/footer.jsp" %>
-
-    <!-- Modal login -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content backdrop-blur fadeScale">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="login" class="form-label sr-only">Login</label>
-                            <input type="text" class="form-control" id="login" placeholder="Login">
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label sr-only">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password">
-                        </div>
-                        <button type="submit" class="btn new-button">Login</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal login -->
-
 </body>
-
-
 <%@ include file="../include/scripts.jsp" %>

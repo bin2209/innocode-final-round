@@ -13,20 +13,16 @@
         <servlet-class>controller.User_Dashboard_Exam</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Stock</servlet-name>
-        <servlet-class>controller.Stocks</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>Stocks</servlet-name>
-        <servlet-class>controller.Stocks</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>Achievements</servlet-name>
         <servlet-class>controller.Achievements</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>News</servlet-name>
         <servlet-class>controller.News</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Stocks</servlet-name>
+        <servlet-class>controller.Stocks</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>User_Login</servlet-name>
@@ -41,20 +37,16 @@
         <url-pattern>/dashboard/exam</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Stock</servlet-name>
-        <url-pattern>/stock</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Stocks</servlet-name>
-        <url-pattern>/Stocks</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>Achievements</servlet-name>
         <url-pattern>/achievements</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>News</servlet-name>
         <url-pattern>/news</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Stocks</servlet-name>
+        <url-pattern>/stocks</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

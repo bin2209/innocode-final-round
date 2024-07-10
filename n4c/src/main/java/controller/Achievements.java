@@ -31,7 +31,7 @@ public class Achievements extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             response.setContentType("text/html;charset=UTF-8");
-            request.getRequestDispatcher("/achivements.jsp").forward(request, response);
+            request.getRequestDispatcher("/achievements.jsp").forward(request, response);
         }
     }
 
