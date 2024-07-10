@@ -21,8 +21,8 @@
         <servlet-class>controller.Stocks</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Achivements</servlet-name>
-        <servlet-class>controller.Achivements</servlet-class>
+        <servlet-name>Achievements</servlet-name>
+        <servlet-class>controller.Achievements</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>News</servlet-name>

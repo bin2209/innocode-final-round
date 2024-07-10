@@ -20,15 +20,20 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/course">Course</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/news">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/contact">Contact</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/achievements">Achievements</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/stocks">Stocks</a>
                 </li>
             </ul>
             <div class="buttons">
-
                 <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login?value=login">Log In</a>
+
+                <!--LOGOUT-->
+                <!--<a class="btn rounded new-button" href="${pageContext.request.contextPath}/logout">Logout</a>-->
             </div>
         </div>
     </div>

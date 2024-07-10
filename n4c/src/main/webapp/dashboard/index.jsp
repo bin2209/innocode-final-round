@@ -11,7 +11,7 @@
 <%@ include file="../include/header.jsp" %>
 
 <body class="read-page">
-    <%@ include file="../include/navbar_logged.jsp" %>
+    <%@ include file="../include/navbar.jsp" %>
     <section class="bg-gradient-a dashboard">
         <div class="container">
             <p class="my-3">Hello 'username'. Welcome to FPT. Let's explore!</p>
