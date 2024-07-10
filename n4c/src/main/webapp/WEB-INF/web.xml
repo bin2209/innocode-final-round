@@ -49,8 +49,8 @@
         <url-pattern>/Stocks</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Achivements</servlet-name>
-        <url-pattern>/achivements</url-pattern>
+        <servlet-name>Achievements</servlet-name>
+        <url-pattern>/achievements</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>News</servlet-name>
