@@ -68,7 +68,7 @@ public class GetQuizzesServlet extends HttpServlet {
             ArrayList<Quiz> quizzes = User_DB.getAllQuizzesByCourseId(courseId);
             Gson gson = new Gson();
             String json = gson.toJson(quizzes);
-                    response.getWriter().write(json);
+            response.getWriter().write(json);
 
         } else {
             ArrayList<Quiz> quizzes = User_DB.getAllQuizzesByCourseId(courseId);
@@ -81,7 +81,7 @@ public class GetQuizzesServlet extends HttpServlet {
             }
             Gson gson = new Gson();
             String json = gson.toJson(quizzes);
-                    response.getWriter().write(json);
+            response.getWriter().write(json);
 
         }
 
