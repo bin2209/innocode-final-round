@@ -47,7 +47,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 5px solid #FF8C00; /* Màu cam cho border */
+        
             box-sizing: border-box;
             margin-right: 10px; /* Khoảng cách giữa các slide */
             background-color: white;
@@ -65,11 +65,11 @@
         }
 
         .swiper-pagination, .swiper-button-prev, .swiper-button-next, .swiper-scrollbar {
-            background-color: #FF8C00; /* Màu cam cho các nút điều khiển */
+           
         }
 
         .swiper-button-prev, .swiper-button-next {
-            color: #FF8C00; /* Màu cam cho các mũi tên điều hướng */
+            color:  #FF8C00; /* Màu cam cho các mũi tên điều hướng */
         }
 
         .swiper-material-wrapper {
@@ -143,6 +143,23 @@
                         </div>
                     </div>
                 </div>
+                 <div class="swiper-slide">
+                    <div class="swiper-material-wrapper">
+                        <div class="swiper-material-content">
+                            <img class="demo-material-image" data-swiper-material-scale="1.25" src="${pageContext.request.contextPath}/upload/fpt25.jpg"/>
+                            <span class="demo-material-label swiper-material-animate-opacity">Slide 2</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="swiper-slide">
+                    <div class="swiper-material-wrapper">
+                        <div class="swiper-material-content">
+                            <img class="demo-material-image" data-swiper-material-scale="1.25" src="${pageContext.request.contextPath}/upload/fpt4.jpg"/>
+                            <span class="demo-material-label swiper-material-animate-opacity">Slide 2</span>
+                        </div>
+                    </div>
+                </div>
+                          
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -156,7 +173,7 @@
         </div>
     </section>
 
-    <section class="section-posts bg-gradient-c py-5">
+    <section id="news" class="section-posts bg-gradient-c py-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center mb-5">
