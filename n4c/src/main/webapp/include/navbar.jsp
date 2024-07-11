@@ -91,7 +91,6 @@
 
         </div>
         <div class="col-3 d-flex     align-items-center justify-content-end">     
-
             <c:choose>
                 <c:when test="${not empty USER}">
                     <ul class="navbar-nav">
@@ -137,6 +136,8 @@
                             <video id="webcam" autoplay playsinline></video>
                             <canvas class="output_canvas" id="output_canvas"></canvas>
                         </div>
+                        <h3>Distance between Index and Middle Fingers: <span id="fingerDistance">0</span></h3>
+
                     </section>
                     <p> 1 finger to turn Dark Mode On </p>
                     <p> 2 fingers to turn Dark Mode On </p>
@@ -181,7 +182,6 @@
     let results = undefined;
     const checkbox = document.getElementById("checkbox");
     const webcamModal = document.getElementById("webcamModal");
-    let fingerCount = 0;
 
     enableWebcamButton.addEventListener("click", toggleWebcam);
 
@@ -220,7 +220,6 @@
                         runningMode = "VIDEO";
                         handLandmarker.setOptions({runningMode: "VIDEO"});
                         webcamRunning = true;
-//                        enableWebcamButton.innerText = "DISABLE PREDICTIONS";
                         predictWebcam();
                     });
                 })
@@ -235,13 +234,9 @@
         }
         video.srcObject = null;
         webcamRunning = false;
-//        enableWebcamButton.innerText = "ENABLE WEBCAM";
     }
 
     async function predictWebcam() {
-//        canvasElement.style.width = video.videoWidth + "px";
-//        canvasElement.style.height = video.videoHeight + "px";
-
         canvasElement.style.width = "100%";
         canvasElement.style.height = "100%";
         canvasElement.width = video.videoWidth;
@@ -259,32 +254,54 @@
         canvasCtx.save();
         canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
 
-        let fingerCount = 0;
         if (results.landmarks) {
             for (const landmarks of results.landmarks) {
                 drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS, {color: "#00FF00", lineWidth: 5});
                 drawLandmarks(canvasCtx, landmarks, {color: "#FF0000", lineWidth: 2});
 
-                fingerCount = countFingers(landmarks);
+                const fingerCount = countFingers(landmarks);
                 handleScroll(landmarks);
+
+                if (fingerCount === 1) {
+                    console.log("1 ngón tay được phát hiện, bật dark mode");
+                    checkbox.checked = true;
+                    document.body.classList.add("dark");
+                    await delay(500); // Thêm delay 500ms trước khi tiếp tục
+                } else if (fingerCount === 3) {
+                    console.log("3 ngón tay được phát hiện, tắt dark mode");
+                    checkbox.checked = false;
+                    document.body.classList.remove("dark");
+                    await delay(500); // Thêm delay 500ms trước khi tiếp tục
+                } else if (fingerCount === 5) {
+                    console.log("5 ngón tay được phát hiện, đóng webcam");
+                    stopWebcam();
+                    const modal = bootstrap.Modal.getInstance(webcamModal);
+                    if (modal) {
+                        modal.hide();
+                    }
+                    await delay(500); // Thêm delay 500ms trước khi tiếp tục
+                } else if (fingerCount === 2) {
+                    console.log("2 ngón tay được phát hiện, đóng webcam");
+                    const distance = calculateFingerDistance(landmarks);
+                    if (distance > 10) {
+                        const indexTip = landmarks[8];
+                        const middleTip = landmarks[12];
+                        if (indexTip.y < 0.5 && middleTip.y < 0.5) {
+                            // Scroll up
+                            window.scrollBy(0, -1000);
+                            await delay(500); // Thêm delay 500ms trước khi tiếp tục
+                        } else if (indexTip.y > 0.5 && middleTip.y > 0.5) {
+                            // Scroll down
+                            window.scrollBy(0, 1000);
+                            await delay(500); // Thêm delay 500ms trước khi tiếp tục
+                        }
+                    }
+                } else {
+                    console.log("Không có hành động phù hợp với số lượng ngón tay được phát hiện");
+                }
             }
         }
 
-        // Handle different finger counts
-        if (fingerCount === 1) {
-            checkbox.checked = true;
-            document.body.classList.add("dark");
-        } else if (fingerCount === 2) {
-            checkbox.checked = false;
-            document.body.classList.remove("dark");
-        } else if (fingerCount === 5) {
-            // Stop webcam and close modal
-            stopWebcam();
-            const modal = bootstrap.Modal.getInstance(webcamModal);
-            if (modal) {
-                modal.hide();
-            }
-        }
         canvasCtx.restore();
 
         if (webcamRunning === true) {
@@ -295,15 +312,17 @@
     function countFingers(landmarks) {
         const fingerTips = [8, 12, 16, 20];
         let count = 0;
-        for (let i = 0; i < fingerTips.length; i++) {
-            if (landmarks[fingerTips[i]].y < landmarks[fingerTips[i] - 2].y) {
-                count++;
-            }
-        }
-        // Check thumb
-        if (landmarks[4].x < landmarks[3].x) {
+
+        if (landmarks[8].y < landmarks[6].y)
             count++;
-        }
+        if (landmarks[12].y < landmarks[10].y)
+            count++;
+        if (landmarks[16].y < landmarks[14].y)
+            count++;
+        if (landmarks[20].y < landmarks[18].y)
+            count++;
+        if (landmarks[4].x < landmarks[3].x)
+            count++; // Thumb detection
         return count;
     }
 
@@ -312,20 +331,32 @@
         const indexTip = landmarks[8];
         const middleTip = landmarks[12];
 
-        // Calculate distance between index and middle fingers
         const distance = Math.abs(indexTip.y - middleTip.y) * canvasHeight;
 
-        // Define scroll speed based on distance
-        const scrollSpeed = 10; // Adjust this value as needed
+        document.getElementById('fingerDistance').textContent = distance.toFixed(2);
 
-        // Scroll smoothly based on finger positions
         if (indexTip.y * canvasHeight > canvasHeight && middleTip.y * canvasHeight > canvasHeight) {
-            // Both fingers are below the canvas, scroll down
-            window.scrollBy(0, scrollSpeed);
+            window.scrollBy(0, 1000);
         } else if (indexTip.y * canvasHeight < 0 && middleTip.y * canvasHeight < 0) {
-            // Both fingers are above the canvas, scroll up
-            window.scrollBy(0, -scrollSpeed);
+            window.scrollBy(0, -1000);
         }
+    }
+
+    function calculateFingerDistance(landmarks) {
+        const fingerTips = [8, 12, 16, 20];
+        let totalDistance = 0;
+        let count = 0;
+        for (let i = 0; i < fingerTips.length; i++) {
+            for (let j = i + 1; j < fingerTips.length; j++) {
+                const distance = Math.sqrt(
+                        Math.pow(landmarks[fingerTips[i]].x - landmarks[fingerTips[j]].x, 2) +
+                        Math.pow(landmarks[fingerTips[i]].y - landmarks[fingerTips[j]].y, 2)
+                        );
+                totalDistance += distance;
+                count++;
+            }
+        }
+        return totalDistance / count;
     }
 
     const HAND_CONNECTIONS = [
@@ -368,7 +399,6 @@
         });
     }
 
-    // Function to set a cookie
     function setCookie(name, value, days) {
         const d = new Date();
         d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -376,7 +406,6 @@
         document.cookie = name + "=" + (value || "") + ";" + expires + ";path=/";
     }
 
-    // Function to get a cookie by name
     function getCookie(name) {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
@@ -390,7 +419,6 @@
         return null;
     }
 
-    // Function to apply the dark mode based on the cookie value
     function applyDarkMode() {
         const darkMode = getCookie("darkMode");
         if (darkMode === "true") {
@@ -402,7 +430,6 @@
         }
     }
 
-    // Event listener to toggle dark mode and set the cookie
     checkbox.addEventListener("change", () => {
         const isChecked = checkbox.checked;
         if (isChecked) {
@@ -413,13 +440,16 @@
         setCookie("darkMode", isChecked, 7); // Save the preference for 7 days
     });
 
-    // Apply dark mode based on the saved cookie value on page load
     applyDarkMode();
 
-    // Event listener for when the modal is closed
     webcamModal.addEventListener("hidden.bs.modal", () => {
         stopWebcam();
     });
+
+    function delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
 </script>
+
 
 
