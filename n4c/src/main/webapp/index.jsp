@@ -36,7 +36,6 @@
             <div class="liquid-item-4 liquid-item center-subject-out4"></div>
             <div class="liquid-item-5 liquid-item center-subject-out5"></div>
         </div>
-
     </header>
 
     <section class="how-to-use ">

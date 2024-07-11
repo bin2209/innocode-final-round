@@ -1,11 +1,5 @@
-<%-- 
-    Document   : news
-    Created on : Jul 10, 2024, 10:39:29 AM
-    Author     : mac
---%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ include file="../include/header.jsp" %>
-
+<%@ include file="/include/header.jsp" %>
 <body>
     <%@ include file="../include/navbar.jsp" %>
     <style>
@@ -44,6 +38,65 @@
         .section-posts .card-header img {
             border-radius: 8px;
         }
+          .swiper {
+            width: 100%;
+            height: 400px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid #FF8C00; /* Màu cam cho border */
+            box-sizing: border-box;
+            margin-right: 10px; /* Khoảng cách giữa các slide */
+            background-color: white;
+        }
+
+        .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Đảm bảo hình ảnh nằm gọn trong border */
+        }
+
+        .swiper-horizontal {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .swiper-pagination, .swiper-button-prev, .swiper-button-next, .swiper-scrollbar {
+            background-color: #FF8C00; /* Màu cam cho các nút điều khiển */
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            color: #FF8C00; /* Màu cam cho các mũi tên điều hướng */
+        }
+
+        .swiper-material-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .swiper-material-content {
+            position: relative;
+            text-align: center;
+        }
+
+        .swiper-material-animate-opacity {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #FF8C00; /* Màu cam cho nhãn */
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .swiper-slide-active .swiper-material-animate-opacity {
+            opacity: 1;
+        }
     </style>
 
     <header class="hero-section text-center text-white d-flex align-items-center justify-content-center" style="min-height: 100vh; background: url('${pageContext.request.contextPath}/assets/images/hero-bg.jpg') no-repeat center center/cover;">
@@ -71,59 +124,37 @@
         </div>
     </header>
 
-    <section class="how-to-use">
-        <div class="container">
-            <div class="row mt-4 justify-content-end">
-                <div class="col-md-4">
-                    <div class="card mb-4 mb-md-0">
-                        <div class="card-body d-flex">
-                            <div class="col-4">
-                                <img class="img-fluid" src="${pageContext.request.contextPath}/assets/images/buildwith/Layer 1.png" alt="">
-                            </div>
-                            <div class="col-8">
-                                <h5 class="card-title">Java</h5>
-                                <p class="card-text">AI-driven data analysis optimizes insights, guiding informed
-                                    decisions
-                                    for business growth and efficiency.</p>
-                            </div>
+    <section class="newsfeed">
+        <div class="swiper swiper-horizontal">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-material-wrapper">
+                        <div class="swiper-material-content">
+                            <img class="demo-material-image" data-swiper-material-scale="1.25" src="${pageContext.request.contextPath}/upload/fpt5.jpg"/>
+                            <span class="demo-material-label swiper-material-animate-opacity">Slide 1</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 mb-md-0">
-                        <div class="card-body d-flex">
-                            <div class="col-4">
-                                <img class="img-fluid" src="${pageContext.request.contextPath}/assets/images/buildwith/Layer 2.png" alt="">
-                            </div>
-                            <div class="col-8">
-                                <h5 class="card-title">MS SQL</h5>
-                                <p class="card-text">AI-driven data analysis optimizes insights, guiding informed
-                                    decisions
-                                    for business growth and efficiency.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 mb-md-0">
-                        <div class="card-body d-flex">
-                            <div class="col-4">
-                                <img class="img-fluid" src="${pageContext.request.contextPath}/assets/images/buildwith/Layer 3.png" alt="">
-                            </div>
-                            <div class="col-8">
-                                <h5 class="card-title">Open AI</h5>
-                                <p class="card-text">AI-driven data analysis optimizes insights, guiding informed
-                                    decisions
-                                    for business growth and efficiency.</p>
-                            </div>
+                <div class="swiper-slide">
+                    <div class="swiper-material-wrapper">
+                        <div class="swiper-material-content">
+                            <img class="demo-material-image" data-swiper-material-scale="1.25" src="${pageContext.request.contextPath}/upload/fpt2.jpg"/>
+                            <span class="demo-material-label swiper-material-animate-opacity">Slide 2</span>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
         </div>
     </section>
-
-
 
     <section class="section-posts bg-gradient-c py-5">
         <div class="container">
@@ -136,10 +167,11 @@
             </div>
             <div class="row">
                 <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-header p-0 position-relative">
+                <div class="col-12 col-md-4 col-sm-4 p-0">
+                    <div class="card p-2 mb-3">
+                        <div class="card-header p-1 position-relative">
                             <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/fpt.jpeg">
+                            <!--<div class="cel-overlay"></div>-->
                         </div>
                         <div class="card-body">                           
                             <h3>
@@ -242,36 +274,40 @@
         </div>
     </section>
 
-    <%@ include file="../include/footer.jsp" %>
 
-    <!-- Modal login -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content backdrop-blur fadeScale">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="login" class="form-label sr-only">Login</label>
-                            <input type="text" class="form-control" id="login" placeholder="Login">
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label sr-only">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password">
-                        </div>
-                        <button type="submit" class="btn new-button">Login</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal login -->
 
+
+
+    <%@ include file="/include/footer.jsp" %>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal', 
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    draggable: true
+                }
+            });
+        });
+    </script>
 </body>
 
 
-
-<%@ include file="../include/scripts.jsp" %>
+<%@ include file="/include/scripts.jsp" %>
