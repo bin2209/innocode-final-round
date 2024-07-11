@@ -54,7 +54,7 @@
                         <c:forEach var="course" items="${courses}">
                             <div class="col-md-4 mb-4">
                                 <div class="card">
-                                    <img src="https://tse2.mm.bing.net/th?id=OIP.eHCd4r_euPSCQyymxOeUCgHaE7&pid=Api&P=0&h=180" class="card-img-top" alt="Course Image">
+                                    <img src="${course.imageUrl}" class="card-img-top" alt="Course Image">
                                         <div class="card-body">
                                             <h5 class="card-title">${course.title}</h5>
                                             <p class="card-text">${course.description}</p>

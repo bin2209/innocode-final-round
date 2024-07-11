@@ -55,8 +55,9 @@ public class User_DB implements DBinfo {
                 String title = rs.getString("Title");
                 String description = rs.getString("Description");
                 java.util.Date createdAt = rs.getTimestamp("Created_at");
+                String imageUrl = rs.getString("ImageUrl");
 
-                Course course = new Course(courseId, title, description, createdAt);
+                Course course = new Course(courseId, title, description, createdAt, imageUrl);
                 courses.add(course);
             }
         } catch (SQLException ex) {
