@@ -62,32 +62,31 @@ public class GetQuizzesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int courseId = Integer.parseInt(request.getParameter("courseId"));
-        ArrayList<Quiz> quizzes = User_DB.getAllQuizzesByCourseId(courseId);
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("USER");
+        if (user == null) {
+            ArrayList<Quiz> quizzes = User_DB.getAllQuizzesByCourseId(courseId);
+            Gson gson = new Gson();
+            String json = gson.toJson(quizzes);
+                    response.getWriter().write(json);
 
-        // Lấy thông tin lần thử sức của người dùng cho từng quiz
-        int userId = getUserIdFromRequest(request); // Thay userId bằng cách lấy từ request
-        for (Quiz quiz : quizzes) {
-            UserQuizAttempt attempt = User_DB.getUserQuizAttemptByUserIdAndQuizId(userId, quiz.getQuizId());
-            if (attempt != null) {
-                quiz.setUserQuizAttempt(attempt);
+        } else {
+            ArrayList<Quiz> quizzes = User_DB.getAllQuizzesByCourseId(courseId);
+            // Lấy thông tin lần thử sức của người dùng cho từng quiz
+            for (Quiz quiz : quizzes) {
+                UserQuizAttempt attempt = User_DB.getUserQuizAttemptByUserIdAndQuizId(user.getUserId(), quiz.getQuizId());
+                if (attempt != null) {
+                    quiz.setUserQuizAttempt(attempt);
+                }
             }
-        }
+            Gson gson = new Gson();
+            String json = gson.toJson(quizzes);
+                    response.getWriter().write(json);
 
-        Gson gson = new Gson();
-        String json = gson.toJson(quizzes);
+        }
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(json);
-    }
-
-// Hàm hỗ trợ để lấy userId từ request, có thể dựa vào session hoặc cookie
-    private int getUserIdFromRequest(HttpServletRequest request) {
-        // Implement logic để lấy userId từ request
-        // Ví dụ:
-        HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("USER");
-        return user.getUserId();
     }
 
     /**
