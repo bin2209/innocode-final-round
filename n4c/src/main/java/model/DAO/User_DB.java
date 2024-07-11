@@ -48,7 +48,7 @@ public class User_DB implements DBinfo {
 
     public static ArrayList<Course> getAllCourses() {
         ArrayList<Course> courses = new ArrayList<>();
-        String query = "SELECT * FROM Course";
+        String query = "SELECT * FROM Courses";
         try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query); ResultSet rs = pstmt.executeQuery()) {
 
             while (rs.next()) {
@@ -118,7 +118,7 @@ public class User_DB implements DBinfo {
 
     public static ArrayList<Course> getCoursesByMajorId(int majorId) {
         ArrayList<Course> courses = new ArrayList<>();
-        String query = "SELECT * FROM Course WHERE Major_id = ?";
+        String query = "SELECT * FROM Courses WHERE Major_id = ?";
         try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query)) {
 
             pstmt.setInt(1, majorId);
