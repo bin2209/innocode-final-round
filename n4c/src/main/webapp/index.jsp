@@ -106,14 +106,14 @@
                         <div class="cel-overlay"></div>
                         <img class="img-fluid shadow" src="${pageContext.request.contextPath}/assets/images/building/map0.jpg"/>
                         <div class="content position-absolute bottom-0 p-4">
-                            <h2>Ha Noi</h2>
+                            <h2>Campus Ha Noi</h2>
                         </div>
                     </div>
                     <div id="map-1" class="d-none building-map position-relative">
                         <div class="cel-overlay"></div>
                         <img class="img-fluid shadow" src="${pageContext.request.contextPath}/assets/images/building/map1.jpg"/>
                         <div class="content position-absolute bottom-0 p-4">
-                            <h2>Hue</h2>
+                            <h2>Campus Hue</h2>
                         </div>
                     </div>
 
@@ -121,28 +121,28 @@
                         <div class="cel-overlay"></div>
                         <img class="img-fluid shadow" src="${pageContext.request.contextPath}/assets/images/building/map2.jpg"/>
                         <div class="content position-absolute bottom-0 p-4">
-                            <h2>Da Nang</h2>
+                            <h2>Campus Da Nang</h2>
                         </div>
                     </div>
                     <div id="map-3" class="d-none building-map position-relative">
                         <div class="cel-overlay"></div>
                         <img class="img-fluid shadow"src="${pageContext.request.contextPath}/assets/images/building/map3.jpg"/>
                         <div class="content position-absolute bottom-0 p-4">
-                            <h2>Quy Nhon</h2>
+                            <h2>Campus Quy Nhon</h2>
                         </div>
                     </div>
                     <div id="map-4" class="d-none building-map position-relative">
                         <div class="cel-overlay"></div>
                         <img class="img-fluid shadow" src="${pageContext.request.contextPath}/assets/images/building/map4.jpg"/>
                         <div class="content position-absolute bottom-0 p-4">
-                            <h2>Can Tho</h2>
+                            <h2>Campus Can Tho</h2>
                         </div>
                     </div>
                     <div id="map-5" class="d-none building-map position-relative">
                         <div class="cel-overlay"></div>
                         <img class="img-fluid shadow" src="${pageContext.request.contextPath}/assets/images/building/map5.jpeg"/>
                         <div class="content position-absolute bottom-0 p-4">
-                            <h2>Ho Chi Minh</h2>
+                            <h2>Campus Ho Chi Minh</h2>
                         </div>
                     </div>
 
@@ -156,37 +156,37 @@
                         <img class="img-fluid" src="assets/images/building/flag.png"/>
                         <div class="building-select position-absolute w-100 h-100 top-0 left-0">
                             <a href="javascript:void(0)" onclick="showID('map-0')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <svg class="pulse rounded" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
                                 </svg> Ha Noi</a>
                             <a href="javascript:void(0)" onclick="showID('map-1')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <svg class="pulse rounded" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
                                 </svg> Hue</a>
                             <a href="javascript:void(0)" onclick="showID('map-2')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <svg class="pulse rounded" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
                                 </svg> Da Nang</a>
                             <a href="javascript:void(0)" onclick="showID('map-3')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <svg class="pulse rounded" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
                                 </svg> Quy Nhon</a>
                             <a href="javascript:void(0)" onclick="showID('map-4')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <svg class="pulse rounded" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
                                 </svg> Can Tho</a>
                             <a href="javascript:void(0)" onclick="showID('map-5')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <svg class="pulse rounded" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
                                 </svg> Ho Chi Minh</a>
 
                             <a href="javascript:void(0)">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-radar" viewBox="0 0 16 16">
+                                <svg class=" " xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-radar" viewBox="0 0 16 16">
                                 <path d="M6.634 1.135A7 7 0 0 1 15 8a.5.5 0 0 1-1 0 6 6 0 1 0-6.5 5.98v-1.005A5 5 0 1 1 13 8a.5.5 0 0 1-1 0 4 4 0 1 0-4.5 3.969v-1.011A2.999 2.999 0 1 1 11 8a.5.5 0 0 1-1 0 2 2 0 1 0-2.5 1.936v-1.07a1 1 0 1 1 1 0V15.5a.5.5 0 0 1-1 0v-.518a7 7 0 0 1-.866-13.847"/>
                                 </svg> Hoang Sa</a>
 
                             <a href="javascript:void(0)">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-radar" viewBox="0 0 16 16">
+                                <svg class=" " xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-radar" viewBox="0 0 16 16">
                                 <path d="M6.634 1.135A7 7 0 0 1 15 8a.5.5 0 0 1-1 0 6 6 0 1 0-6.5 5.98v-1.005A5 5 0 1 1 13 8a.5.5 0 0 1-1 0 4 4 0 1 0-4.5 3.969v-1.011A2.999 2.999 0 1 1 11 8a.5.5 0 0 1-1 0 2 2 0 1 0-2.5 1.936v-1.07a1 1 0 1 1 1 0V15.5a.5.5 0 0 1-1 0v-.518a7 7 0 0 1-.866-13.847"/>
                                 </svg> Truong Sa</a>
                         </div>

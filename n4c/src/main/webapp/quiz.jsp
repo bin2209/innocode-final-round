@@ -1,17 +1,17 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" import="model.*" import="model.DAO.*"%>
+<%@ page contentType="text/html" pageEncoding="UTF-8" import="model.*" import="model.DAO.*" %>
 <%@ include file="/include/header.jsp" %>
 <%@ include file="/include/navbar.jsp" %>
 
 <div class="progressBarControl col-12 position-fixed bottom-0 border-top" style="z-index: 1;">
     <!-- Progress bar -->
-    <div class="d-flex justify-content-between justify-content-center align-items-center container mx-auto ">
+    <div class="d-flex justify-content-between justify-content-center align-items-center container mx-auto">
         <div class="col-10">
             <div class="progress">
                 <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
             </div>
         </div>
         <div class="col-2 w-100">
-            <button type="submit" class="btn btn-primary rounded submit-quiz mx-5">Submit</button>
+            <button type="submit" form="quizForm" class="btn btn-primary rounded submit-quiz mx-5">Submit</button>
         </div>
     </div>
 </div>
@@ -26,10 +26,8 @@
         </div>
 
         <div class="row">
-
-
             <div class="col-12">
-                <form action="quiz" method="post">
+                <form id="quizForm" action="quiz" method="post">
                     <input type="hidden" name="courseId" value="${courseId}">
                     <input type="hidden" name="quizId" value="${quizId}">
 
@@ -50,15 +48,12 @@
                             </div>
                         </c:forEach>
                     </div>
-
-
                 </form>
             </div>
         </div>
     </div>
 </section>
 
-<%--<%@ include file="/include/footer.jsp" %>--%>
 <%@ include file="/include/scripts.jsp" %>
 
 <script>

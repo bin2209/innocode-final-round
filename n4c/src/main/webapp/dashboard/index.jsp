@@ -26,6 +26,7 @@
             padding: 0;
             transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out;
             color: black;
+       
         }
 
         .card-body .additional-content {
@@ -39,7 +40,7 @@
         }
 
         .card:hover .card-body {
-            transform: translateY(-50%);
+            transform: translateY(-33%);
         }
 
         .card:hover .card-body .card-title {
@@ -98,7 +99,7 @@
             background: rgba(0, 0, 0, 0.6); /* Thêm overlay màu dark khi hover */
         }
     </style>
-    <section class="bg-gradient-a dashboard">
+    <section   class="section-tab bg-gradient-a dashboard">
         <div class="container">
             <div class="row">
                 <div class="col-12 position-relative" style="margin-top:50px;">
@@ -215,7 +216,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="courses">
         <div class="container mt-5">
             <div class="row">
                 <c:set var="courses" value="${User_DB.getAllCoursesByUserId(USER.userId)}" />

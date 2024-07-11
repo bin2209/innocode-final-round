@@ -1207,9 +1207,19 @@ footer li{
     backdrop-filter: brightness(0.5) blur(10px);
 }
 
-
-
+body.dark .dropdown-item:hover{
+    color:black !important;
+    
+}
+body.dark .dropdown-item:active{
+    background-color:none;
+}
 /*DARK MODE*/
+
+body.dark .dropdown-menu{
+        background: #8282827a;
+        border: none;
+}
 body.dark {
     background-color: #292c35;
 } /* #9b59b6 */
@@ -1419,4 +1429,29 @@ body.dark .card-invest .card{
 
 .checkbox:checked + .checkbox-label .ball {
     transform: translateX(24px);
+}   
+
+.pulse {
+  animation: pulse-animation 1s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+}
+
+
+.master{
+  color:black;
+  float:right;
+}
+
+@media (max-width:900px){
+  .master{
+    display:none
+  }
 }   
