@@ -4,16 +4,23 @@
  */
 package model;
 
-import java.util.Date;
-
 public class Quiz {
 
     private int quizId;
     private int courseId;
     private String title;
-    private Date createdAt;
+    private String description;
 
-    // Getters and Setters
+    public Quiz() {
+    }
+
+    public Quiz(int quizId, int courseId, String title, String description) {
+        this.quizId = quizId;
+        this.courseId = courseId;
+        this.title = title;
+        this.description = description;
+    }
+
     public int getQuizId() {
         return quizId;
     }
@@ -38,17 +45,17 @@ public class Quiz {
         this.title = title;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
+    public String getDescription() {
+        return description;
     }
 
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
     public String toString() {
-        return "Quiz{" + "quizId=" + quizId + ", courseId=" + courseId + ", title=" + title + ", createdAt=" + createdAt + '}';
+        return "Quiz{" + "quizId=" + quizId + ", courseId=" + courseId + ", title=" + title + ", description=" + description + '}';
     }
 
 }

@@ -4,16 +4,21 @@
  */
 package model;
 
-import java.util.Date;
-
 public class Question {
 
     private int questionId;
     private int quizId;
     private String questionText;
-    private Date createdAt;
 
-    // Getters and Setters
+    public Question() {
+    }
+
+    public Question(int questionId, int quizId, String questionText) {
+        this.questionId = questionId;
+        this.quizId = quizId;
+        this.questionText = questionText;
+    }
+
     public int getQuestionId() {
         return questionId;
     }
@@ -38,17 +43,9 @@ public class Question {
         this.questionText = questionText;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
     @Override
     public String toString() {
-        return "Question{" + "questionId=" + questionId + ", quizId=" + quizId + ", questionText=" + questionText + ", createdAt=" + createdAt + '}';
+        return "Question{" + "questionId=" + questionId + ", quizId=" + quizId + ", questionText=" + questionText + '}';
     }
 
 }
