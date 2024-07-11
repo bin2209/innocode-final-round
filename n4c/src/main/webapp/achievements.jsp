@@ -12,7 +12,9 @@
 
     <%@ include file="/include/navbar.jsp" %>
     <style>
-
+        #title-history{
+             color: rgb(243 168 85);
+        }
         .bg-gradient-c {
             padding: 60px 0;
         }
@@ -59,6 +61,8 @@
         .timeline-section {
             background: #f9f9f9;
             padding: 60px 0;
+           height: 2900px;
+
         }
 
         .timeline-section .title {
@@ -89,6 +93,7 @@
             position: relative;
             background: inherit;
             width: 50%;
+            margin-bottom: -200px;
         }
 
         .timeline-item:nth-child(odd) {
@@ -99,7 +104,23 @@
             left: 50%;
         }
 
-        .timeline-year {
+        .timeline-year-left {
+            padding: 8px;
+            background: #F9701C;
+            color: white;
+            font-size: 1.2rem;
+            position: absolute;
+            top: 10px;
+            left: -5px;
+            text-align: center;
+            width: 58px;
+            height: 50px;
+            line-height: 30px;
+            border-radius: 50%;
+            z-index: 1;
+             margin-left: 550px;
+        }
+        .timeline-year-right {
             padding: 8px;
             background: #F9701C;
             color: white;
@@ -160,14 +181,7 @@
             text-decoration: underline;
             cursor: pointer;
         }
-        .timeline-item .btn-show-more,
-        .timeline-item .btn-show-less {
-            display: block;
-            margin-top: 10px;
-            color: orange;
-            text-decoration: underline;
-            cursor: pointer;
-        }
+        
     </style>
     <header class="hero-section text-white d-flex align-items-center justify-content-center">
         <div class="bg-courses w-100 h-100 position-absolute"></div>
@@ -175,8 +189,8 @@
             <div class="row px-4">
                 <div class="col-12 col-md-6 mx-auto position-relative p-0">
                     <div class="cel-overlay cel-overlay-hotnews p-0"></div>
-                    <img class="hotnews p-0" src="${pageContext.request.contextPath}/assets/images/hotnews.png" class="img-fluid">
-                        <h4 class="hotnews-title position-absolute">Explore Our Courses</h4>
+                    <img class="hotnews p-0" src="${pageContext.request.contextPath}/assets/images/namTien.png" class="img-fluid">
+                        <h4 class="hotnews-title position-absolute">Explore Our Achievements</h4>
                         <a class="read-more bottom-0 text-light position-absolute" href="#">Read More 
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
@@ -186,8 +200,8 @@
 
                 <div class="col-12 col-md-6 px-4 pt-4">
                     <div class="col-8 ps-2"> 
-                        <h1 class="display-4">Join <span class="">Our Community</span></h1>
-                        <p class="lead text-dark">Enroll in our advanced technology courses to enhance your skills and career.</p>
+                        <h1 class="display-4">Join <span class="">Our Achievements</span></h1>
+                        <p class="lead text-dark">“Thành công là một quá trình, không phải là một kết quả.”.</p>
 
                         <div class="buttons mt-4">
                             <a class="btn new-button rounded" href="#achievements">Achivements</a>
@@ -239,13 +253,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="title text-center">Historic Milestone</h2>
+                    <h2 id="title-history"class="title text-center">Historic Milestone</h2>
                 </div>
                 <div class="col-12">
                     <div class="timeline">
                         <!-- 2024 -->
                         <div class="timeline-item">
-                            <div class="timeline-year">2024</div>
+                            <div class="timeline-year-left">2024</div>
                             <div class="timeline-content">
                                 <h3>The Impact Rankings</h3>
                                 <p>On June 1st, FPT University ascended to the 401-600 group in THE Impact Rankings 2024...</p>
@@ -260,7 +274,7 @@
 
                         <!-- 2019 -->
                         <div class="timeline-item">
-                            <div class="timeline-year">2019</div>
+                            <div class="timeline-year-right">2019</div>
                             <div class="timeline-content">
                                 <h3>Best Brand in Education Tertiary</h3>
                                 <p>FPT University was awarded as the Best Brand in Education Tertiary in 2019...</p>
@@ -275,7 +289,7 @@
 
                         <!-- 2017 -->
                         <div class="timeline-item">
-                            <div class="timeline-year">2017</div>
+                            <div class="timeline-year-left">2017</div>
                             <div class="timeline-content">
                                 <h3>ICT Award, Sao Khuê, QS Star "3-star"</h3>
                                 <p>FPT University gained significant achievements in training and research...</p>
@@ -290,7 +304,7 @@
 
                         <!-- 2010 -->
                         <div class="timeline-item">
-                            <div class="timeline-year">2010</div>
+                            <div class="timeline-year-right">2010</div>
                             <div class="timeline-content">
                                 <h3>FPT University - Da Nang Campus</h3>
                                 <p>In 2010, FPT University established its Da Nang Campus...</p>
@@ -305,7 +319,7 @@
 
                         <!-- 2007 -->
                         <div class="timeline-item">
-                            <div class="timeline-year">2007</div>
+                            <div class="timeline-year-left">2007</div>
                             <div class="timeline-content">
                                 <h3>First Batch With 300 Freshmen</h3>
                                 <p>In 2007, FPT University welcomed its first batch of 300 freshmen...</p>
@@ -320,7 +334,7 @@
 
                         <!-- 2006 -->
                         <div class="timeline-item">
-                            <div class="timeline-year">2006</div>
+                            <div class="timeline-year-right">2006</div>
                             <div class="timeline-content">
                                 <h3>The journey to seek trial autonomy</h3>
                                 <p>In 2006, FPT University embarked on its journey towards trial autonomy...</p>
@@ -335,7 +349,7 @@
 
                         <!-- 2006-1 -->
                         <div class="timeline-item">
-                            <div class="timeline-year">2006</div>
+                            <div class="timeline-year-left">2006</div>
                             <div class="timeline-content">
                                 <h3>Started its first course in January 2007</h3>
                                 <p>FPT University was officially established in 2006 and started its first course in January 2007...</p>
@@ -350,7 +364,7 @@
 
                         <!-- 1999 -->
                         <div class="timeline-item">
-                            <div class="timeline-year">1999</div>
+                            <div class="timeline-year-right">1999</div>
                             <div class="timeline-content">
                                 <h3>Vietnam's First International Standard Software Training</h3>
                                 <p>In 1999, FPT University started Vietnam's first international standard software training program...</p>
