@@ -19,8 +19,9 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/news">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/achievements">Achievements</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/achievements#achievements">Achievements</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="${pageContext.request.contextPath}/stocks">Stocks</a>
                 </li>

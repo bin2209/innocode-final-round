@@ -350,8 +350,8 @@ header {
     border-radius: 50px !important;
 }
 .read-more{
-    right: 0px;
-    padding: 2em 3em;
+        right: 0px;
+    padding: 0em 0em;
     z-index: 99;
 }
 .hotnews-title{
