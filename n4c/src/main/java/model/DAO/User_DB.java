@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Course;
 import static model.DAO.DBinfo.driver;
+import model.Major;
 
 public class User_DB implements DBinfo {
 
@@ -47,16 +48,18 @@ public class User_DB implements DBinfo {
 
     public static ArrayList<Course> getAllCourses() {
         ArrayList<Course> courses = new ArrayList<>();
-        String query = "SELECT * FROM Courses";
+        String query = "SELECT * FROM Course";
         try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query); ResultSet rs = pstmt.executeQuery()) {
+
             while (rs.next()) {
                 int courseId = rs.getInt("Course_id");
                 String title = rs.getString("Title");
                 String description = rs.getString("Description");
                 java.util.Date createdAt = rs.getTimestamp("Created_at");
                 String imageUrl = rs.getString("ImageUrl");
+                int majorId = rs.getInt("Major_id");
 
-                Course course = new Course(courseId, title, description, createdAt, imageUrl);
+                Course course = new Course(courseId, title, description, createdAt, imageUrl, majorId);
                 courses.add(course);
             }
         } catch (SQLException ex) {
@@ -91,5 +94,49 @@ public class User_DB implements DBinfo {
             Logger.getLogger(User_DB.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
+    }
+
+    public static ArrayList<Major> getAllMajor() {
+        ArrayList<Major> majors = new ArrayList<>();
+        String query = "SELECT * FROM Major";
+        try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query); ResultSet rs = pstmt.executeQuery()) {
+
+            while (rs.next()) {
+                int majorId = rs.getInt("Major_id");
+                String title = rs.getString("Title");
+                String description = rs.getString("Description");
+                // Nếu bạn muốn lấy thêm các trường khác từ bảng Major, hãy thêm vào đây
+                Major major = new Major(majorId, title, description);
+                majors.add(major);
+            }
+            System.out.println("Major");
+        } catch (SQLException ex) {
+            Logger.getLogger(User_DB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return majors;
+    }
+
+    public static ArrayList<Course> getCoursesByMajorId(int majorId) {
+        ArrayList<Course> courses = new ArrayList<>();
+        String query = "SELECT * FROM Course WHERE Major_id = ?";
+        try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query)) {
+
+            pstmt.setInt(1, majorId);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    int courseId = rs.getInt("Course_id");
+                    String title = rs.getString("Title");
+                    String description = rs.getString("Description");
+                    java.util.Date createdAt = rs.getTimestamp("Created_at");
+                    String imageUrl = rs.getString("ImageUrl");
+
+                    Course course = new Course(courseId, title, description, createdAt, imageUrl, majorId);
+                    courses.add(course);
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(User_DB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return courses;
     }
 }

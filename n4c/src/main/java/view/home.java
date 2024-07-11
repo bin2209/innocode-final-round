@@ -10,6 +10,9 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import model.DAO.User_DB;
+import model.Major;
 
 /**
  *
@@ -28,7 +31,11 @@ public class home extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        User_DB udb = new User_DB();
+        ArrayList<Major> majors = udb.getAllMajor(); // Lấy danh sách các ngành học từ CSDL
+        request.getSession().setAttribute("majors", majors); // Đẩy danh sách lên session
+
+        request.getRequestDispatcher("index.jsp").forward(request, response); // Forward đến trang index.jsp
     }
 
 }

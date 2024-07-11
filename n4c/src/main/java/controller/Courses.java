@@ -59,7 +59,16 @@ public class Courses extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         User_DB udb = new User_DB();
-        ArrayList<Course> courses = udb.getAllCourses();
+        String majorIdParam = request.getParameter("majorId");
+        ArrayList<Course> courses;
+
+        if (majorIdParam != null && !majorIdParam.isEmpty()) {
+            int majorId = Integer.parseInt(majorIdParam);
+            courses = udb.getCoursesByMajorId(majorId);
+        } else {
+            courses = udb.getAllCourses();
+        }
+
         request.setAttribute("courses", courses);
         request.getRequestDispatcher("courses.jsp").forward(request, response);
     }

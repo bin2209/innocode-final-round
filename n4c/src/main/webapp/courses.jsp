@@ -5,10 +5,10 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ include file="../include/header.jsp" %>
+<%@ include file="/include/header.jsp" %>
 
 <body>
-    <%@ include file="../include/navbar.jsp" %>
+    <%@ include file="/include/navbar.jsp" %>
 
     <header class="hero-section text-white d-flex align-items-center justify-content-center">
         <div class="bg-courses w-100 h-100 position-absolute"></div>
@@ -27,7 +27,7 @@
 
                 <div class="col-12 col-md-6 px-4 pt-4">
                     <div class="col-8 ps-2"> 
-                        <h1 class="display-4">Join <span class="">Our Courses</span></h1>
+                        <h1 class="display-4">Join <span class="">Our Community</span></h1>
                         <p class="lead text-dark">Enroll in our advanced technology courses to enhance your skills and career.</p>
 
                         <div class="buttons mt-4">
@@ -39,7 +39,7 @@
         </div>
     </header>
 
-    <section class="section-tab">
+    <section class="section-tab" id="courses">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center mb-5">
@@ -48,7 +48,7 @@
                     <p class="sub-title">Explore a variety of courses designed to help you achieve your goals. Learn from the best and get hands-on experience.</p>
                 </div>
             </div>
-            <div class="row" id="courses">
+            <div class="row"">
                 <c:choose>
                     <c:when test="${not empty courses}">
                         <c:forEach var="course" items="${courses}">
@@ -107,6 +107,6 @@
         </div>
     </section>
 
-    <%@ include file="../include/footer.jsp" %>
+    <%@ include file="/include/footer.jsp" %>
 </body>
-<%@ include file="../include/scripts.jsp" %>
+<%@ include file="/include/scripts.jsp" %>

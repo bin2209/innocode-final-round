@@ -13,20 +13,30 @@ public class Course {
     private String description;
     private Date createdAt;
     private String imageUrl; // Add this field
+    private int majorId;
 
     // Constructor
     public Course() {
     }
 
-    public Course(int courseId, String title, String description, Date createdAt, String imageUrl) {
+    public Course(int courseId, String title, String description, Date createdAt, String imageUrl, int majorId) {
         this.courseId = courseId;
         this.title = title;
         this.description = description;
         this.createdAt = createdAt;
         this.imageUrl = imageUrl;
+        this.majorId = majorId;
+    }
+    // Getters and Setters
+
+    public int getMajorId() {
+        return majorId;
     }
 
-    // Getters and Setters
+    public void setMajorId(int majorId) {
+        this.majorId = majorId;
+    }
+
     public int getCourseId() {
         return courseId;
     }

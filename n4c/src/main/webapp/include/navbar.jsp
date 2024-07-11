@@ -28,9 +28,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="${pageContext.request.contextPath}/stocks">Stocks</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/courses">Courses</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/courses">Major</a>
+
                 </li>
+                <ul class="dropdown-menu" aria-labelledby="majorDropdown">
+                    <c:forEach var="major" items="${majors}">
+                        <li><a class="dropdown-item" href="${pageContext.request.contextPath}/courses?majorId=${major.majorId}">
+                                ${major.title}
+                            </a></li>
+                    </c:forEach>
+                </ul>
             </ul>
             <div class="buttons">
                 <%
