@@ -103,7 +103,7 @@
             <div class="row px-4">
                 <div class="col-12 col-md-6 mx-auto position-relative p-0">
                     <div class="cel-overlay cel-overlay-hotnews p-0"></div>
-                    <img class="hotnews p-0" src="${pageContext.request.contextPath}/assets/images/hotnews.png" class="img-fluid">
+                    <img class="hotnews p-0" src="${pageContext.request.contextPath}/assets/images/namTien.png" class="img-fluid">
                         <h4 class="hotnews-title position-absolute">Explore Our Courses</h4>
                         <a class="read-more bottom-0 text-light position-absolute" href="#">Read More 
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
