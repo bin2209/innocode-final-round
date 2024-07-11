@@ -1,5 +1,12 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" import="model.*" import="model.DAO.*"%>
- <style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Landmark Detection using MediaPipe HandLandmarker</title>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <style>
         body {
             font-family: Roboto;
             margin: 2em;
@@ -115,100 +122,31 @@
             color: #ddd;
         }
     </style>
-<nav id="nav" class="navbar navbar-expand-lg overplay-blur shadow">
-    <div class="container ">
-        <a class="navbar-brand" href="${pageContext.request.contextPath}"><img src="${pageContext.request.contextPath}/assets/images/fpt.svg" style="width: 60px;" /> </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse w-100 justify-content-between" id="navbarNav">
+</head>
 
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/news#news">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/achievements#achievements">Achievements</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/stocks">Stocks</a>
-                </li>
+<body>
    
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/courses" id="majorDropdown" role="button" aria-haspopup="true" aria-expanded="false">Major</a>
-                    <ul class="dropdown-menu  rounded-1 shadow" aria-labelledby="majorDropdown">
-                        <div class="position-absolute w-100 h-100 overlay-blur" style="z-index: -1;"></div>
-                        <div class="position-relative">
-                            <c:forEach var="major" items="${majors}">
-                                <li class=""><a class="dropdown-item rounded" href="${pageContext.request.contextPath}/courses?majorId=${major.majorId}#courses">
-                                        ${major.title}
-                                    </a></li>
-                            </c:forEach>
-                        </div>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a id="webcamButton" class="mdc-button mdc-button--raised" data-bs-toggle="modal" data-bs-target="#webcamModal">
-                        <span class="mdc-button__ripple"></span>
-                        <span class="mdc-button__label">ENABLE WEBCAM</span>
-                    </a>
-                </li>
-                <!-- Webcam Modal -->
-<div class="modal fade" id="webcamModal" tabindex="-1" aria-labelledby="webcamModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="webcamModalLabel">Webcam Feed</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <section id="demos">
-                    <div class="video-container" id="liveView">
-                        <video id="webcam" autoplay playsinline></video>
-                        <canvas class="output_canvas" id="output_canvas"></canvas>
-                    </div>
-                    <h3>Finger Count: <span id="fingerCount">0</span></h3>
-                </section>
-            </div>
-        </div>
-    </div>
-</div>
- 
-            </ul>
-            <div class="buttons">
-                <%
-                    User user = (User) session.getAttribute("USER");
-                    if (user != null) {
-                %>
-                <span class="navbar-text">
-                    <%= user.getEmail()%>
-                </span>
-                <a class="btn rounded new-button" href="${pageContext.request.contextPath}/logout">Logout</a>
-                <%
-                } else {
-                %>
-                <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login?value=login">Log In</a>
-                <%
-                    }
-                %>
-            </div>
-        </div>
-        <div class="swipe-mode px-2">
-            <input type="checkbox" class="checkbox" id="checkbox">
-            <label for="checkbox" class="checkbox-label">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <span class="ball"></span>
-            </label>
-        </div>
-    </div>
 
-</nav>
+    <section id="demos" class="invisible">
+        <div class="video-container" id="liveView">
+            <button id="webcamButton" class="mdc-button mdc-button--raised">
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__label">ENABLE WEBCAM</span>
+            </button>
+            <video id="webcam" autoplay playsinline></video>
+            <canvas class="output_canvas" id="output_canvas"></canvas>
+        </div>
+        <h3>Finger Count: <span id="fingerCount">0</span></h3>
+    </section>
+
+    <div class="swipe-mode px-2">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
+        </label>
+    </div>
 
     <script type="module">
         import {
@@ -470,4 +408,7 @@
 
         // Apply dark mode based on the saved cookie value on page load
         applyDarkMode();
-</script>
+    </script>
+</body>
+
+</html>
