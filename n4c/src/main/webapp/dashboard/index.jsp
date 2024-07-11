@@ -101,7 +101,7 @@
     <section class="bg-gradient-a dashboard">
         <div class="container">
             <div class="row">
-                <div class="col-12 position-relative">
+                <div class="col-12 position-relative" style="margin-top:50px;">
                     <div class="card px-3 py-3 rounded container position-relative border-0">
                         <div class="row">
                             <div class="col-12 col-md-2 col-sm-2 text-center">
