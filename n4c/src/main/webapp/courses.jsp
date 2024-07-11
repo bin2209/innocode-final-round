@@ -60,7 +60,8 @@
 
         .card:hover .card-img-top {
             transform: scale(1.05);
-            filter: blur(5px);
+            filter: blur(15px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Thêm bóng màu đen để tạo hiệu ứng dark */
         }
 
         .card .cel-overlay {
@@ -75,6 +76,25 @@
 
         .card:hover .cel-overlay {
             background: rgba(0, 0, 0, 0.6); /* Dark gray overlay */
+        }
+        .cel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0); /* Ban đầu không có overlay */
+            transition: background 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+            pointer-events: none; /* Đảm bảo lớp phủ không chặn tương tác */
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+            filter: blur(15px);
+        }
+
+        .card:hover .cel-overlay {
+            background: rgba(0, 0, 0, 0.6); /* Thêm overlay màu dark khi hover */
         }
     </style>
     <header class="hero-section text-white d-flex align-items-center justify-content-center">
@@ -111,14 +131,15 @@
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center mb-5">
                     <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Courses</p>
-                    <h2 class="title">Our Popular Courses</h2>
-                    <p class="sub-title">Explore a variety of courses designed to help you achieve your goals. Learn from the best and get hands-on experience.</p>
+                    <h2 class="title">FPT University Major</h2>
+                    <p class="sub-title">Explore a variety of major designed to help you achieve your goals. Learn from the best and get hands-on experience.</p>
                 </div>
             </div>
             <div class="row">
                 <c:choose>
                     <c:when test="${not empty courses}">
                         <c:forEach var="course" items="${courses}">
+
                             <div class="col-md-3 mb-4">
                                 <div class="card rounded1dot2 p-0 h-100">
                                     <div class="position-relative">
@@ -130,7 +151,7 @@
                                             <h5 class="card-title z-index-9999">${course.title}</h5>
                                             <div class="additional-content">
                                                 <p class="card-text my-4 z-index-9999">${course.description}</p>
-                                                <a href="#" class="btn btn-primary rounded z-index-9999">View Details</a>
+                                                <a href="javascript:void(0);" onclick="showQuizzes(${course.courseId}, '${course.title}')" class="btn btn-primary rounded z-index-9999">View Details</a>
                                             </div>
                                         </div>
                                     </div>
@@ -182,5 +203,79 @@
     </section>
 
     <%@ include file="/include/footer.jsp" %>
+
+    <!-- Modal -->
+    <div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quizModalLabel">Quizzes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="quizList" class="list-group">
+                        <!-- Quiz items will be injected here -->
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 <%@ include file="/include/scripts.jsp" %>
+
+<script>
+    function showQuizzes(courseId, courseTitle) {
+        // Set the modal title
+        document.getElementById('quizModalLabel').innerText = courseTitle + ' - Quizzes';
+
+        // Clear the previous quiz list
+        const quizList = document.getElementById('quizList');
+        quizList.innerHTML = '';
+
+        // Fetch quizzes for the selected course
+        fetch('${pageContext.request.contextPath}/getQuizzes?courseId=' + courseId)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        data.forEach(quiz => {
+                            const listItem = document.createElement('li');
+                            listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+                            listItem.innerText = quiz.title;
+
+                            const quizButton = document.createElement('button');
+                            quizButton.className = 'btn btn-primary btn-sm';
+
+                            if (quiz.userQuizAttempt) {
+                                quizButton.innerText = 'Review';
+                                quizButton.onclick = () => {
+                                    window.location.href = '${pageContext.request.contextPath}/quiz?courseId=' + courseId + '&quizId=' + quiz.quizId;
+                                };
+                            } else {
+                                quizButton.innerText = 'Go to Quiz';
+                                quizButton.onclick = () => {
+                                    window.location.href = '${pageContext.request.contextPath}/quiz?courseId=' + courseId + '&quizId=' + quiz.quizId;
+                                };
+                            }
+
+                            listItem.appendChild(quizButton);
+                            quizList.appendChild(listItem);
+                        });
+                    } else {
+                        const listItem = document.createElement('li');
+                        listItem.className = 'list-group-item';
+                        listItem.innerText = 'No quizzes available for this course.';
+                        quizList.appendChild(listItem);
+                    }
+                });
+
+        // Show the modal
+        const quizModal = new bootstrap.Modal(document.getElementById('quizModal'));
+        quizModal.show();
+    }
+</script>
+
+

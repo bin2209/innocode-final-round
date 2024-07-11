@@ -370,7 +370,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-12">
                     <div class="box-content">
                         <div class="row">
@@ -392,6 +391,7 @@
                         </div>
                     </div>
                 </div>
+                            
             </div>
         </div>
     </section>

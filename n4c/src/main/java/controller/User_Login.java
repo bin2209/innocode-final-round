@@ -94,6 +94,7 @@ public class User_Login extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession session = request.getSession();
         String email = request.getParameter("loginEmail");
         String password = request.getParameter("loginPassword");
 
@@ -107,11 +108,13 @@ public class User_Login extends HttpServlet {
         User user = User.login(email, password);
 
         if (user != null) {
-            HttpSession session = request.getSession();
+            
             session.setAttribute("USER", user);
             response.sendRedirect("home");
         } else {
-            out.println("Invalid email or password!");
+            String msg = "Invalid email or password! ";
+            session.setAttribute("message", msg);
+            response.sendRedirect("login?value=login");
         }
     }
 }
