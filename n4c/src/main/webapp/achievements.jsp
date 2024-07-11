@@ -247,11 +247,11 @@
                     <div class="row text-center achievements-stats">
                         <div class="col-6 col-md-2">
                             <h3 class="counter" data-target="20">0</h3>
-                            <p>PROVINCES</p>
+                            <p>PROVINCES MAJOR</p>
                         </div>
                         <div class="col-6 col-md-2">
                             <h3 class="counter" data-target="145000">0</h3>
-                            <p>STUDENTS</p>
+                            <p>STUDENTS LEARNING</p>
                         </div>
                         <div class="col-6 col-md-2">
                             <h3 class="counter" data-target="180">0</h3>
@@ -259,11 +259,11 @@
                         </div>
                         <div class="col-6 col-md-2">
                             <h3 class="counter" data-target="40">0</h3>
-                            <p>COUNTRIES HAVING PARTNERS</p>
+                            <p>COUNTRIES  PARTNERS</p>
                         </div>
                         <div class="col-6 col-md-2">
                             <h3 class="counter" data-target="1">0</h3>
-                            <p>INTERNATIONAL STUDENT EXCHANGE AND DEVELOPMENT CENTER</p>
+                            <p> STUDENT EXCHANGE </p>
                         </div>
                     </div>
                 </div>

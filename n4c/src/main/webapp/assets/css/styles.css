@@ -563,6 +563,29 @@ header {
 .popup-blur .modal-body{
     padding: 0 32px;
 }
+/*webcam-popup*/
+.webcam-popup{
+
+}
+#demos{
+    padding: 0;
+}
+.webcam-popup video{
+    border-radius: 1.2em;
+    margin-bottom: 1em;
+}
+
+.webcam-popup .modal-dialog{
+    position: fixed;
+    width: 100%;
+    right: 2vh;
+    height: 95vh;
+    z-index: 9;
+    display: flex;
+    margin: 0;
+    align-content: flex-end;
+    align-items: flex-end;
+}
 /*Course*/
 #courses .card img{
     aspect-ratio: 1 / 1;
@@ -1206,9 +1229,11 @@ body.dark .bg-gradient-a{
 body.dark .container{
     /*background: #292c35;*/
 }
-
-body.dark footer{
-    background-image: linear-gradient(-178deg, #292c35 20%, #fd7002 108%) !important;
+body.dark .modal-content{
+    background: rgb(109 109 109 / 70%);
+}
+body.dark footer {
+    background-image: linear-gradient(-178deg, #292c35 100%, #fd7002 108%) !important;
 }
 
 body.dark .btn{
@@ -1229,7 +1254,7 @@ body.dark .overplay-map{
 }
 
 body.dark  .progressBarControl{
-     background: #292c35;
+    background: #292c35;
 }
 
 body.dark .submit-quiz{
@@ -1237,7 +1262,7 @@ body.dark .submit-quiz{
     color: white;
 }
 .have-sub svg{
-        transition: all .3s;
+    transition: all .3s;
 }
 .dropdown:hover .have-sub svg{
     transform: rotate(180deg);
@@ -1394,4 +1419,4 @@ body.dark .card-invest .card{
 
 .checkbox:checked + .checkbox-label .ball {
     transform: translateX(24px);
-}
+}   

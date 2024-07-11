@@ -3,15 +3,6 @@
 <body>
     <%@ include file="/include/navbar.jsp" %>
     <style>
-        .lead {
-            color: #FF8C00; /* Dark orange color */
-            font-weight: bold;
-        }
-
-        .hero-section {
-            min-height: 100vh;
-            background: url('${pageContext.request.contextPath}/assets/images/hero-bg.jpg') no-repeat center center/cover;
-        }
 
         .card-title {
             font-weight: bold;
@@ -26,37 +17,38 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+
         .section-posts .card-body h3 {
             font-size: 18px;
             font-weight: bold;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
 
         .section-posts .card-body p {
             font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
         }
 
-        .section-posts .card-header img {
+        .section-posts img {
             border-radius: 8px;
         }
-          .swiper {
-            width: 100%;
-            height: 400px;
-        }
 
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        
-            box-sizing: border-box;
-            margin-right: 10px; /* Khoảng cách giữa các slide */
-            background-color: white;
-        }
 
         .swiper-slide img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* Đảm bảo hình ảnh nằm gọn trong border */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .swiper-horizontal {
@@ -64,20 +56,12 @@
             flex-direction: row;
         }
 
-        .swiper-pagination, .swiper-button-prev, .swiper-button-next, .swiper-scrollbar {
-           
-        }
 
         .swiper-button-prev, .swiper-button-next {
             color:  #FF8C00; /* Màu cam cho các mũi tên điều hướng */
         }
 
-        .swiper-material-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
+
 
         .swiper-material-content {
             position: relative;
@@ -97,103 +81,64 @@
         .swiper-slide-active .swiper-material-animate-opacity {
             opacity: 1;
         }
+        #news{
+            margin: 100px 0;
+        }
+
+        #news .cel-overlay{
+            height: 97% !important;
+        }
+        .cel-news-tag {
+            background: #EE923D;
+            width: fit-content;
+            border-radius: 20px;
+            margin: 13px;
+            float: right;
+            font-size: 14px;
+            padding: 1px 12px;
+            font-weight: 300;
+            position: absolute;
+            top: 0;
+            color: white;
+            right: 0;
+        }
+        .fill{
+            transform: rotateY(0) !important;
+            -webkit-transform: rotateY(0) !important;
+        }
     </style>
 
-    <header class="hero-section text-center text-white d-flex align-items-center justify-content-center" style="min-height: 100vh; background: url('${pageContext.request.contextPath}/assets/images/hero-bg.jpg') no-repeat center center/cover;">
-        <div class="hero-content w-100 position-relative">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h1 class="display-4">FPT Education's <span class="text-gradient">25th Anniversary</span></h1>
-                    <p class="lead">Begin your AI-driven enterprise swiftly - initiate with advanced technology in just
-                        a few minutes for enhanced efficiency.</p>
-                    <div class="buttons mt-4">
-                        <a class="btn btn-primary btn-lg mx-2" href="#">Demo</a>                        
-                    </div>
-                </div>
-            </div>
-        </div>
+    <header class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+        <video class="fill hide-for-small" preload="" playsinline="" autoplay="" muted="" loop="">
+            <source src="${pageContext.request.contextPath}/assets/fpt.mp4" type="video/mp4">	</video>
 
-        <div class="liquid">
-            <div class="liquid-main rotate liquid-item"></div>
-            <div class="liquid-sub-right-end liquid-item zoom-in-out"></div>
-            <div class="liquid-item-1 liquid-item center-subject-out1"></div>
-            <div class="liquid-item-2 liquid-item center-subject-out2"></div>
-            <div class="liquid-item-3 liquid-item center-subject-out3"></div>
-            <div class="liquid-item-4 liquid-item center-subject-out4"></div>
-            <div class="liquid-item-5 liquid-item center-subject-out5"></div>
-        </div>
     </header>
 
-    <section class="newsfeed">
-        <div class="swiper swiper-horizontal">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="swiper-material-wrapper">
-                        <div class="swiper-material-content">
-                            <img class="demo-material-image" data-swiper-material-scale="1.25" src="${pageContext.request.contextPath}/upload/fpt5.jpg"/>
-                            <span class="demo-material-label swiper-material-animate-opacity">Slide 1</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="swiper-material-wrapper">
-                        <div class="swiper-material-content">
-                            <img class="demo-material-image" data-swiper-material-scale="1.25" src="${pageContext.request.contextPath}/upload/fpt2.jpg"/>
-                            <span class="demo-material-label swiper-material-animate-opacity">Slide 2</span>
-                        </div>
-                    </div>
-                </div>
-                 <div class="swiper-slide">
-                    <div class="swiper-material-wrapper">
-                        <div class="swiper-material-content">
-                            <img class="demo-material-image" data-swiper-material-scale="1.25" src="${pageContext.request.contextPath}/upload/fpt25.jpg"/>
-                            <span class="demo-material-label swiper-material-animate-opacity">Slide 2</span>
-                        </div>
-                    </div>
-                </div>
-                 <div class="swiper-slide">
-                    <div class="swiper-material-wrapper">
-                        <div class="swiper-material-content">
-                            <img class="demo-material-image" data-swiper-material-scale="1.25" src="${pageContext.request.contextPath}/upload/fpt4.jpg"/>
-                            <span class="demo-material-label swiper-material-animate-opacity">Slide 2</span>
-                        </div>
-                    </div>
-                </div>
-                          
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-        </div>
-    </section>
 
     <section id="news" class="section-posts bg-gradient-c py-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center mb-5">
-                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">News</p>
+                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light mt-4">News</p>
                     <h2 class="title">FPT Education News</h2>
                     <p class="sub-title">Stay updated with the latest news and events from FPT Education. Discover how we are shaping the future of education with innovative programs and global collaborations.</p>
                 </div>
             </div>
             <div class="row">
                 <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-4 p-0">
-                    <div class="card p-2 mb-3">
-                        <div class="card-header p-1 position-relative">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/fpt.jpeg">
-                            <!--<div class="cel-overlay"></div>-->
+                <div class="col-12 col-md-4 col-sm-6 mb-4 px-3 ">
+                    <div class="card p-0 mb-3 rounded1dot2">
+                        <div class=" p-0 position-relative">
+                            <img class="img-fluid w-100 rounded1dot2" src="${pageContext.request.contextPath}/upload/fpt.jpeg">
+                            <div class="cel-overlay">
+                            </div>
+                            <div class="cel-news-tag">Tin tức mới</div>
                         </div>
-                        <div class="card-body">                           
+                        <div class="card-body px-4 mb-3 mt-2">                           
                             <h3>
                                 <a href="https://daihoc.fpt.edu.vn/en/opening-ceremony-at-fpt-universitys-campuses/" target="_blank" style="text-decoration: none; color: inherit;">
-                                    FPT Education Opens New Campus
+                                    Opening Ceremony at FPT University’s campuses
                                 </a>
                             </h3>
                             <p>FPT Education has inaugurated a new campus, expanding its facilities to accommodate more students and enhance learning experiences.</p>
@@ -202,12 +147,14 @@
                 </div>
 
                 <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-header p-0">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/fpt1.jpg">
+                <div class="col-12 col-md-4 col-sm-6 mb-4 px-3 ">
+                    <div class="card p-0 mb-3 rounded1dot2">
+                        <div class=" p-0 position-relative">
+                            <img class="img-fluid w-100 rounded1dot2" src="${pageContext.request.contextPath}/upload/fpt1.jpg">
+                            <div class="cel-overlay"></div> 
+                            <div class="cel-news-tag">Tin tức mới</div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body px-4 mb-3 mt-2">
                             <h3>
                                 <a href="https://daihoc.fpt.edu.vn/en/fpt-university-climbs-global-rankings-in-sustainable-development/" target="_blank" style="text-decoration: none; color: inherit;">
                                     FPT University Ranked Top in Technology
@@ -219,12 +166,14 @@
                 </div>
 
                 <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-header p-0">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/fpt2.jpg">
+                <div class="col-12 col-md-4 col-sm-6 mb-4 px-3 ">
+                    <div class="card p-0 mb-3 rounded1dot2">
+                        <div class=" p-0 position-relative">
+                            <img class="img-fluid w-100 rounded1dot2" src="${pageContext.request.contextPath}/upload/fpt2.jpg">
+                            <div class="cel-overlay"></div> 
+                            <div class="cel-news-tag">Tin tức mới</div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body px-4 mb-3 mt-2">
                             <h3>
                                 <a href="https://daihoc.fpt.edu.vn/en/news/" target="_blank" style="text-decoration: none; color: inherit;">
                                     FPT Education Hosts International Conference
@@ -236,12 +185,14 @@
                 </div>
 
                 <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-header p-0">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/fpt3.jpeg">
+                <div class="col-12 col-md-4 col-sm-6 mb-4 px-3 ">
+                    <div class="card p-0 mb-3 rounded1dot2">
+                        <div class=" p-0 position-relative">
+                            <img class="img-fluid w-100 rounded1dot2" src="${pageContext.request.contextPath}/upload/fpt3.jpeg">
+                            <div class="cel-overlay"></div> 
+                            <div class="cel-news-tag">Tin tức mới</div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body px-4 mb-3 mt-2">
                             <h3>
                                 <a href="https://daihoc.fpt.edu.vn/truong-dai-hoc-fpt-cong-bo-to-chuc-giai-dau-robot-quy-mo-toan-cau-tai-viet-nam/" target="_blank" style="text-decoration: none; color: inherit;">
                                     FPT University announces organization of global robot tournament in Vietnam
@@ -254,12 +205,14 @@
                 </div>
 
                 <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-header p-0">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/fpt4.jpg">
+                <div class="col-12 col-md-4 col-sm-6 mb-4 px-3 ">
+                    <div class="card p-0 mb-3 rounded1dot2">
+                        <div class=" p-0 position-relative">
+                            <img class="img-fluid w-100 rounded1dot2" src="${pageContext.request.contextPath}/upload/fpt4.jpg">
+                            <div class="cel-overlay"></div> 
+                            <div class="cel-news-tag">Tin tức mới</div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body px-4 mb-3 mt-2">
                             <h3>
                                 <a href="https://fptcameraiq.vn/blog/sinh-nhat-fpt-telecom-25-nam-cuc-ky-an-tuong-qua-goc-nhin-cua-fpt-camera" target="_blank" style="text-decoration: none; color: inherit;">
                                     FPT Telecom's 25th birthday is extremely impressive through the perspective of FPT Camera
@@ -272,12 +225,14 @@
                 </div>
 
                 <!-- Loop this post in back-end -->
-                <div class="col-12 col-md-4 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-header p-0">
-                            <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/fpt5.jpg">
+                <div class="col-12 col-md-4 col-sm-6 mb-4 px-3 ">
+                    <div class="card p-0 mb-3 rounded1dot2">
+                        <div class=" p-0 position-relative">
+                            <img class="img-fluid w-100 rounded1dot2" src="${pageContext.request.contextPath}/upload/fpt5.jpg">
+                            <div class="cel-overlay"></div> 
+                            <div class="cel-news-tag">Tin tức mới</div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body px-4 mb-3 mt-2">
                             <h3>
                                 <a href="https://www.facebook.com/daihocfptdanang/photos/fuda-summer-jamboree-2024-h%C6%A1n-c%E1%BA%A3-m%E1%BB%99t-m%C3%B9a-h%C3%A8-l%C3%A0-h%C3%A0nh-tr%C3%ACnh-tr%E1%BA%A3i-nghi%E1%BB%87m-nhi%E1%BB%81u-%C4%91i%E1%BB%81u/854358806723113/" target="_blank" style="text-decoration: none; color: inherit;">
                                     💥FUDA SUMMER JAMBOREE 2024 - MORE THAN A SUMMER, A JOURNEY TO EXPERIENCE MANY NEW THINGS💥
@@ -299,9 +254,9 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const swiper = new Swiper('.swiper', {
+            const swiper = new Swiper('.swiper1', {
                 // Optional parameters
-                direction: 'horizontal', 
+                direction: 'horizontal',
                 loop: true,
 
                 // If we need pagination
@@ -316,11 +271,6 @@
                     prevEl: '.swiper-button-prev'
                 },
 
-                // And if we need scrollbar
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                    draggable: true
-                }
             });
         });
     </script>
