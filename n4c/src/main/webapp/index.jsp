@@ -97,67 +97,105 @@
 
 
 
-    <section class="section-tab">
+    <section id="section-map" class="section-map">
+        <div class="overplay-map"></div>
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8 mx-auto text-center mb-5">
-                    <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Vision</p>
-                    <h2 class="title">Strategic </h2>
-                    <p class="sub-title">FPT continues to pursue the larger goal of becoming a digital enterprise and ranking in the Top 50 companies in the world in providing comprehensive digital transformation services and solutions by 2030.</p>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-6">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#tab1">
-                                <h3>Insdustry Relevent</h3>
-                                <p>This vision emphasizes aligning educational programs with the evolving needs of various industries. By integrating practical skills and knowledge demanded by the job market, education systems can better prepare students for successful careers.
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " data-bs-toggle="tab" href="#tab2">
-                                <h3>Global</h3>
-                                <p>A global perspective in education encourages an understanding of diverse cultures and international collaboration. This vision aims to equip students with the skills and mindset needed to thrive in a interconnected world.
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " data-bs-toggle="tab" href="#tab3">
-                                <h3>Smart Education</h3>
-                                <p>Smart education leverages technology to enhance learning experiences. This vision includes utilizing digital tools, personalized learning, and data analytics to create more effective and engaging educational environments.
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " data-bs-toggle="tab" href="#tab3">
-                                <h3>Mega</h3>
-                                <p>Recognizing and adapting to mega trends, such as technological advancements and societal shifts, is crucial for modern education. This vision involves staying ahead of significant global changes to ensure education systems remain relevant and future-proof.
-                                </p>
-                            </a>
-                        </li>
-                    </ul>
+                    <div id="map-0" class="d-none building-map position-relative">
+                        <div class="cel-overlay"></div>
+                        <img class="img-fluid shadow" src="${pageContext.request.contextPath}/assets/images/building/map0.jpg"/>
+                        <div class="content position-absolute bottom-0 p-4">
+                            <h2>Ha Noi</h2>
+                        </div>
+                    </div>
+                    <div id="map-1" class="d-none building-map position-relative">
+                        <div class="cel-overlay"></div>
+                        <img class="img-fluid shadow" src="${pageContext.request.contextPath}/assets/images/building/map1.jpg"/>
+                        <div class="content position-absolute bottom-0 p-4">
+                            <h2>Hue</h2>
+                        </div>
+                    </div>
+
+                    <div id="map-2" class="d-none building-map position-relative">
+                        <div class="cel-overlay"></div>
+                        <img class="img-fluid shadow" src="${pageContext.request.contextPath}/assets/images/building/map2.jpg"/>
+                        <div class="content position-absolute bottom-0 p-4">
+                            <h2>Da Nang</h2>
+                        </div>
+                    </div>
+                    <div id="map-3" class="d-none building-map position-relative">
+                        <div class="cel-overlay"></div>
+                        <img class="img-fluid shadow"src="${pageContext.request.contextPath}/assets/images/building/map3.jpg"/>
+                        <div class="content position-absolute bottom-0 p-4">
+                            <h2>Quy Nhon</h2>
+                        </div>
+                    </div>
+                    <div id="map-4" class="d-none building-map position-relative">
+                        <div class="cel-overlay"></div>
+                        <img class="img-fluid shadow" src="${pageContext.request.contextPath}/assets/images/building/map4.jpg"/>
+                        <div class="content position-absolute bottom-0 p-4">
+                            <h2>Can Tho</h2>
+                        </div>
+                    </div>
+                    <div id="map-5" class="d-none building-map position-relative">
+                        <div class="cel-overlay"></div>
+                        <img class="img-fluid shadow" src="${pageContext.request.contextPath}/assets/images/building/map5.jpeg"/>
+                        <div class="content position-absolute bottom-0 p-4">
+                            <h2>Ho Chi Minh</h2>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="col-md-6">
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="tab1">
-                            <img class="img-fluid" src="${pageContext.request.contextPath}/assets/images/tab1.png" alt="">
-                        </div>
-                        <div class="tab-pane fade" id="tab2">
-                            <h3>Tab 2 Content</h3>
-                            <p>This is the content for Tab 2.</p>
-                        </div>
-                        <div class="tab-pane fade" id="tab3">
-                            <h3>Tab 3 Content</h3>
-                            <p>This is the content for Tab 3.</p>
+                <div class="col-12 col-md-5 ps-5">
+
+                    <!--<p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-4 text-light">The Building</p>-->
+                    <h2 class="title text-black">The Building</h2>
+                    <p class="sub-title mb-4">Acts as a gateway to the campus with a green façade clearly dictating the future direction of the campus</p>
+                    <div class="position-relative px-5">
+                        <img class="img-fluid" src="assets/images/building/flag.png"/>
+                        <div class="building-select position-absolute w-100 h-100 top-0 left-0">
+                            <a href="javascript:void(0)" onclick="showID('map-0')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg> Ha Noi</a>
+                            <a href="javascript:void(0)" onclick="showID('map-1')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                </svg> Hue</a>
+                            <a href="javascript:void(0)" onclick="showID('map-2')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                </svg> Da Nang</a>
+                            <a href="javascript:void(0)" onclick="showID('map-3')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                </svg> Quy Nhon</a>
+                            <a href="javascript:void(0)" onclick="showID('map-4')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                </svg> Can Tho</a>
+                            <a href="javascript:void(0)" onclick="showID('map-5')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                </svg> Ho Chi Minh</a>
+
+                            <a href="javascript:void(0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-radar" viewBox="0 0 16 16">
+                                <path d="M6.634 1.135A7 7 0 0 1 15 8a.5.5 0 0 1-1 0 6 6 0 1 0-6.5 5.98v-1.005A5 5 0 1 1 13 8a.5.5 0 0 1-1 0 4 4 0 1 0-4.5 3.969v-1.011A2.999 2.999 0 1 1 11 8a.5.5 0 0 1-1 0 2 2 0 1 0-2.5 1.936v-1.07a1 1 0 1 1 1 0V15.5a.5.5 0 0 1-1 0v-.518a7 7 0 0 1-.866-13.847"/>
+                                </svg> Hoang Sa</a>
+
+                            <a href="javascript:void(0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-radar" viewBox="0 0 16 16">
+                                <path d="M6.634 1.135A7 7 0 0 1 15 8a.5.5 0 0 1-1 0 6 6 0 1 0-6.5 5.98v-1.005A5 5 0 1 1 13 8a.5.5 0 0 1-1 0 4 4 0 1 0-4.5 3.969v-1.011A2.999 2.999 0 1 1 11 8a.5.5 0 0 1-1 0 2 2 0 1 0-2.5 1.936v-1.07a1 1 0 1 1 1 0V15.5a.5.5 0 0 1-1 0v-.518a7 7 0 0 1-.866-13.847"/>
+                                </svg> Truong Sa</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section class="bg-gradient-a brand-ai-section">
         <div class="container">
@@ -390,5 +428,37 @@
 
 </body>
 
+<script>
+
+
+
+    function showID(id) {
+        // Hide all images
+        const images = document.querySelectorAll('.building-map');
+        images.forEach(image => image.classList.add('d-none'));
+
+        const sectionMap = document.getElementById("section-map");
+
+        // Show the selected image and update the background image of the section
+        const selectedImageContainer = document.getElementById(id);
+        if (selectedImageContainer) {
+            selectedImageContainer.classList.remove('d-none');
+            const imgElement = selectedImageContainer.querySelector('img');
+            if (imgElement) {
+                const imageUrl = imgElement.getAttribute('src');
+                const section = document.getElementById('section-map');
+                sectionMap.style.backgroundImage = 'url(' + imageUrl + ')';
+                console.log(imageUrl);
+            }
+        }
+    }
+
+// Optionally, show the first image by default
+    document.addEventListener('DOMContentLoaded', () => {
+        showID('map-0'); // Show the first image initially
+    });
+
+
+</script>
 
 <%@ include file="include/scripts.jsp" %>

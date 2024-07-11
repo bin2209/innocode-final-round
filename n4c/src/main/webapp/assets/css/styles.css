@@ -212,7 +212,7 @@ header {
 }
 
 .sub-title{
-    font-size: 1.25em;
+    font-size: 1em;
     opacity: .8;
 }
 .nav-login button{
@@ -1139,6 +1139,7 @@ body.dark .text-rounded{
 
 body.dark .timeline-section{
     background: #292c35;
+
 }
 
 body.dark .timeline-content{
@@ -1154,6 +1155,100 @@ body.dark .card-invest .card{
 .checkbox {
     opacity: 0;
     position: absolute;
+}
+.section-map .cel-overlay{
+    padding: 0;
+    margin: 0;
+    border-radius: 30px;
+    background: linear-gradient(0deg, rgb(0 0 0 / 31%) 16%, rgba(0, 0, 0, 0) 28%, rgba(0, 212, 255, 0) 82%) !important;
+}
+.building-map {
+    height:400px;
+
+}
+.section-map{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+}
+.overplay-map{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(174deg, #ffffff 34%, #eeb570 139%);
+    opacity: 0.8;
+}
+
+.building-select {
+    color: white;
+}
+.text-black{
+    z-index: 22;
+    position: relative;
+    color: black;
+}
+.building-select a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.building-select a:first-child{
+    top: 8%;
+    left: 21%;
+}
+
+.building-select a:nth-child(2){
+    top: 38%;
+    left: 35%;
+}
+.building-select a:nth-child(3){
+    top: 41%;
+    left: 37%;
+}
+
+.building-select a:nth-child(4){
+    top: 60%;
+    left: 49%;
+}
+
+.building-select a:nth-child(5){
+    top: 80%;
+    left: 23%;
+}
+
+
+.building-select a:nth-child(6){
+    top: 74%;
+    left: 31%;
+}
+
+.building-select a:nth-child(7){
+    top: 40%;
+    left: 70%;
+
+}
+
+.building-select a:nth-child(8){
+    top: 93%;
+    left: 58%;
+
+}
+.building-map .content h2{
+    position: relative;
+    color: white;
+    font-size: 25px;
+    padding-left: 5px;
+    z-index: 99;
+}
+
+.section-map .building-map img{
+    height:400px;
+    border-radius: 30px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .checkbox-label {
