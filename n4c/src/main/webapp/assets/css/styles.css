@@ -475,13 +475,25 @@ header {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
-
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+#nav .dropdown-item{
+    padding:10px !important;
+}
 #nav .show {
     padding: 20px 0 !important;
     transition: all 0.3s ease-in-out;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
+.dropdown-menu{
+    /*display: block;*/
+    padding: 20px 0;
+    background: #ffffff7a;
+
+
+}
 
 /*Course*/
 #courses .card img{
@@ -508,7 +520,9 @@ header {
 .z-index-9999{
     z-index: 9999 !important;
 }
-
+#nav .show{
+    height: unset;
+}
 
 #courses .btn{
     font-size: 13px;

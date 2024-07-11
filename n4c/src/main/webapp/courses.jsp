@@ -48,7 +48,7 @@
                     <p class="sub-title">Explore a variety of courses designed to help you achieve your goals. Learn from the best and get hands-on experience.</p>
                 </div>
             </div>
-            <div class="row"  id="course">
+            <div class="row">
                 <c:choose>
                     <c:when test="${not empty courses}">
                         <c:forEach var="course" items="${courses}">
