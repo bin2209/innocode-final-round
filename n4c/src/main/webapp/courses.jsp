@@ -60,7 +60,8 @@
 
         .card:hover .card-img-top {
             transform: scale(1.05);
-            filter: blur(5px);
+            filter: blur(15px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Thêm bóng màu đen để tạo hiệu ứng dark */
         }
 
         .card .cel-overlay {
@@ -75,6 +76,25 @@
 
         .card:hover .cel-overlay {
             background: rgba(0, 0, 0, 0.6); /* Dark gray overlay */
+        }
+        .cel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0); /* Ban đầu không có overlay */
+            transition: background 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+            pointer-events: none; /* Đảm bảo lớp phủ không chặn tương tác */
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+            filter: blur(15px);
+        }
+
+        .card:hover .cel-overlay {
+            background: rgba(0, 0, 0, 0.6); /* Thêm overlay màu dark khi hover */
         }
     </style>
     <header class="hero-section text-white d-flex align-items-center justify-content-center">
@@ -111,8 +131,8 @@
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center mb-5">
                     <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Courses</p>
-                    <h2 class="title">Our Popular Courses</h2>
-                    <p class="sub-title">Explore a variety of courses designed to help you achieve your goals. Learn from the best and get hands-on experience.</p>
+                    <h2 class="title">FPT University Major</h2>
+                    <p class="sub-title">Explore a variety of major designed to help you achieve your goals. Learn from the best and get hands-on experience.</p>
                 </div>
             </div>
             <div class="row">
