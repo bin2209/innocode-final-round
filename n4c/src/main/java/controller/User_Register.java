@@ -20,10 +20,9 @@ import model.User;
  */
 public class User_Register extends HttpServlet {
 
-    protected void doget(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.getRequestDispatcher("/auth/register.jsp").forward(request, response);
-
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -36,16 +35,18 @@ public class User_Register extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         if (password == null || rePassword == null || !password.equals(rePassword)) {
-            String msg = "Mật khẩu không trùng khớp";
+            String msg = "Passwords are not duplicates";
             session.setAttribute("message", msg);
+            response.sendRedirect(request.getContextPath() + "/register");
             return;
         }
 
         User_DB userDB = new User_DB();
 
         if (userDB.isEmailExist(email)) {
-            String msg = "Email đã tồn tại";
+            String msg = "Email already exist";
             session.setAttribute("message", msg);
+            response.sendRedirect(request.getContextPath() + "/register");
             return;
         }
 
@@ -59,11 +60,13 @@ public class User_Register extends HttpServlet {
         User user = new User(0, email, hashedPassword, 0, 1);
 
         if (userDB.addUser(user)) {
-            String msg = "Đăng ký thành công";
+            String msg = "Registration Success";
             session.setAttribute("message", msg);
+            response.sendRedirect(request.getContextPath() + "/login?value=login");
         } else {
-            String msg = "Gặp lỗi khi đăng ký";
+            String msg = "Error while register";
             session.setAttribute("message", msg);
+            response.sendRedirect(request.getContextPath() + "/register");
         }
     }
 }
