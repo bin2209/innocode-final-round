@@ -42,7 +42,7 @@ public class User_Login extends HttpServlet {
             request.getSession().setAttribute("USER", userInfo);
             session.setAttribute("message", msg);
 //            response.sendRedirect("login?value=loginwithgoogle");
-            request.getRequestDispatcher("test.jsp").forward(request, response);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         } else {
             String msg = "Email account has not been created yet! ";
             session.setAttribute("message", msg);
