@@ -12,9 +12,6 @@
 
     <%@ include file="/include/navbar.jsp" %>
     <style>
-        #title-history{
-             color: rgb(243 168 85);
-        }
         .bg-gradient-c {
             padding: 60px 0;
         }
@@ -61,8 +58,6 @@
         .timeline-section {
             background: #f9f9f9;
             padding: 60px 0;
-           height: 2900px;
-
         }
 
         .timeline-section .title {
@@ -93,7 +88,7 @@
             position: relative;
             background: inherit;
             width: 50%;
-            margin-bottom: -200px;
+
         }
 
         .timeline-item:nth-child(odd) {
@@ -104,7 +99,7 @@
             left: 50%;
         }
 
-        .timeline-year-left {
+        .timeline-year {
             padding: 8px;
             background: #F9701C;
             color: white;
@@ -118,24 +113,6 @@
             line-height: 30px;
             border-radius: 50%;
             z-index: 1;
-             margin-top: -20px;
-        }
-        .timeline-year-right {
-            padding: 8px;
-            background: #F9701C;
-            color: white;
-            font-size: 1.2rem;
-            position: absolute;
-            top: 10px;
-            left: -5px;
-            text-align: center;
-            width: 58px;
-            height: 50px;
-            line-height: 30px;
-            border-radius: 50%;
-            z-index: 1;
-            margin-left: 530px;
-           margin-top: -20px;
         }
 
         .timeline-content {
@@ -183,7 +160,50 @@
             text-decoration: underline;
             cursor: pointer;
         }
-        
+        .timeline-item .btn-show-more,
+        .timeline-item .btn-show-less {
+            display: block;
+            margin-top: 10px;
+            color: orange;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .timeline-year-left {
+            padding: 8px;
+            background: #F9701C;
+            color: white;
+            font-size: 1.2rem;
+            position: absolute;
+            top: 10px;
+            left: -5px;
+            text-align: center;
+            width: 58px;
+            height: 50px;
+            line-height: 30px;
+            border-radius: 50%;
+            z-index: 1;
+            margin-top: -20px;
+        }
+        .timeline-year-right {
+            padding: 8px;
+            background: #F9701C;
+            color: white;
+            font-size: 1.2rem;
+            position: absolute;
+            top: 10px;
+            left: -5px;
+            text-align: center;
+            width: 58px;
+            height: 50px;
+            line-height: 30px;
+            border-radius: 50%;
+            z-index: 1;
+            margin-left: 530px;
+            margin-top: -20px;
+        }
+         #title-history{
+             color: rgb(243 168 85);
+        }
     </style>
     <header class="hero-section text-white d-flex align-items-center justify-content-center">
         <div class="bg-courses w-100 h-100 position-absolute"></div>
@@ -275,7 +295,7 @@
                         </div>
 
                         <!-- 2019 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item" style="margin-top: -200px;">
                             <div class="timeline-year-right">2019</div>
                             <div class="timeline-content">
                                 <h3>Best Brand in Education Tertiary</h3>
@@ -290,7 +310,7 @@
                         </div>
 
                         <!-- 2017 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item"  style="margin-top: -200px;">
                             <div class="timeline-year-left">2017</div>
                             <div class="timeline-content">
                                 <h3>ICT Award, Sao Khuê, QS Star "3-star"</h3>
@@ -305,7 +325,7 @@
                         </div>
 
                         <!-- 2010 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item"  style="margin-top: -200px;">
                             <div class="timeline-year-right">2010</div>
                             <div class="timeline-content">
                                 <h3>FPT University - Da Nang Campus</h3>
@@ -320,7 +340,7 @@
                         </div>
 
                         <!-- 2007 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item"  style="margin-top: -200px;"> 
                             <div class="timeline-year-left">2007</div>
                             <div class="timeline-content">
                                 <h3>First Batch With 300 Freshmen</h3>
@@ -335,7 +355,7 @@
                         </div>
 
                         <!-- 2006 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item"  style="margin-top: -200px;">
                             <div class="timeline-year-right">2006</div>
                             <div class="timeline-content">
                                 <h3>The journey to seek trial autonomy</h3>
@@ -350,7 +370,7 @@
                         </div>
 
                         <!-- 2006-1 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item"  style="margin-top: -200px;">
                             <div class="timeline-year-left">2006</div>
                             <div class="timeline-content">
                                 <h3>Started its first course in January 2007</h3>
@@ -365,7 +385,7 @@
                         </div>
 
                         <!-- 1999 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item"  style="margin-top: -200px;">
                             <div class="timeline-year-right">1999</div>
                             <div class="timeline-content">
                                 <h3>Vietnam's First International Standard Software Training</h3>
@@ -393,7 +413,7 @@
                     <!--<p class="text-uppercase text-light text-rounded font-weight-300 mx-auto text-center my-5">BUILD AI</p>-->
                     <h2 class=" text-light outline-text text-uppercase mb-5">Anniversary</h2>
                 </div>
-                <div class="col-12 col-md-9     ">
+                <div class="col-12 col-md-9 ">
                     <h2 class="text-uppercase mb-3 text-light">trusted</h2>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
