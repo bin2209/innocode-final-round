@@ -46,22 +46,21 @@
                 </div>
 
                 <c:if test="${not empty message}">
-                    <%
-                        session.removeAttribute("message");
+                    <%                        session.removeAttribute("message");
                     %>
                 </c:if>
 
                 <div class="col-12 col-md-6 mt-3 ps-5">
                     <ul class="nav-login  nav mb-3 border rounded" id="myTab" role="tablist">
                         <li class="nav-item col-6" role="presentation">
-                            <button class="btn rounded w-100 " id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="true">Sign Up</button>
+                            <a href="${pageContext.request.contextPath}/register" ><button class="btn rounded w-100 active " id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="false" tabindex="-1">Sign Up</button></a>
                         </li>
                         <li class="nav-item col-6" role="presentation">
-                            <button class="btn rounded w-100 active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="false" tabindex="-1">Log In</button>
+                            <a href="${pageContext.request.contextPath}/login?value=login"><button class="btn rounded w-100 " id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true" >Log In</button></a>
                         </li>
                     </ul>
                     <div class="tab-content " id="myTabContent">
-                        <div class="tab-pane fade " id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                        <div class="tab-pane fade show active" id="signup" role="tabpanel" aria-labelledby="signup-tab">
                             <h2 class="mb-3">Sign Up</h2>
                             <form action="register" method="post">
                                 <div class="mb-3">

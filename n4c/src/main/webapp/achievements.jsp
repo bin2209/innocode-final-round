@@ -151,7 +151,9 @@
             margin-top: 10px;
         }
 
-        .timeline-item .read-more {
+
+        .timeline-item .btn-show-more,
+        .timeline-item .btn-show-less {
             display: block;
             margin-top: 10px;
             color: orange;
@@ -180,7 +182,7 @@
                         <p class="lead text-dark">Enroll in our advanced technology courses to enhance your skills and career.</p>
 
                         <div class="buttons mt-4">
-                            <a class="btn new-button rounded" href="#achivements">Achivements</a>
+                            <a class="btn new-button rounded" href="#achievements">Achivements</a>
                         </div>
                     </div>
                 </div>
@@ -188,7 +190,7 @@
         </div>
     </header>
 
-    <section class="section-tab" id="achivements">
+    <section class="section-tab" id="achievements">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center mb-5">
@@ -233,114 +235,122 @@
                 </div>
                 <div class="col-12">
                     <div class="timeline">
-                        <!-- 2023 -->
+                        <!-- 2024 -->
                         <div class="timeline-item">
-                            <div class="timeline-year">2023</div>
+                            <div class="timeline-year">2024</div>
                             <div class="timeline-content">
-                                <h3>The Impact Ranking</h3>
-                                <p>On June 1st, FPT University ranked in the 601-800 group in THE Impact Rankings 2023...</p>
-                                <span class="read-more">Read More</span>
-                                <div class="full-text">
-                                    <p>Based on the United Nations' 17 Sustainable Development Goals in terms of peace, justice, and prosperity globally, FPT University has achieved a new ranking among the 1591 universities from across the globe that are taking part in the ranking.</p>
+                                <h3>The Impact Rankings</h3>
+                                <p>On June 1st, FPT University ascended to the 401-600 group in THE Impact Rankings 2024...</p>
+                                <div class="full-text" style="display: none;">
+                                    <p>Based on the United Nations' 17 Sustainable Development Goals in terms of peace, justice, and prosperity globally, FPT University has achieved a new ranking among the 1591 universities from across the globe that are participating in the ranking.</p>
+                                    <a class="btn-show-less" style="display: none;">Show less</a>
                                 </div>
-                                <img src="${pageContext.request.contextPath}/upload/image.jpg" alt="2023 Achievement">
-                            </div>
-                        </div>
-
-                        <!-- 2022 -->
-                        <div class="timeline-item">
-                            <div class="timeline-year">2019</div>
-                            <div class="timeline-content">
-                                <h3>Best Brand in Education Tertiary</h3>
-                                <p>FPT University was awarded as the Best Brand in Education Tertiary in 2019...</p>
-                                <span class="read-more">Read More</span>
-                                <div class="full-text">
-                                    <p>At the ASOCIO Digital Summit 2018 (Tokyo City, Japan), the ASOCIO 2018 Award Council decided to award FPT University in the category of Excellent IT teaching educational organization. In 2018, FPT University was honored to be the Best Brands in Education Tertiary - Excellent University. FPT Education was honored in the category of Excellence educational institution brand. In November 2019, ACBSP officially recognized the teaching quality of FPT University to meet the international educational quality standards.</p>
-                                </div>
-                                <img src="${pageContext.request.contextPath}/upload/ASOCIO_Awards.jpg" alt="2019 Achievement">
-                            </div>
-                        </div>
-
-                        <!-- 2021 -->
-                        <div class="timeline-item">
-                            <div class="timeline-year">2017</div>
-                            <div class="timeline-content">
-                                <h3>ICT Award, Sao Khuê, QS Star "3-star"</h3>
-                                <p>FPT University gained significant achievements in training and research...</p>
-                                <span class="read-more">Read More</span>     
-                                <div class="full-text">
-                                    <p>In 10 years of operation and development, FPT University has gained impressive achievements in training and research. Domestically, FPT University has earned a reputation as an award holder in information technology such as ICT and 'Sao Khue' Awards. On the rating scale of international credibility, FPT University is the first academic institution in Vietnam to meet QS Stars' 3-star quality standard, of which criteria such as Teaching, Facilities, Employability and Social Responsibility are rated 5 stars. Besides, FPT University is one of the few universities in Vietnam to obtain quality certification - ISO 9001: 2008. In addition, FPT University's fame has been widely known thanks to its students' remarkable achievements in Vietnam and the world as well. They are ACM/ICPC. Olympic Informatics Super Cup, IT Award for Female Vietnamese, and Vietnam's Golden Globe Award.</p>
-                                </div>
-                                <img src="${pageContext.request.contextPath}/upload/chung_ket_sk_2016_2017-14_59_45_468.jpg" alt="2017 Achievement">
-                            </div>
-                        </div>
-
-                        <!-- 2020 -->
-                        <div class="timeline-item">
-                            <div class="timeline-year">2010</div>
-                            <div class="timeline-content">
-                                <h3>FPT University - Da Nang Campus</h3>
-                                <p>In 2010, FPT University established its Da Nang Campus...</p>
-                                <span class="read-more">Read More</span>
-                                <div class="full-text">
-                                    <p>In 2010, The Viet Nam Minister of Education and Training signed Decision No. 657/QD-BGDDT agreeing to establish the FPT University - Da Nang Campus. It is a memorable milestone for many staff and lecturers as it also marks the presence of FPT University in the Central Viet Nam region.</p>
-                                </div>
-                                <img src="${pageContext.request.contextPath}/upload/BT (6).jpg" alt="2010 Achievement">
+                                <a class="btn-show-more">Show more</a>
+                                <img src="https://university.fpt.edu.vn/wp-content/uploads/2024/06/THE-2-1-1024x686.jpg" alt="2024 Achievement">
                             </div>
                         </div>
 
                         <!-- 2019 -->
                         <div class="timeline-item">
-                            <div class="timeline-year">2007</div>
+                            <div class="timeline-year">2019</div>
                             <div class="timeline-content">
-                                <h3>First Batch With 300 Freshmen</h3>
-                                <p>In 2007, FPT University welcomed its first batch of 300 freshmen...</p>
-                                <span class="read-more">Read More</span>
+                                <h3>Best Brand in Education Tertiary</h3>
+                                <p>FPT University was awarded as the Best Brand in Education Tertiary in 2019...</p>
                                 <div class="full-text">
-                                    <p>In the spirit of "Dream of Innovation" amidst an exciting atmosphere, FPT University held an opening ceremony of the first batch with 300 freshmen who had high expectations for an innovative education environment. After the ceremony, the students immediately enjoyed a new method of education. The first challenge was to participate in a 30 days' experience in military training, a period of preparation of fitness, discipline and collective cultural immersion.</p>
+                                    <p>At the ASOCIO Digital Summit 2018 (Tokyo City, Japan), the ASOCIO 2018 Award Council decided to award FPT University in the category of Excellent IT teaching educational organization. In 2018, FPT University was honored to be the Best Brands in Education Tertiary - Excellent University. FPT Education was honored in the category of Excellence educational institution brand. In November 2019, ACBSP officially recognized the teaching quality of FPT University to meet the international educational quality standards.</p>
+                                    <a class="btn-show-less" style="display: none;">Show less</a>
                                 </div>
-                                <img src="${pageContext.request.contextPath}/upload/fpt-1-1456198275.jpg" alt="2007 Achievement">
-                            </div>
-                        </div>
-
-                        <!-- 2018 -->
-                        <div class="timeline-item">
-                            <div class="timeline-year">2006</div>
-                            <div class="timeline-content">
-                                <h3>The journey to seek trial autonomy</h3>
-                                <p>In 2006, FPT University embarked on its journey towards trial autonomy...</p>
-                                <span class="read-more">Read More</span>
-                                <div class="full-text">
-                                    <p>At the end of 2006, FPT University embarked on its journey towards trial autonomy. In September 2006, the university received a decision to hold a press conference on October 5, 2006, to announce its admission plan. However, a day before the press conference, the Ministry of Education and Training sent a document not approving the university's request for trial autonomy. Despite this, the university went ahead with the press conference, informing attendees about the Ministry's decision and stating that some details and timelines in the admission plan might change. The university emphasized its continued efforts to explain the trial autonomy to the Ministry and expressed confidence that approval would come. During this challenging phase, FPT University received support from the media and various ministries and agencies, which positively impacted the university’s ability to receive quotas and permission to start admissions in November 2006.</p>
-                                </div>
-                                <img src="${pageContext.request.contextPath}/upload/lekhaitruong.jpg" alt="2006 Achievement">
+                                <a class="btn-show-more">Show more</a>
+                                <img src="${pageContext.request.contextPath}/upload/ASOCIO_Awards.jpg" alt="2019 Achievement">
                             </div>
                         </div>
 
                         <!-- 2017 -->
                         <div class="timeline-item">
+                            <div class="timeline-year">2017</div>
+                            <div class="timeline-content">
+                                <h3>ICT Award, Sao Khuê, QS Star "3-star"</h3>
+                                <p>FPT University gained significant achievements in training and research...</p>
+                                <div class="full-text">
+                                    <p>In 10 years of operation and development, FPT University has gained impressive achievements in training and research. Domestically, FPT University has earned a reputation as an award holder in information technology such as ICT and 'Sao Khue' Awards. On the rating scale of international credibility, FPT University is the first academic institution in Vietnam to meet QS Stars' 3-star quality standard, of which criteria such as Teaching, Facilities, Employability and Social Responsibility are rated 5 stars. Besides, FPT University is one of the few universities in Vietnam to obtain quality certification - ISO 9001: 2008. In addition, FPT University's fame has been widely known thanks to its students' remarkable achievements in Vietnam and the world as well. They are ACM/ICPC. Olympic Informatics Super Cup, IT Award for Female Vietnamese, and Vietnam's Golden Globe Award.</p>
+                                    <a class="btn-show-less" style="display: none;">Show less</a>
+                                </div>
+                                <a class="btn-show-more">Show more</a>
+                                <img src="${pageContext.request.contextPath}/upload/chung_ket_sk_2016_2017-14_59_45_468.jpg" alt="2017 Achievement">
+                            </div>
+                        </div>
+
+                        <!-- 2010 -->
+                        <div class="timeline-item">
+                            <div class="timeline-year">2010</div>
+                            <div class="timeline-content">
+                                <h3>FPT University - Da Nang Campus</h3>
+                                <p>In 2010, FPT University established its Da Nang Campus...</p>
+                                <div class="full-text">
+                                    <p>In 2010, The Viet Nam Minister of Education and Training signed Decision No. 657/QD-BGDDT agreeing to establish the FPT University - Da Nang Campus. It is a memorable milestone for many staff and lecturers as it also marks the presence of FPT University in the Central Viet Nam region.</p>
+                                    <a class="btn-show-less" style="display: none;">Show less</a>
+                                </div>
+                                <a class="btn-show-more">Show more</a>
+                                <img src="${pageContext.request.contextPath}/upload/BT (6).jpg" alt="2010 Achievement">
+                            </div>
+                        </div>
+
+                        <!-- 2007 -->
+                        <div class="timeline-item">
+                            <div class="timeline-year">2007</div>
+                            <div class="timeline-content">
+                                <h3>First Batch With 300 Freshmen</h3>
+                                <p>In 2007, FPT University welcomed its first batch of 300 freshmen...</p>
+                                <div class="full-text">
+                                    <p>In the spirit of "Dream of Innovation" amidst an exciting atmosphere, FPT University held an opening ceremony of the first batch with 300 freshmen who had high expectations for an innovative education environment. After the ceremony, the students immediately enjoyed a new method of education. The first challenge was to participate in a 30 days' experience in military training, a period of preparation of fitness, discipline and collective cultural immersion.</p>
+                                    <a class="btn-show-less" style="display: none;">Show less</a>
+                                </div>
+                                <a class="btn-show-more">Show more</a>
+                                <img src="${pageContext.request.contextPath}/upload/fpt-1-1456198275.jpg" alt="2007 Achievement">
+                            </div>
+                        </div>
+
+                        <!-- 2006 -->
+                        <div class="timeline-item">
+                            <div class="timeline-year">2006</div>
+                            <div class="timeline-content">
+                                <h3>The journey to seek trial autonomy</h3>
+                                <p>In 2006, FPT University embarked on its journey towards trial autonomy...</p>
+                                <div class="full-text">
+                                    <p>At the end of 2006, FPT University embarked on its journey towards trial autonomy. In September 2006, the university received a decision to hold a press conference on October 5, 2006, to announce its admission plan. However, a day before the press conference, the Ministry of Education and Training sent a document not approving the university's request for trial autonomy. Despite this, the university went ahead with the press conference, informing attendees about the Ministry's decision and stating that some details and timelines in the admission plan might change. The university emphasized its continued efforts to explain the trial autonomy to the Ministry and expressed confidence that approval would come. During this challenging phase, FPT University received support from the media and various ministries and agencies, which positively impacted the university’s ability to receive quotas and permission to start admissions in November 2006.</p>
+                                    <a class="btn-show-less" style="display: none;">Show less</a>
+                                </div>
+                                <a class="btn-show-more">Show more</a>
+                                <img src="${pageContext.request.contextPath}/upload/lekhaitruong.jpg" alt="2006 Achievement">
+                            </div>
+                        </div>
+
+                        <!-- 2006-1 -->
+                        <div class="timeline-item">
                             <div class="timeline-year">2006</div>
                             <div class="timeline-content">
                                 <h3>Started its first course in January 2007</h3>
                                 <p>FPT University was officially established in 2006 and started its first course in January 2007...</p>
-                                <span class="read-more">Read More</span>
                                 <div class="full-text">
                                     <p>The idea to establish FPT University was raised during FPT Strategic Conference which took place in Ha Long in 2003. However, the realization of the plan is a lengthy process. The pre-feasibility study was presented to the authorities in December 2004, followed by the approval in 2005 and FPT University was officially established on the 8th of September 2006 and started its first course in January 2007.</p>
+                                    <a class="btn-show-less" style="display: none;">Show less</a>
                                 </div>
+                                <a class="btn-show-more">Show more</a>
                                 <img src="${pageContext.request.contextPath}/upload/khaimac.jpg" alt="2006-1 Achievement">
                             </div>
                         </div>
 
-                        <!-- 2016 -->
+                        <!-- 1999 -->
                         <div class="timeline-item">
                             <div class="timeline-year">1999</div>
                             <div class="timeline-content">
                                 <h3>Vietnam's First International Standard Software Training</h3>
                                 <p>In 1999, FPT University started Vietnam's first international standard software training program...</p>
-                                <span class="read-more">Read More</span>
                                 <div class="full-text">
                                     <p>After trips to India to survey experiences and learn technology transfer by FPT leaders, two FPT-APTECH International Programmer Training Centers in Hanoi and Ho Chi Minh City were inaugurated in September 1999. This event marked the first time Vietnam implemented training for software experts according to international standards. It also laid the foundation for the FPT Education System, as well as the establishment and development of FPT University.</p>
+                                    <a class="btn-show-less" style="display: none;">Show less</a>
                                 </div>
+                                <a class="btn-show-more">Show more</a>
                                 <img src="${pageContext.request.contextPath}/upload/fpt1999.jpg" alt="1999 Achievement">
                             </div>
                         </div>
@@ -384,31 +394,26 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
     <%@ include file="/include/footer.jsp" %>
     <!-- Modal login -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the speed, the faster the count up
+            const duration = 2000; // Thời gian hoàn thành hiệu ứng (ms)
 
             counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const increment = target / duration * 10; // Tốc độ cập nhật (có thể điều chỉnh)
+                let count = 0;
+
                 const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-                    const increment = target / speed;
+                    count += increment;
+                    counter.innerText = Math.ceil(count);
 
                     if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 1);
+                        setTimeout(updateCount, 10); // Tốc độ cập nhật (ms)
                     } else {
-                        // Only add "+" sign for specific targets
+                        // Hiển thị số + nếu là target cụ thể
                         if (target === 20 || target === 145000) {
                             counter.innerText = target + "+";
                         } else {
@@ -420,11 +425,27 @@
                 updateCount();
             });
         });
-        document.querySelectorAll('.read-more').forEach(link => {
+        document.querySelectorAll('.btn-show-more').forEach(link => {
             link.addEventListener('click', () => {
-                const fullText = link.nextElementSibling;
-                fullText.style.display = fullText.style.display === 'none' || fullText.style.display === '' ? 'block' : 'none';
-                link.textContent = fullText.style.display === 'block' ? 'Read Less' : 'Read More';
+                const timelineContent = link.closest('.timeline-content');
+                const fullText = timelineContent.querySelector('.full-text');
+                const showLessLink = fullText.querySelector('.btn-show-less');
+
+                fullText.style.display = 'block';
+                link.style.display = 'none';
+                showLessLink.style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll('.btn-show-less').forEach(link => {
+            link.addEventListener('click', () => {
+                const timelineContent = link.closest('.timeline-content');
+                const fullText = timelineContent.querySelector('.full-text');
+                const showMoreLink = timelineContent.querySelector('.btn-show-more');
+
+                fullText.style.display = 'none';
+                link.style.display = 'none';
+                showMoreLink.style.display = 'block';
             });
         });
 

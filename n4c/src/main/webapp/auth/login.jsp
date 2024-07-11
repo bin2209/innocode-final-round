@@ -46,39 +46,20 @@
                 </div>
 
                 <c:if test="${not empty message}">
-                    <%
-                        session.removeAttribute("message");
+                    <%                        session.removeAttribute("message");
                     %>
                 </c:if>
 
                 <div class="col-12 col-md-6 mt-3 ps-5">
                     <ul class="nav-login  nav mb-3 border rounded" id="myTab" role="tablist">
                         <li class="nav-item col-6" role="presentation">
-                            <button class="btn rounded w-100 " id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="true">Sign Up</button>
+                            <a href="${pageContext.request.contextPath}/register" ><button class="btn rounded w-100 " id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="true">Sign Up</button></a>
                         </li>
                         <li class="nav-item col-6" role="presentation">
-                            <button class="btn rounded w-100 active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="false" tabindex="-1">Log In</button>
+                            <a href="${pageContext.request.contextPath}/login?value=login"><button class="btn rounded w-100 active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="false" tabindex="-1">Log In</button></a>
                         </li>
                     </ul>
                     <div class="tab-content " id="myTabContent">
-                        <div class="tab-pane fade " id="signup" role="tabpanel" aria-labelledby="signup-tab">
-                            <h2 class="mb-3">Sign Up</h2>
-                            <form action="register" method="post">
-                                <div class="mb-3">
-                                    <label for="signupEmail" class="form-label">Email address</label>
-                                    <input placeholder="example@gmail.com"type="email" class="c-input rounded form-control" id="signupEmail" name="signupEmail" aria-describedby="signupEmailHelp" required pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" title="Please enter a valid Gmail address (example@gmail.com)" autofocus>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="signupPassword" class="form-label">Password</label>
-                                    <input type="password" class="c-input rounded form-control" id="signupPassword" name="signupPassword" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="signupRePassword" class="form-label">Re-Password</label>
-                                    <input type="password" class="c-input rounded form-control" id="signupRePassword" name="signupRePassword" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-75 rounded w-50 mt-3">Sign Up</button>
-                            </form>
-                        </div>
                         <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
                             <h2 class="mb-3">Log In</h2>
                             <form action="login" method="post">

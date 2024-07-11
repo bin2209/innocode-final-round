@@ -30,10 +30,7 @@ public class User_Login extends HttpServlet {
 //        User_DB udb = new User_DB();
         User userInfo = User_DB.getUserByEmail(usergg.getEmail());
         if (userInfo != null) {
-            String msg = "Thành công";
-
             request.getSession().setAttribute("USER", userInfo);
-            session.setAttribute("message", msg);
             response.sendRedirect("home");
         } else {
             String msg = "Email account has not been created yet! ";
