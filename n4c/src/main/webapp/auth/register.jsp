@@ -79,32 +79,6 @@
                                 <button type="submit" class="btn btn-primary w-75 rounded w-50 mt-3">Sign Up</button>
                             </form>
                         </div>
-                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-                            <h2 class="mb-3">Log In</h2>
-                            <form action="login" method="post">
-                                <div class="mb-3">
-                                    <label for="loginEmail" class="form-label">Email address</label>
-                                    <input type="email" class="c-input form-control rounded" id="loginEmail" name="loginEmail" aria-describedby="loginEmailHelp" autofocus>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="loginPassword" class="form-label">Password</label>
-                                    <input type="password" class="c-input form-control rounded" id="loginPassword" name="loginPassword">
-                                </div>
-                                <div class="mb-3 form-check d-flex align-items-center justify-content-between">
-                                    <div>
-                                        <input type="checkbox" class="rounded form-check-input me-2" id="rememberMe">
-                                        <label class="form-check-label" for="rememberMe">Remember me</label>  
-                                    </div>
-                                    <p class=""><a href="#">Forgot Password?</a></p>
-                                </div>
-                                <button type="submit" class="btn btn-primary rounded w-75 mt-3">Log In</button>
-                            </form>
-                        </div>
-                        <a href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/n4c/login&response_type=code&client_id=244022125519-vt7oljom48jfdkene79prdon4im71p5n.apps.googleusercontent.com&approval_prompt=force">
-                            <button class="btn btn-light rounded mt-3 w-75 border d-flex justify-content-center">
-                                <img class="me-3" src="${pageContext.request.contextPath}/assets/images/gg.svg" style="width: 22px;"/>
-                                Continues with Google</button>
-                        </a>
                     </div>
                 </div>
             </div>

@@ -10,8 +10,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import jakarta.servlet.http.HttpSession;
 import model.DAO.User_DB;
 import model.User;
 
@@ -21,23 +20,32 @@ import model.User;
  */
 public class User_Register extends HttpServlet {
 
+    protected void doget(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.getRequestDispatcher("/auth/register.jsp").forward(request, response);
+
+    }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession session = request.getSession();
         String email = request.getParameter("signupEmail");
         String password = request.getParameter("signupPassword");
         String rePassword = request.getParameter("signupRePassword");
 
         PrintWriter out = response.getWriter();
 
-        if (email == null || password == null || rePassword == null || !password.equals(rePassword)) {
-            out.println("Invalid input!");
+        if (password == null || rePassword == null || !password.equals(rePassword)) {
+            String msg = "Mật khẩu không trùng khớp";
+            session.setAttribute("message", msg);
             return;
         }
 
         User_DB userDB = new User_DB();
 
         if (userDB.isEmailExist(email)) {
-            out.println("Email already exists!");
+            String msg = "Email đã tồn tại";
+            session.setAttribute("message", msg);
             return;
         }
 
@@ -51,9 +59,11 @@ public class User_Register extends HttpServlet {
         User user = new User(0, email, hashedPassword, 0, 1);
 
         if (userDB.addUser(user)) {
-            out.println("User registered successfully!");
+            String msg = "Đăng ký thành công";
+            session.setAttribute("message", msg);
         } else {
-            out.println("Error saving user!");
+            String msg = "Gặp lỗi khi đăng ký";
+            session.setAttribute("message", msg);
         }
     }
 }
