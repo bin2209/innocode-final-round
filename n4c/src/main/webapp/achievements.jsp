@@ -160,6 +160,14 @@
             text-decoration: underline;
             cursor: pointer;
         }
+        .timeline-item .btn-show-more,
+        .timeline-item .btn-show-less {
+            display: block;
+            margin-top: 10px;
+            color: orange;
+            text-decoration: underline;
+            cursor: pointer;
+        }
     </style>
     <header class="hero-section text-white d-flex align-items-center justify-content-center">
         <div class="bg-courses w-100 h-100 position-absolute"></div>
@@ -359,6 +367,7 @@
             </div>
         </div>
     </section>
+
     <section class="bg-gradient-a brand-ai-section">
         <div class="container">
 
@@ -448,6 +457,19 @@
                 showMoreLink.style.display = 'block';
             });
         });
+
+        document.querySelectorAll('.btn-show-less').forEach(link => {
+            link.addEventListener('click', () => {
+                const timelineContent = link.closest('.timeline-content');
+                const fullText = timelineContent.querySelector('.full-text');
+                const showMoreLink = timelineContent.querySelector('.btn-show-more');
+
+                fullText.style.display = 'none';
+                link.style.display = 'none';
+                showMoreLink.style.display = 'block';
+            });
+        });
+
 
     </script>
 
