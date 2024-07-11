@@ -11,10 +11,10 @@
 <%@ include file="../include/header.jsp" %>
 
 <body class="read-page">
-    <%@ include file="../include/navbar_logged.jsp" %>
-    <section class="bg-gradient-a dashboard">
+    <%@ include file="../include/navbar.jsp" %>
+<!--    <section class="bg-gradient-a dashboard">
 
-    </section>
+    </section>-->
 
     <section>
         <div class="container mt-5">

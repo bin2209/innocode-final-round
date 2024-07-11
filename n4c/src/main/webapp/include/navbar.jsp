@@ -6,9 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<nav id="nav" class="navbar navbar-expand-lg overplay-blur">
+<nav id="nav" class="navbar navbar-expand-lg overplay-blur shadow">
     <div class="container ">
-        <a class="navbar-brand" href="#"><img src="${pageContext.request.contextPath}/assets/images/fpt.svg" style="width: 60px;" /> </a>
+        <a class="navbar-brand" href="${pageContext.request.contextPath}"><img src="${pageContext.request.contextPath}/assets/images/fpt.svg" style="width: 60px;" /> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -20,15 +20,20 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/course">Course</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/news">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/contact">Contact</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/achievements">Achievements</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/stocks">Stocks</a>
                 </li>
             </ul>
             <div class="buttons">
-
                 <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login?value=login">Log In</a>
+
+                <!--LOGOUT-->
+                <!--<a class="btn rounded new-button" href="${pageContext.request.contextPath}/logout">Logout</a>-->
             </div>
         </div>
     </div>

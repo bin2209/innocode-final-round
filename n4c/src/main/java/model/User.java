@@ -1,6 +1,8 @@
 package model;
 
 import model.DAO.User_DB;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class User {
 
@@ -23,6 +25,7 @@ public class User {
         this.level = level;
     }
 
+    // Getters and Setters
     public int getUserId() {
         return userId;
     }
@@ -71,16 +74,27 @@ public class User {
         this.level = level;
     }
 
-    public static User login(String email, String inputMatKhau) {
-        User user = User_DB.getUserByEmail(email);
-        if (user != null && user.getPassword().equals(inputMatKhau)) {
+    public static User login(String email, String inputPassword) {
+        User_DB udb = new User_DB();
+        User user = udb.getUserByEmail(email);
+        if (user != null && hashPassword(inputPassword).equals(user.getPassword())) {
             return user;
         }
         return null;
     }
 
-    @Override
-    public String toString() {
-        return "User{" + "userId=" + userId + ", username=" + username + ", email=" + email + ", password=" + password + ", xp=" + xp + ", level=" + level + '}';
+    public static String hashPassword(String password) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] hashedBytes = md.digest(password.getBytes());
+            StringBuilder sb = new StringBuilder();
+            for (byte b : hashedBytes) {
+                sb.append(String.format("%02x", b));
+            }
+            return sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

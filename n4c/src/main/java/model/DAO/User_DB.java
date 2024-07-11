@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static model.DAO.DBinfo.driver;
 
 public class User_DB implements DBinfo {
 
@@ -23,17 +22,17 @@ public class User_DB implements DBinfo {
 
     public static User getUserByEmail(String email) {
         User user = null;
-        String query = "SELECT * FROM Users WHERE email = ?";
+        String query = "SELECT * FROM Users WHERE Email = ?";
         try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query)) {
             pstmt.setString(1, email);
             try (ResultSet rs = pstmt.executeQuery()) {
                 if (rs.next()) {
-                    int userId = rs.getInt("user_id");
-                    String username = rs.getString("username");
-                    String userEmail = rs.getString("email");
-                    String password = rs.getString("password");
+                    int userId = rs.getInt("User_id");
+                    String username = rs.getString("Username");
+                    String userEmail = rs.getString("Email");
+                    String password = rs.getString("Password");
                     int xp = rs.getInt("xp");
-                    int level = rs.getInt("level");
+                    int level = rs.getInt("Level");
 
                     user = new User(userId, username, userEmail, password, xp, level);
                 }
@@ -43,10 +42,33 @@ public class User_DB implements DBinfo {
         }
         return user;
     }
-    
-    public static void main(String[] args) {
-        User u = getUserByEmail("phucnhde170110@fpt.edu.vn");
-        System.out.println(u);
+
+    public static boolean addUser(User user) {
+        String query = "INSERT INTO Users (Username, Email, Password, xp, Level) VALUES (?, ?, ?, ?, ?)";
+        try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query)) {
+            pstmt.setString(1, user.getUsername());
+            pstmt.setString(2, user.getEmail());
+            pstmt.setString(3, user.getPassword());
+            pstmt.setInt(4, user.getXp());
+            pstmt.setInt(5, user.getLevel());
+            int rowsAffected = pstmt.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException ex) {
+            Logger.getLogger(User_DB.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
     }
 
+    public static boolean isEmailExist(String email) {
+        String query = "SELECT 1 FROM Users WHERE Email = ?";
+        try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query)) {
+            pstmt.setString(1, email);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                return rs.next();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(User_DB.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
 }
