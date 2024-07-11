@@ -73,8 +73,8 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="${pageContext.request.contextPath}/courses" id="majorDropdown" role="button" aria-haspopup="true" aria-expanded="false">Major<span class="have-sub"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-</svg></span></a>
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                            </svg></span></a>
                     <ul class="dropdown-menu  rounded-1 shadow" aria-labelledby="majorDropdown">
                         <div class="position-absolute w-100 h-100 overlay-blur" style="z-index: -1;"></div>
                         <div class="position-relative">
@@ -95,22 +95,22 @@
             <c:choose>
                 <c:when test="${not empty USER}">
                     <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/courses" id="majorDropdown" role="button" aria-haspopup="true" aria-expanded="false">Hi, ${USER.email} <span class="have-sub"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-</svg></span></a>
-                        <ul class="dropdown-menu  rounded-1 shadow" aria-labelledby="majorDropdown">
-                            <div class="position-absolute w-100 h-100 overlay-blur" style="z-index: -1;"></div>
-                            <div class="position-relative">
-                               
-                                 <li class=""><a class="dropdown-item rounded" href="${pageContext.request.contextPath}/dashboard">
-                                       Dashboard
-                                    </a></li>
-                                
-                                <li class=""><a class="dropdown-item rounded" href="${pageContext.request.contextPath}/logout">Logout</a></li>
-                            </div>
-                        </ul>
-                    </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/courses" id="majorDropdown" role="button" aria-haspopup="true" aria-expanded="false">Hi, ${USER.email} <span class="have-sub"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                                    </svg></span></a>
+                            <ul class="dropdown-menu  rounded-1 shadow" aria-labelledby="majorDropdown">
+                                <div class="position-absolute w-100 h-100 overlay-blur" style="z-index: -1;"></div>
+                                <div class="position-relative">
+
+                                    <li class=""><a class="dropdown-item rounded" href="${pageContext.request.contextPath}/dashboard">
+                                            Dashboard
+                                        </a></li>
+
+                                    <li class=""><a class="dropdown-item rounded" href="${pageContext.request.contextPath}/logout">Logout</a></li>
+                                </div>
+                            </ul>
+                        </li>
                     </ul>
 
                 </c:when>
@@ -158,7 +158,7 @@
         <div style="width: 50px">
             <a id="webcamButton" class="nav-link" data-bs-toggle="modal" data-bs-target="#webcamModal">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16">
-                <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+                    <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
                 </svg>
             </a>
         </div>
@@ -266,6 +266,7 @@
                 drawLandmarks(canvasCtx, landmarks, {color: "#FF0000", lineWidth: 2});
 
                 fingerCount = countFingers(landmarks);
+                handleScroll(landmarks);
             }
         }
 
@@ -304,6 +305,27 @@
             count++;
         }
         return count;
+    }
+
+    function handleScroll(landmarks) {
+        const canvasHeight = canvasElement.height;
+        const indexTip = landmarks[8];
+        const middleTip = landmarks[12];
+
+        // Calculate distance between index and middle fingers
+        const distance = Math.abs(indexTip.y - middleTip.y) * canvasHeight;
+
+        // Define scroll speed based on distance
+        const scrollSpeed = 10; // Adjust this value as needed
+
+        // Scroll smoothly based on finger positions
+        if (indexTip.y * canvasHeight > canvasHeight && middleTip.y * canvasHeight > canvasHeight) {
+            // Both fingers are below the canvas, scroll down
+            window.scrollBy(0, scrollSpeed);
+        } else if (indexTip.y * canvasHeight < 0 && middleTip.y * canvasHeight < 0) {
+            // Both fingers are above the canvas, scroll up
+            window.scrollBy(0, -scrollSpeed);
+        }
     }
 
     const HAND_CONNECTIONS = [
@@ -399,3 +421,5 @@
         stopWebcam();
     });
 </script>
+
+
