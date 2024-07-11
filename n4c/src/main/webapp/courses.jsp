@@ -38,7 +38,7 @@
         }
 
         .card:hover .card-body {
-            transform: translateY(-50%);
+            transform: translateY(-33%);
         }
 
         .card:hover .card-body .card-title {
@@ -129,9 +129,9 @@
     <section class="section-tab" id="courses">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-8 mx-auto text-center mb-5">
+                <div class="col-12 col-md-7 mx-auto text-center mb-5">
                     <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Courses</p>
-                    <h2 class="title">FPT University Major</h2>
+                    <h2 class="title text-uppercase">Explore Major</h2>
                     <p class="sub-title">Explore a variety of major designed to help you achieve your goals. Learn from the best and get hands-on experience.</p>
                 </div>
             </div>
@@ -151,7 +151,7 @@
                                             <h5 class="card-title z-index-9999">${course.title}</h5>
                                             <div class="additional-content">
                                                 <p class="card-text my-4 z-index-9999">${course.description}</p>
-                                                <a href="javascript:void(0);" onclick="showQuizzes(${course.courseId}, '${course.title}')" class="btn btn-primary rounded z-index-9999">View Details</a>
+                                                <a href="javascript:void(0);" onclick="showQuizzes(${course.courseId}, '${course.title}')" class="btn btn-primary rounded z-index-9999">Explorer</a>
                                             </div>
                                         </div>
                                     </div>
@@ -206,20 +206,18 @@
 
     <!-- Modal -->
     <div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content popup-blur rounded1dot2">
                 <div class="modal-header">
                     <h5 class="modal-title" id="quizModalLabel">Quizzes</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body ">
                     <ul id="quizList" class="list-group">
                         <!-- Quiz items will be injected here -->
                     </ul>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
+             
             </div>
         </div>
     </div>
@@ -247,7 +245,7 @@
                             listItem.innerText = quiz.title;
 
                             const quizButton = document.createElement('button');
-                            quizButton.className = 'btn btn-primary btn-sm';
+                            quizButton.className = 'btn btn-light btn-sm rounded';
 
                             if (quiz.userQuizAttempt) {
                                 quizButton.innerText = 'Review';

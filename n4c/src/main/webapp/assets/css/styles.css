@@ -1230,10 +1230,10 @@ body.dark .container{
     /*background: #292c35;*/
 }
 body.dark .modal-content{
-        background: rgb(109 109 109 / 70%);
+    background: rgb(109 109 109 / 70%);
 }
-body.dark footer{
-    background-image: linear-gradient(-178deg, #292c35 20%, #fd7002 108%) !important;
+body.dark footer {
+    background-image: linear-gradient(-178deg, #292c35 100%, #fd7002 108%) !important;
 }
 
 body.dark .btn{
