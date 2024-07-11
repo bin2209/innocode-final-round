@@ -151,7 +151,9 @@
             margin-top: 10px;
         }
 
-        .timeline-item .read-more {
+
+        .timeline-item .btn-show-more,
+        .timeline-item .btn-show-less {
             display: block;
             margin-top: 10px;
             color: orange;
@@ -188,7 +190,7 @@
                         <p class="lead text-dark">Enroll in our advanced technology courses to enhance your skills and career.</p>
 
                         <div class="buttons mt-4">
-                            <a class="btn new-button rounded" href="#achivements">Achivements</a>
+                            <a class="btn new-button rounded" href="#achievements">Achivements</a>
                         </div>
                     </div>
                 </div>
@@ -196,7 +198,7 @@
         </div>
     </header>
 
-    <section class="section-tab" id="achivements">
+    <section class="section-tab" id="achievements">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center mb-5">
@@ -401,31 +403,26 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
     <%@ include file="/include/footer.jsp" %>
     <!-- Modal login -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the speed, the faster the count up
+            const duration = 2000; // Thời gian hoàn thành hiệu ứng (ms)
 
             counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const increment = target / duration * 10; // Tốc độ cập nhật (có thể điều chỉnh)
+                let count = 0;
+
                 const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-                    const increment = target / speed;
+                    count += increment;
+                    counter.innerText = Math.ceil(count);
 
                     if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 1);
+                        setTimeout(updateCount, 10); // Tốc độ cập nhật (ms)
                     } else {
-                        // Only add "+" sign for specific targets
+                        // Hiển thị số + nếu là target cụ thể
                         if (target === 20 || target === 145000) {
                             counter.innerText = target + "+";
                         } else {
@@ -446,6 +443,18 @@
                 fullText.style.display = 'block';
                 link.style.display = 'none';
                 showLessLink.style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll('.btn-show-less').forEach(link => {
+            link.addEventListener('click', () => {
+                const timelineContent = link.closest('.timeline-content');
+                const fullText = timelineContent.querySelector('.full-text');
+                const showMoreLink = timelineContent.querySelector('.btn-show-more');
+
+                fullText.style.display = 'none';
+                link.style.display = 'none';
+                showMoreLink.style.display = 'block';
             });
         });
 

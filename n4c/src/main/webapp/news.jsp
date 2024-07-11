@@ -5,10 +5,10 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ include file="../include/header.jsp" %>
+<%@ include file="/include/header.jsp" %>
 
 <body>
-    <%@ include file="../include/navbar.jsp" %>
+    <%@ include file="/include/navbar.jsp" %>
 
     <header class="hero-section text-center text-white d-flex align-items-center">
         <div class="hero-content w-100 position-absolute">
@@ -118,7 +118,7 @@
                     <div class="card p-2 mb-3">
                         <div class="card-header p-1 position-relative">
                             <img class="img-fluid w-100" src="${pageContext.request.contextPath}/upload/s5.jpeg">
-                             <!--<div class="cel-overlay"></div>-->
+                            <!--<div class="cel-overlay"></div>-->
                         </div>
                         <div class="card-body p-1 mt-3">
                             <h3>Heading</h3>
@@ -208,11 +208,11 @@
 
     </section>
 
-  
 
 
 
-    <%@ include file="../include/footer.jsp" %>
+
+    <%@ include file="/include/footer.jsp" %>
 
     <!-- Modal login -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -243,4 +243,4 @@
 </body>
 
 
-<%@ include file="../include/scripts.jsp" %>
+<%@ include file="/include/scripts.jsp" %>

@@ -1,7 +1,4 @@
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8" import="model.*" import="model.DAO.*"%>
-
 <nav id="nav" class="navbar navbar-expand-lg overplay-blur shadow">
     <div class="container ">
         <a class="navbar-brand" href="${pageContext.request.contextPath}"><img src="${pageContext.request.contextPath}/assets/images/fpt.svg" style="width: 60px;" /> </a>
@@ -31,7 +28,7 @@
                         <div class="position-absolute w-100 h-100 overlay-blur" style="z-index: -1;"></div>
                         <div class="position-relative">
                             <c:forEach var="major" items="${majors}">
-                                <li class=""><a class="dropdown-item rounded" href="${pageContext.request.contextPath}/courses?majorId=${major.majorId}">
+                                <li class=""><a class="dropdown-item rounded" href="${pageContext.request.contextPath}/courses?majorId=${major.majorId}#courses">
                                         ${major.title}
                                     </a></li>
                             </c:forEach>
@@ -55,7 +52,7 @@
                 %>
                 <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login?value=login">Log In</a>
                 <%
-}
+                    }
                 %>
             </div>
         </div>
