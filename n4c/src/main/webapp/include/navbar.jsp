@@ -89,27 +89,6 @@
                         ENABLE WEBCAM
                     </a>
                 </li>
-                <!-- Webcam Modal -->
-                <div class="modal fade" id="webcamModal" tabindex="-1" aria-labelledby="webcamModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="webcamModalLabel">Webcam Feed</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <section id="demos">
-                                    <div class="video-container" id="liveView">
-                                        <video id="webcam" autoplay playsinline></video>
-                                        <canvas class="output_canvas" id="output_canvas"></canvas>
-                                    </div>
-                                    <h3>Finger Count: <span id="fingerCount">0</span></h3>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </ul>
             <div class="buttons">
 
@@ -135,8 +114,28 @@
             </label>
         </div>
     </div>
-
+    <!-- Webcam Modal -->
+    <div class="modal fade" id="webcamModal" tabindex="-1" aria-labelledby="webcamModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="webcamModalLabel">Webcam Feed</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section id="demos">
+                        <div class="video-container" id="liveView">
+                            <video id="webcam" autoplay playsinline></video>
+                            <canvas class="output_canvas" id="output_canvas"></canvas>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
 </nav>
+
+
 
 <script type="module">
     import { HandLandmarker, FilesetResolver } from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.0";
@@ -144,12 +143,14 @@
     let handLandmarker = undefined;
     let runningMode = "IMAGE";
     let webcamRunning = false;
-    let enableWebcamButton = document.getElementById("webcamButton");
-    let video = document.getElementById("webcam");
-    let canvasElement = document.getElementById("output_canvas");
-    let canvasCtx = canvasElement.getContext("2d");
+    const enableWebcamButton = document.getElementById("webcamButton");
+    const video = document.getElementById("webcam");
+    const canvasElement = document.getElementById("output_canvas");
+    const canvasCtx = canvasElement.getContext("2d");
     let lastVideoTime = -1;
     let results = undefined;
+    const checkbox = document.getElementById("checkbox");
+    const webcamModal = document.getElementById("webcamModal");
     let fingerCount = 0;
 
     enableWebcamButton.addEventListener("click", toggleWebcam);
@@ -199,7 +200,9 @@
     }
 
     function stopWebcam() {
-        video.srcObject.getTracks().forEach(track => track.stop());
+        if (video.srcObject) {
+            video.srcObject.getTracks().forEach(track => track.stop());
+        }
         video.srcObject = null;
         webcamRunning = false;
         enableWebcamButton.innerText = "ENABLE WEBCAM";
@@ -242,26 +245,18 @@
             document.body.classList.remove("dark");
         } else if (fingerCount === 5) {
             // Stop webcam and close modal
-            webcamRunning = false;
-            enableWebcamButton.innerText = "ENABLE WEBCAM";
-            const modal = document.getElementById("webcamModal");
-            const modalBackdrop = document.querySelector(".modal-backdrop");
-            modal.classList.remove("show");
-            modal.style.display = "none";
-            modalBackdrop.remove();
-            const stream = video.srcObject;
-            const tracks = stream.getTracks();
-            tracks.forEach(track => track.stop());
-            video.srcObject = null;
+            stopWebcam();
+            const modal = bootstrap.Modal.getInstance(webcamModal);
+            if (modal) {
+                modal.hide();
+            }
         }
-
         canvasCtx.restore();
 
         if (webcamRunning === true) {
             window.requestAnimationFrame(predictWebcam);
         }
     }
-
 
     function countFingers(landmarks) {
         const fingerTips = [8, 12, 16, 20];
@@ -279,9 +274,11 @@
     }
 
     const HAND_CONNECTIONS = [
-        [0, 1], [1, 2], [2, 3], [3, 4], [0, 5], [5, 6], [6, 7], [7, 8],
-        [5, 9], [9, 10], [10, 11], [11, 12], [9, 13], [13, 14], [14, 15],
-        [15, 16], [13, 17], [0, 17], [17, 18], [18, 19], [19, 20], [17, 20]
+        [0, 1], [1, 2], [2, 3], [3, 4],
+        [0, 5], [5, 6], [6, 7], [7, 8],
+        [5, 9], [9, 10], [10, 11], [11, 12],
+        [9, 13], [13, 14], [14, 15], [15, 16],
+        [13, 17], [0, 17], [17, 18], [18, 19], [19, 20], [17, 20]
     ];
 
     function drawConnectors(ctx, landmarks, connections, { color, lineWidth }) {
@@ -315,8 +312,6 @@
             ctx.fill();
         });
     }
-
-    const checkbox = document.getElementById("checkbox");
 
     // Function to set a cookie
     function setCookie(name, value, days) {
@@ -367,7 +362,6 @@
     applyDarkMode();
 
     // Event listener for when the modal is closed
-    const webcamModal = document.getElementById("webcamModal");
     webcamModal.addEventListener("hidden.bs.modal", () => {
         stopWebcam();
     });
