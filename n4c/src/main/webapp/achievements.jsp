@@ -349,7 +349,11 @@
 
 
 
+<<<<<<< Updated upstream
     <section class="bg-gradient-c achievements-section">
+=======
+    <section id="achievements" class="bg-gradient-c achievements-section">
+>>>>>>> Stashed changes
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center">
@@ -359,11 +363,19 @@
                 <div class="col-12">
                     <div class="row text-center achievements-stats">
                         <div class="col-6 col-md-2">
+<<<<<<< Updated upstream
                             <h3 class="counter" data-target="10">0</h3>
                             <p>PROVINCES</p>
                         </div>
                         <div class="col-6 col-md-2">
                             <h3 class="counter" data-target="52000">0</h3>
+=======
+                            <h3 class="counter" data-target="20">0</h3>
+                            <p>PROVINCES</p>
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <h3 class="counter" data-target="145000">0</h3>
+>>>>>>> Stashed changes
                             <p>STUDENTS</p>
                         </div>
                         <div class="col-6 col-md-2">
@@ -542,7 +554,11 @@
     </div>
     <!-- Modal login -->
     <script>
+<<<<<<< Updated upstream
          document.addEventListener("DOMContentLoaded", function () {
+=======
+       document.addEventListener("DOMContentLoaded", function () {
+>>>>>>> Stashed changes
         const counters = document.querySelectorAll('.counter');
         const speed = 200; // The lower the speed, the faster the count up
 
@@ -557,7 +573,11 @@
                     setTimeout(updateCount, 1);
                 } else {
                     // Only add "+" sign for specific targets
+<<<<<<< Updated upstream
                     if (target === 10 || target === 52000) {
+=======
+                    if (target === 20 || target === 145000) {
+>>>>>>> Stashed changes
                         counter.innerText = target + "+";
                     } else {
                         counter.innerText = target;
@@ -567,6 +587,21 @@
 
             updateCount();
         });
+<<<<<<< Updated upstream
+=======
+    
+        // Scroll to the achievements section if the URL contains "#achievements"
+        if (window.location.hash === "#achievements") {
+            const achievementsSection = document.getElementById('achievements');
+            if (achievementsSection) {
+                window.scrollTo({
+                    top: achievementsSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+   
+>>>>>>> Stashed changes
     });
 document.querySelectorAll('.read-more').forEach(link => {
     link.addEventListener('click', () => {
@@ -575,6 +610,10 @@ document.querySelectorAll('.read-more').forEach(link => {
         link.textContent = fullText.style.display === 'block' ? 'Read Less' : 'Read More';
     });
 });
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     </script>
 
 </body>
