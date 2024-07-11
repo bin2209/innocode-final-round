@@ -64,44 +64,41 @@
                     <div class="tab-content " id="myTabContent">
                         <div class="tab-pane fade " id="signup" role="tabpanel" aria-labelledby="signup-tab">
                             <h2 class="mb-3">Sign Up</h2>
-                            <form>
+                            <form action="register" method="post">
                                 <div class="mb-3">
                                     <label for="signupEmail" class="form-label">Email address</label>
-                                    <input type="email" class="c-input rounded form-control" id="signupEmail" aria-describedby="signupEmailHelp">
+                                    <input type="email" class="c-input rounded form-control" id="signupEmail" name="signupEmail" aria-describedby="signupEmailHelp">
                                 </div>
                                 <div class="mb-3">
                                     <label for="signupPassword" class="form-label">Password</label>
-                                    <input type="password" class="c-input rounded form-control">
+                                    <input type="password" class="c-input rounded form-control" id="signupPassword" name="signupPassword">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="signupPassword" class="form-label">Re-Password</label>
-                                    <input type="password" class="c-input rounded form-control">
+                                    <label for="signupRePassword" class="form-label">Re-Password</label>
+                                    <input type="password" class="c-input rounded form-control" id="signupRePassword" name="signupRePassword">
                                 </div>
                                 <button type="submit" class="btn btn-primary w-75 rounded w-50 mt-3">Sign Up</button>
                             </form>
                         </div>
-
                         <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
                             <h2 class="mb-3">Log In</h2>
-                            <form>
+                            <form action="login" method="post">
                                 <div class="mb-3">
                                     <label for="loginEmail" class="form-label">Email address</label>
-                                    <input type="email" class="c-input form-control rounded" id="loginEmail" aria-describedby="loginEmailHelp">
+                                    <input type="email" class="c-input form-control rounded" id="loginEmail" name="loginEmail" aria-describedby="loginEmailHelp">
                                 </div>
                                 <div class="mb-3">
                                     <label for="loginPassword" class="form-label">Password</label>
-                                    <input type="password" class="c-input form-control rounded" id="loginPassword">
+                                    <input type="password" class="c-input form-control rounded" id="loginPassword" name="loginPassword">
                                 </div>
-                                <div class="mb-3 form-check d-flex align-items-center  justify-content-between">
+                                <div class="mb-3 form-check d-flex align-items-center justify-content-between">
                                     <div>
                                         <input type="checkbox" class="rounded form-check-input me-2" id="rememberMe">
-                                        <label class=" form-check-label " for="rememberMe">Remember me</label>  
+                                        <label class="form-check-label" for="rememberMe">Remember me</label>  
                                     </div>
-
                                     <p class=""><a href="#">Forgot Password?</a></p>
                                 </div>
                                 <button type="submit" class="btn btn-primary rounded w-75 mt-3">Log In</button>
-
                             </form>
                         </div>
 

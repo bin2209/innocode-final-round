@@ -60,13 +60,11 @@ public class User_Logout extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
-        User user = (User) request.getSession().getAttribute("USER");
 
         if (session != null) {
             session.invalidate();
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("home");
         }
-
         out.close();
     }
 
