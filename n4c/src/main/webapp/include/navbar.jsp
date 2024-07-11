@@ -23,7 +23,9 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/stocks">Stocks</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/courses" id="majorDropdown" role="button" aria-haspopup="true" aria-expanded="false">Major</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/courses" id="majorDropdown" role="button" aria-haspopup="true" aria-expanded="false">Major <span class="have-sub"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                            </svg></span></a>
                     <ul class="dropdown-menu  rounded-1 shadow" aria-labelledby="majorDropdown">
                         <div class="position-absolute w-100 h-100 overlay-blur" style="z-index: -1;"></div>
                         <div class="position-relative">
@@ -37,32 +39,55 @@
                 </li>
 
 
-            </ul>
-            <div class="buttons">
                 <%
                     User user = (User) session.getAttribute("USER");
                     if (user != null) {
                 %>
-                <span class="navbar-text">
-                    <%= user.getEmail()%>
-                </span>
-                <a class="btn rounded new-button" href="${pageContext.request.contextPath}/logout">Logout</a>
-                <%
-                } else {
-                %>
-                <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login?value=login">Log In</a>
+
                 <%
                     }
                 %>
-            </div>
+
+
+            </ul>
+
+            <ul>
+                <% if (user == null) {
+                %>
+
+                <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login?value=login">Login</a>
+
+
+                <%} else {%>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/dashboard" id="majorDropdown" role="button" aria-haspopup="true" aria-expanded="false">Hi,<%= user.getEmail()%> <span class="have-sub"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path>
+                            </svg></span></a>
+                    <ul class="dropdown-menu  rounded-1 shadow" aria-labelledby="majorDropdown" >
+                        <div class="position-absolute w-100 h-100 overlay-blur" style="z-index: -1;"></div>
+                        <div class="position-relative">
+                            <li class="nav-item"><a class="dropdown-item rounded" href="${pageContext.request.contextPath}/dashboard">
+                                    Dashboard
+                                </a></li>
+
+                            <li class="nav-item"> <a class="dropdown-item  rounded " href="${pageContext.request.contextPath}/logout">Logout</a></li>
+
+                        </div>
+                    </ul>
+                </li>
+                <%
+                    }
+                %>
+            </ul>
+
         </div>
         <div class="swipe-mode px-2">
             <input type="checkbox" class="checkbox" id="checkbox">
-            <label for="checkbox" class="checkbox-label">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <span class="ball"></span>
-            </label>
+                <label for="checkbox" class="checkbox-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                </label>
         </div>
     </div>
 
