@@ -30,15 +30,15 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="${pageContext.request.contextPath}/courses">Major</a>
-
+                    <ul class="dropdown-menu" aria-labelledby="majorDropdown">
+                        <c:forEach var="major" items="${majors}">
+                            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/courses?majorId=${major.majorId}">
+                                    ${major.title}
+                                </a></li>
+                        </c:forEach>
+                    </ul>
                 </li>
-                <ul class="dropdown-menu" aria-labelledby="majorDropdown">
-                    <c:forEach var="major" items="${majors}">
-                        <li><a class="dropdown-item" href="${pageContext.request.contextPath}/courses?majorId=${major.majorId}">
-                                ${major.title}
-                            </a></li>
-                    </c:forEach>
-                </ul>
+
             </ul>
             <div class="buttons">
                 <%
@@ -46,11 +46,11 @@
                     if (user != null) {
                 %>
                 <span class="navbar-text">
-                    <%= user.getEmail() %>
+                    <%= user.getEmail()%>
                 </span>
                 <a class="btn rounded new-button" href="${pageContext.request.contextPath}/logout">Logout</a>
                 <%
-                    } else {
+                } else {
                 %>
                 <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login?value=login">Log In</a>
                 <%
