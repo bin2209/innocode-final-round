@@ -221,7 +221,7 @@
 
                 <div class="col-12 col-md-6 px-4 pt-4">
                     <div class="col-8 ps-2"> 
-                        <h1 class="display-4">Join <span class="">Our Achievements</span></h1>
+                        <h1 class="display-4">Visit <span class="">Our Achievements</span></h1>
                         <p class="lead text-dark">“Thành công là một quá trình, không phải là một kết quả.”.</p>
 
                         <div class="buttons mt-4">

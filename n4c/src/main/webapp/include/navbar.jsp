@@ -13,7 +13,7 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/news">News</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/news#news">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="${pageContext.request.contextPath}/achievements#achievements">Achievements</a>
