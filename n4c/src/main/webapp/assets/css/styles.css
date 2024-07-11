@@ -350,9 +350,12 @@ header {
     border-radius: 50px !important;
 }
 .read-more{
-        right: 0px;
+    right: 0px;
     padding: 0em 0em;
     z-index: 99;
+}
+.hero-section .read-more{
+     padding: 2em 3em !important;
 }
 .hotnews-title{
     font-size: 23px;
@@ -491,8 +494,6 @@ header {
     /*display: block;*/
     padding: 20px 0;
     background: #ffffff7a;
-
-
 }
 
 /*Course*/
