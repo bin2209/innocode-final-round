@@ -74,6 +74,41 @@ public class User_DB implements DBinfo {
         return courses;
     }
 
+    public static ArrayList<Course> getAllCoursesByUserId(int userId) {
+        ArrayList<Course> courses = new ArrayList<>();
+        String query = "WITH DistinctCourses AS ("
+                + "    SELECT DISTINCT c.Course_id"
+                + "    FROM Users u"
+                + "    JOIN User_Quiz_Attempts uqa ON u.User_id = uqa.User_id"
+                + "    JOIN Quizzes q ON uqa.Quiz_id = q.Quiz_id"
+                + "    JOIN Courses c ON q.Course_id = c.Course_id"
+                + "    WHERE u.User_id = ?"
+                + ")"
+                + "SELECT c.Course_id, c.Title, c.Description, c.Created_at, c.ImageUrl, c.Major_id"
+                + " FROM DistinctCourses dc"
+                + " JOIN Courses c ON dc.Course_id = c.Course_id";
+
+        try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query)) {
+            pstmt.setInt(1, userId);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    int courseId = rs.getInt("Course_id");
+                    String title = rs.getString("Title");
+                    String description = rs.getString("Description");
+                    Date createdAt = rs.getTimestamp("Created_at");
+                    String imageUrl = rs.getString("ImageUrl");
+                    int majorId = rs.getInt("Major_id");
+
+                    Course course = new Course(courseId, title, description, createdAt, imageUrl, majorId);
+                    courses.add(course);
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(User_DB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return courses;
+    }
+
     public static boolean addUser(User user) {
         String query = "INSERT INTO Users (Email, Password, xp, Level) VALUES (?, ?, ?, ?)";
         try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query)) {
@@ -83,6 +118,22 @@ public class User_DB implements DBinfo {
             pstmt.setInt(4, user.getLevel());
             int rowsAffected = pstmt.executeUpdate();
             return rowsAffected > 0;
+        } catch (SQLException ex) {
+            Logger.getLogger(User_DB.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+
+    public static boolean updateUser(User user) {
+        String query = "UPDATE Users SET Email = ?, Password = ?, xp = ?, Level = ? WHERE User_id = ?";
+        try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query)) {
+            pstmt.setString(1, user.getEmail());
+            pstmt.setString(2, user.getPassword());
+            pstmt.setInt(3, user.getXp());
+            pstmt.setInt(4, user.getLevel());
+            pstmt.setInt(5, user.getUserId());
+            int rowsUpdated = pstmt.executeUpdate();
+            return rowsUpdated > 0;
         } catch (SQLException ex) {
             Logger.getLogger(User_DB.class.getName()).log(Level.SEVERE, null, ex);
             return false;

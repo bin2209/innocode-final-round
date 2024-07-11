@@ -1177,6 +1177,10 @@ body.dark .text-rounded{
     color: black !important;
 }
 
+body.dark .overplay-map{
+        background-image: linear-gradient(174deg, #000000 34%, #eeb570 139%);
+}
+
 
 body.dark .timeline-section{
     background: #292c35;
