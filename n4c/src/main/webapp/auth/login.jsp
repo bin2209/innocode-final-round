@@ -66,10 +66,6 @@
                             <h2 class="mb-3">Sign Up</h2>
                             <form action="register" method="post">
                                 <div class="mb-3">
-                                    <label for="username" class="form-label">Username</label>
-                                    <input type="text" class="c-input rounded form-control" id="username" name="username" aria-describedby="signupEmailHelp">
-                                </div>
-                                <div class="mb-3">
                                     <label for="signupEmail" class="form-label">Email address</label>
                                     <input type="email" class="c-input rounded form-control" id="signupEmail" name="signupEmail" aria-describedby="signupEmailHelp">
                                 </div>
