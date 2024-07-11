@@ -66,3 +66,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdown = document.querySelector('.nav-item.dropdown');
+    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+
+    dropdown.addEventListener('mouseenter', function () {
+        dropdownMenu.style.display = 'block';
+    });
+
+    dropdown.addEventListener('mouseleave', function () {
+        dropdownMenu.style.display = 'none';
+    });
+});
