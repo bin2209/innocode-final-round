@@ -10,6 +10,73 @@
 <body>
     <%@ include file="/include/navbar.jsp" %>
 
+    <style>.card-body {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .card-body .card-title {
+            margin: 0;
+            padding: 0;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+            color: black;
+        }
+
+        .card-body .additional-content {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            color: black;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .card:hover .card-body {
+            transform: translateY(-50%);
+        }
+
+        .card:hover .card-body .card-title {
+            transform: translateY(-20px);
+            opacity: 1;
+            color: white; /* Change text color on hover */
+        }
+
+        .card:hover .card-body .additional-content {
+            opacity: 1;
+            visibility: visible;
+            color: white; /* Change text color on hover */
+            max-height: 200px; /* Adjust as needed */
+        }
+
+        .card .card-img-top {
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+            filter: blur(5px);
+        }
+
+        .card .cel-overlay {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.76) 80%, rgba(0, 0, 0, 0) 82%, rgba(0, 0, 0, 0) 105%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .card:hover .cel-overlay {
+            background: rgba(0, 0, 0, 0.6); /* Dark gray overlay */
+        }
+    </style>
     <header class="hero-section text-white d-flex align-items-center justify-content-center">
         <div class="bg-courses w-100 h-100 position-absolute"></div>
         <div class="hero-content w-100 position-absolute container">
@@ -58,8 +125,7 @@
                                         <img src="${course.imageUrl}" class="rounded1dot2 p-0 card-img-top h-100" alt="Course Image">
                                             <div class="cel-overlay"></div>
                                     </div>
-                                    <div class="card-body position-absolute bottom-0 left-0  p-4">
-
+                                    <div class="card-body position-absolute bottom-0 left-0 p-4 content">
                                         <div class="position-relative">
                                             <h5 class="card-title z-index-9999">${course.title}</h5>
                                             <p class="card-text my-4 z-index-9999">${course.description}</p>
@@ -162,7 +228,7 @@
                             quizButton.className = 'btn btn-primary btn-sm';
                             quizButton.innerText = 'Go to Quiz';
                             quizButton.onclick = () => {
-                              window.location.href = '${pageContext.request.contextPath}/quiz?courseId=' + courseId + '&quizId=' + quiz.quizId;
+                                window.location.href = '${pageContext.request.contextPath}/quiz?courseId=' + courseId + '&quizId=' + quiz.quizId;
 
                             };
 

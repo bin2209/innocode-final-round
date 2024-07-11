@@ -16,7 +16,7 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/news">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/achievements">Achievements</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/achievements#achievements">Achievements</a>
                 </li>
 
                 <li class="nav-item">
@@ -56,5 +56,64 @@
                 %>
             </div>
         </div>
+        <div class="swipe-mode px-2">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="ball"></span>
+            </label>
+        </div>
     </div>
+
 </nav>
+
+<script>
+    const checkbox = document.getElementById("checkbox");
+
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = name + "=" + (value || "") + ";" + expires + ";path=/";
+        }
+
+        // Function to get a cookie by name
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Function to apply the dark mode based on the cookie value
+        function applyDarkMode() {
+            const darkMode = getCookie("darkMode");
+            if (darkMode === "true") {
+                document.body.classList.add("dark");
+                checkbox.checked = true;
+            } else {
+                document.body.classList.remove("dark");
+                checkbox.checked = false;
+            }
+        }
+
+        // Event listener to toggle dark mode and set the cookie
+        checkbox.addEventListener("change", () => {
+            const isChecked = checkbox.checked;
+            if (isChecked) {
+                document.body.classList.add("dark");
+            } else {
+                document.body.classList.remove("dark");
+            }
+            setCookie("darkMode", isChecked, 7); // Save the preference for 7 days
+        });
+
+        // Apply dark mode based on the saved cookie value on page load
+        applyDarkMode();
+</script>

@@ -293,6 +293,50 @@ public class User_DB implements DBinfo {
         }
     }
 
+    public static ArrayList<UserAnswer> getAllUserAnswerByAttemptId(int attemptId) {
+        ArrayList<UserAnswer> userAnswers = new ArrayList<>();
+        String query = "SELECT * FROM User_Answers WHERE Attempt_id = ?";
+        try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query)) {
+
+            pstmt.setInt(1, attemptId);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    int userAnswerId = rs.getInt("User_Answer_id");
+                    int questionId = rs.getInt("Question_id");
+                    int answerId = rs.getInt("Answer_id");
+
+                    UserAnswer userAnswer = new UserAnswer(userAnswerId, attemptId, questionId, answerId);
+                    userAnswers.add(userAnswer);
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(User_DB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return userAnswers;
+    }
+
+    public static UserQuizAttempt getUserQuizAttemptByUserIdAndQuizId(int userId, int quizId) {
+        UserQuizAttempt userQuizAttempt = null;
+        String query = "SELECT TOP 1 * FROM User_Quiz_Attempts WHERE User_id = ? AND Quiz_id = ? ORDER BY Attempt_date DESC";
+        try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query)) {
+            pstmt.setInt(1, userId);
+            pstmt.setInt(2, quizId);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    int attemptId = rs.getInt("Attempt_id");
+                    int score = rs.getInt("Score");
+                    Date attemptDate = rs.getTimestamp("Attempt_date");
+
+                    userQuizAttempt = new UserQuizAttempt(attemptId, userId, quizId, score);
+                    userQuizAttempt.setAttemptDate(attemptDate);
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(User_DB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return userQuizAttempt;
+    }
+
     public static void main(String[] args) {
         ArrayList<Quiz> quiz = getAllQuizzesByCourseId(1);
         for (Quiz q : quiz) {

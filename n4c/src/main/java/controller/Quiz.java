@@ -62,15 +62,30 @@ public class Quiz extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        User user = (User) request.getSession().getAttribute("USER");
         String courseId1 = request.getParameter("courseId");
         int courseId = Integer.parseInt(courseId1);
         String quizId1 = request.getParameter("quizId");
         int quizId = Integer.parseInt(quizId1);
+        UserQuizAttempt latestAttempt = User_DB.getUserQuizAttemptByUserIdAndQuizId(user.getUserId(), quizId);
+        ArrayList<Question> questions = User_DB.getAllQuestionsByQuizId(quizId);
+        if (latestAttempt != null) {
+            request.setAttribute("score", latestAttempt.getScore());
+            request.setAttribute("totalQuestions", questions.size());
+            request.setAttribute("quizId", quizId);
+            request.setAttribute("courseId", courseId);
+            request.setAttribute("latestAttempt", latestAttempt);
 
-        request.setAttribute("quizId", quizId);
-        request.setAttribute("courseId", courseId);
+            // Chuyển hướng đến trang quizResult.jsp
+            request.getRequestDispatcher("/quizResult.jsp").forward(request, response);
 
-        request.getRequestDispatcher("quiz.jsp").forward(request, response);
+        } else {
+            request.setAttribute("quizId", quizId);
+            request.setAttribute("courseId", courseId);
+
+            request.getRequestDispatcher("quiz.jsp").forward(request, response);
+        }
+
     }
 
     /**
@@ -124,6 +139,7 @@ public class Quiz extends HttpServlet {
         request.setAttribute("totalQuestions", questions.size());
         request.setAttribute("quizId", quizId);
         request.setAttribute("courseId", courseId);
+        request.setAttribute("latestAttempt", latestAttempt);
 
         // Chuyển hướng đến trang quizResult.jsp
         request.getRequestDispatcher("/quizResult.jsp").forward(request, response);

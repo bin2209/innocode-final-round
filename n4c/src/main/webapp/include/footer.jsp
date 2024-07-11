@@ -40,8 +40,10 @@
         <hr>
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>&copy; 2024 n4c. All rights reserved.</p>
+                <p>&copy; 2024 N4C. All rights reserved.</p>
             </div>
         </div>
+        <script id="kami-chat-widget" src="https://kamimind.ai/kami-chat-widget.js" token="bDgSxj5N1K97mklImQzpbCHCdhEcQhTf" charset="utf-8" botToken="ec530b26-efd7-4e55-bce0-4e61459a4efe" defer
+        ></script>
     </div>
 </footer>
