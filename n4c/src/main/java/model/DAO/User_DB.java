@@ -28,13 +28,12 @@ public class User_DB implements DBinfo {
             try (ResultSet rs = pstmt.executeQuery()) {
                 if (rs.next()) {
                     int userId = rs.getInt("User_id");
-                    String username = rs.getString("Username");
                     String userEmail = rs.getString("Email");
                     String password = rs.getString("Password");
                     int xp = rs.getInt("xp");
                     int level = rs.getInt("Level");
 
-                    user = new User(userId, username, userEmail, password, xp, level);
+                    user = new User(userId, userEmail, password, xp, level);
                 }
             }
         } catch (SQLException ex) {
@@ -44,13 +43,12 @@ public class User_DB implements DBinfo {
     }
 
     public static boolean addUser(User user) {
-        String query = "INSERT INTO Users (Username, Email, Password, xp, Level) VALUES (?, ?, ?, ?, ?)";
+        String query = "INSERT INTO Users (Email, Password, xp, Level) VALUES (?, ?, ?, ?)";
         try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query)) {
-            pstmt.setString(1, user.getUsername());
-            pstmt.setString(2, user.getEmail());
-            pstmt.setString(3, user.getPassword());
-            pstmt.setInt(4, user.getXp());
-            pstmt.setInt(5, user.getLevel());
+            pstmt.setString(1, user.getEmail());
+            pstmt.setString(2, user.getPassword());
+            pstmt.setInt(3, user.getXp());
+            pstmt.setInt(4, user.getLevel());
             int rowsAffected = pstmt.executeUpdate();
             return rowsAffected > 0;
         } catch (SQLException ex) {

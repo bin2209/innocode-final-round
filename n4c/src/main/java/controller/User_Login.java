@@ -5,14 +5,10 @@ import com.google.gson.JsonObject;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import model.DAO.User_DB;
 import model.User;
 import org.apache.http.client.ClientProtocolException;
@@ -21,9 +17,6 @@ import org.apache.http.client.fluent.Form;
 import util.Constants;
 import util.UserGoogleDto;
 
-/**
- * Servlet implementation class User_Login
- */
 public class User_Login extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -42,7 +35,7 @@ public class User_Login extends HttpServlet {
             request.getSession().setAttribute("USER", userInfo);
             session.setAttribute("message", msg);
 //            response.sendRedirect("login?value=loginwithgoogle");
-            request.getRequestDispatcher("test.jsp").forward(request, response);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         } else {
             String msg = "Email account has not been created yet! ";
             session.setAttribute("message", msg);
@@ -119,8 +112,8 @@ public class User_Login extends HttpServlet {
 
         if (user != null) {
             HttpSession session = request.getSession();
-            session.setAttribute("user", user);
-            response.sendRedirect("welcome.jsp");
+            session.setAttribute("USER", user);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         } else {
             out.println("Invalid email or password!");
         }

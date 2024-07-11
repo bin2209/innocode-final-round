@@ -16,9 +16,8 @@ public class User {
     public User() {
     }
 
-    public User(int userId, String username, String email, String password, int xp, int level) {
+    public User(int userId, String email, String password, int xp, int level) {
         this.userId = userId;
-        this.username = username;
         this.email = email;
         this.password = password;
         this.xp = xp;
@@ -34,13 +33,6 @@ public class User {
         this.userId = userId;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
     public String getEmail() {
         return email;

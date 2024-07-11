@@ -4,7 +4,7 @@
     Author     : mac
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" import="model.*" import="model.DAO.*"%>
 
 <nav id="nav" class="navbar navbar-expand-lg overplay-blur shadow">
     <div class="container ">
@@ -25,15 +25,29 @@
                 <li class="nav-item">
                     <a class="nav-link" href="${pageContext.request.contextPath}/achievements">Achievements</a>
                 </li>
-                 <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="${pageContext.request.contextPath}/stocks">Stocks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/courses">Courses</a>
                 </li>
             </ul>
             <div class="buttons">
+                <%
+                    User user = (User) session.getAttribute("USER");
+                    if (user != null) {
+                %>
+                <span class="navbar-text">
+                    <%= user.getEmail() %>
+                </span>
+                <a class="btn rounded new-button" href="${pageContext.request.contextPath}/logout">Logout</a>
+                <%
+                    } else {
+                %>
                 <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login?value=login">Log In</a>
-
-                <!--LOGOUT-->
-                <!--<a class="btn rounded new-button" href="${pageContext.request.contextPath}/logout">Logout</a>-->
+                <%
+                    }
+                %>
             </div>
         </div>
     </div>
