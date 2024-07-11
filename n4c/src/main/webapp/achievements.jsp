@@ -118,7 +118,7 @@
             line-height: 30px;
             border-radius: 50%;
             z-index: 1;
-             margin-left: 550px;
+             margin-top: -20px;
         }
         .timeline-year-right {
             padding: 8px;
@@ -134,6 +134,8 @@
             line-height: 30px;
             border-radius: 50%;
             z-index: 1;
+            margin-left: 530px;
+           margin-top: -20px;
         }
 
         .timeline-content {
