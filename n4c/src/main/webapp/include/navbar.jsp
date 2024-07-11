@@ -233,6 +233,7 @@
                 drawLandmarks(canvasCtx, landmarks, {color: "#FF0000", lineWidth: 2});
 
                 fingerCount = countFingers(landmarks);
+                handleScroll(landmarks);
             }
         }
 
@@ -271,6 +272,27 @@
             count++;
         }
         return count;
+    }
+
+    function handleScroll(landmarks) {
+        const canvasHeight = canvasElement.height;
+        const indexTip = landmarks[8];
+        const middleTip = landmarks[12];
+
+        // Calculate distance between index and middle fingers
+        const distance = Math.abs(indexTip.y - middleTip.y) * canvasHeight;
+
+        // Define scroll speed based on distance
+        const scrollSpeed = 10; // Adjust this value as needed
+
+        // Scroll smoothly based on finger positions
+        if (indexTip.y * canvasHeight > canvasHeight && middleTip.y * canvasHeight > canvasHeight) {
+            // Both fingers are below the canvas, scroll down
+            window.scrollBy(0, scrollSpeed);
+        } else if (indexTip.y * canvasHeight < 0 && middleTip.y * canvasHeight < 0) {
+            // Both fingers are above the canvas, scroll up
+            window.scrollBy(0, -scrollSpeed);
+        }
     }
 
     const HAND_CONNECTIONS = [
@@ -366,3 +388,5 @@
         stopWebcam();
     });
 </script>
+
+
