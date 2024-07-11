@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <footer class="footer-section">
+
     <div class="container">
         <div class="row">
             <div class="col-6 col-md-3">
@@ -43,5 +44,14 @@
                 <p>&copy; 2024 n4c. All rights reserved.</p>
             </div>
         </div>
+        <iframe scrolling="no"
+                loading="lazy"
+                frameborder="0"
+                id="integrate-iframe"
+                allowfullscreen="false"
+                style="width: 50%; border: none; height: 100vh;"
+                src="https://kamimind.ai/integrate/bDgSxj5N1K97mklImQzpbCHCdhEcQhTf/ec530b26-efd7-4e55-bce0-4e61459a4efe?allowCopy=true"
+                allow="clipboard-read; clipboard-write; autoplay; encrypted-media; fullscreen; display-capture"
+                ></iframe>
     </div>
 </footer>
