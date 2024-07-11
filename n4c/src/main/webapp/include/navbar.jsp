@@ -1,8 +1,4 @@
-<%-- 
-    Document   : navbar
-    Created on : Jul 8, 2024, 4:35:24 PM
-    Author     : mac
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8" import="model.*" import="model.DAO.*"%>
 
@@ -30,16 +26,20 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/stocks">Stocks</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/courses">Major</a>
-
+                    <a class="nav-link" href="${pageContext.request.contextPath}/courses" id="majorDropdown" role="button" aria-haspopup="true" aria-expanded="false">Major</a>
+                    <ul class="dropdown-menu  rounded-1 shadow" aria-labelledby="majorDropdown">
+                        <div class="position-absolute w-100 h-100 overlay-blur" style="z-index: -1;"></div>
+                        <div class="position-relative">
+                            <c:forEach var="major" items="${majors}">
+                                <li class=""><a class="dropdown-item rounded" href="${pageContext.request.contextPath}/courses?majorId=${major.majorId}">
+                                        ${major.title}
+                                    </a></li>
+                            </c:forEach>
+                        </div>
+                    </ul>
                 </li>
-                <ul class="dropdown-menu" aria-labelledby="majorDropdown">
-                    <c:forEach var="major" items="${majors}">
-                        <li><a class="dropdown-item" href="${pageContext.request.contextPath}/courses?majorId=${major.majorId}">
-                                ${major.title}
-                            </a></li>
-                    </c:forEach>
-                </ul>
+
+
             </ul>
             <div class="buttons">
                 <%
@@ -47,18 +47,17 @@
                     if (user != null) {
                 %>
                 <span class="navbar-text">
-                    <%= user.getEmail() %>
+                    <%= user.getEmail()%>
                 </span>
                 <a class="btn rounded new-button" href="${pageContext.request.contextPath}/logout">Logout</a>
                 <%
-                    } else {
+                } else {
                 %>
                 <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login?value=login">Log In</a>
                 <%
-                    }
+}
                 %>
             </div>
         </div>
     </div>
 </nav>
-

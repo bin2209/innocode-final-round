@@ -48,18 +48,18 @@
                     <p class="sub-title">Explore a variety of courses designed to help you achieve your goals. Learn from the best and get hands-on experience.</p>
                 </div>
             </div>
-            <div class="row"  id="course">
+            <div class="row">
                 <c:choose>
                     <c:when test="${not empty courses}">
                         <c:forEach var="course" items="${courses}">
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
                                 <div class="card rounded1dot2 p-0 h-100">
-                                     <div class="position-relative">
+                                    <div class="position-relative">
                                         <img src="${course.imageUrl}" class="rounded1dot2 p-0 card-img-top h-100" alt="Course Image">
                                             <div class="cel-overlay"></div>
                                     </div>
                                     <div class="card-body position-absolute bottom-0 left-0  p-4">
-                                        
+
                                         <div class="position-relative">
                                             <h5 class="card-title z-index-9999">${course.title}</h5>
                                             <p class="card-text my-4 z-index-9999">${course.description}</p>
