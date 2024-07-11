@@ -1,7 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ include file="/include/header.jsp" %>
 <body>
-    <%@ include file="../include/navbar.jsp" %>
+    <%@ include file="/include/navbar.jsp" %>
     <style>
         .lead {
             color: #FF8C00; /* Dark orange color */
