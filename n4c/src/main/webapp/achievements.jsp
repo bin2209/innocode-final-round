@@ -158,6 +158,7 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
     </style>
     <header class="hero-section text-center text-white d-flex align-items-center">
         <div class="hero-content w-100 position-absolute">
@@ -349,7 +350,7 @@
 
 
 
-    <section id="achievements" class="bg-gradient-c achievements-section">
+    <section id="achievements" class="bg-gradient-c section-tab">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center">
@@ -568,17 +569,7 @@
             updateCount();
         });
     
-        // Scroll to the achievements section if the URL contains "#achievements"
-        if (window.location.hash === "#achievements") {
-            const achievementsSection = document.getElementById('achievements');
-            if (achievementsSection) {
-                window.scrollTo({
-                    top: achievementsSection.offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        }
-   
+        
     });
 document.querySelectorAll('.read-more').forEach(link => {
     link.addEventListener('click', () => {
