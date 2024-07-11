@@ -7,8 +7,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.Course;
 import static model.DAO.DBinfo.driver;
 
 public class User_DB implements DBinfo {
@@ -43,7 +45,26 @@ public class User_DB implements DBinfo {
         }
         return user;
     }
-    
+
+    public static ArrayList<Course> getAllCourses() {
+        ArrayList<Course> courses = new ArrayList<>();
+        String query = "SELECT * FROM Courses";
+        try (Connection con = DriverManager.getConnection(dbURL, dbUser, dbPass); PreparedStatement pstmt = con.prepareStatement(query); ResultSet rs = pstmt.executeQuery()) {
+            while (rs.next()) {
+                int courseId = rs.getInt("Course_id");
+                String title = rs.getString("Title");
+                String description = rs.getString("Description");
+                java.util.Date createdAt = rs.getTimestamp("Created_at");
+
+                Course course = new Course(courseId, title, description, createdAt);
+                courses.add(course);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(User_DB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return courses;
+    }
+
     public static void main(String[] args) {
         User u = getUserByEmail("phucnhde170110@fpt.edu.vn");
         System.out.println(u);
