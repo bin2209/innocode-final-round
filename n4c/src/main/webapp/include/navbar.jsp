@@ -35,12 +35,22 @@
                         </div>
                     </ul>
                 </li>
+                
+                <%
+                    User user = (User) session.getAttribute("USER");
+                    if (user != null) {
+                %>
+                <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/dashboard">DashBoard</a>
+                </li>
+                <%
+                    }
+                %>
 
 
             </ul>
             <div class="buttons">
                 <%
-                    User user = (User) session.getAttribute("USER");
                     if (user != null) {
                 %>
                 <span class="navbar-text">

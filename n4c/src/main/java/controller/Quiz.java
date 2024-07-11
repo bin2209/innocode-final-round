@@ -134,6 +134,32 @@ public class Quiz extends HttpServlet {
         latestAttempt.setScore(score);
         User_DB.updateUserQuizAttemptScore(latestAttempt);
 
+        // Cộng thêm XP dựa trên điểm số
+        int xpToAdd = 0;
+        if (score >= 5 && score <= 7) {
+            xpToAdd = 10;
+        } else if (score == 8 || score == 9) {
+            xpToAdd = 20;
+        } else if (score == 10) {
+            xpToAdd = 30;
+        }
+
+        if (xpToAdd > 0) {
+            user.setXp(user.getXp() + xpToAdd);
+            User_DB.updateUser(user);
+        }
+
+        // Lấy lại User từ database để kiểm tra XP và cập nhật level
+        user = User_DB.getUserByEmail(user.getEmail());
+        while (user.getXp() >= 50) {
+            user.setXp(user.getXp() - 50);
+            user.setLevel(user.getLevel() + 1);
+        }
+        User_DB.updateUser(user);
+
+        // Cập nhật lại User trong session
+        request.getSession().setAttribute("USER", user);
+
         // Gửi các thuộc tính đến trang quizResult.jsp
         request.setAttribute("score", score);
         request.setAttribute("totalQuestions", questions.size());
