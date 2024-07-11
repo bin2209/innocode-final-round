@@ -7,5 +7,4 @@ public interface DBinfo {
     String dbUser = "sa";
     String dbPass = "0934077041";
     String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-
 }

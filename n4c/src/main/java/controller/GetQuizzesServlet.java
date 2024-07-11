@@ -11,9 +11,12 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.util.ArrayList;
 import model.DAO.User_DB;
 import model.Quiz;
+import model.User;
+import model.UserQuizAttempt;
 
 /**
  *
@@ -61,12 +64,30 @@ public class GetQuizzesServlet extends HttpServlet {
         int courseId = Integer.parseInt(request.getParameter("courseId"));
         ArrayList<Quiz> quizzes = User_DB.getAllQuizzesByCourseId(courseId);
 
+        // Lấy thông tin lần thử sức của người dùng cho từng quiz
+        int userId = getUserIdFromRequest(request); // Thay userId bằng cách lấy từ request
+        for (Quiz quiz : quizzes) {
+            UserQuizAttempt attempt = User_DB.getUserQuizAttemptByUserIdAndQuizId(userId, quiz.getQuizId());
+            if (attempt != null) {
+                quiz.setUserQuizAttempt(attempt);
+            }
+        }
+
         Gson gson = new Gson();
         String json = gson.toJson(quizzes);
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write(json);
+    }
+
+// Hàm hỗ trợ để lấy userId từ request, có thể dựa vào session hoặc cookie
+    private int getUserIdFromRequest(HttpServletRequest request) {
+        // Implement logic để lấy userId từ request
+        // Ví dụ:
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("USER");
+        return user.getUserId();
     }
 
     /**

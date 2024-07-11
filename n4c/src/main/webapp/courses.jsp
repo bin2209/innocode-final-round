@@ -139,6 +139,7 @@
                 <c:choose>
                     <c:when test="${not empty courses}">
                         <c:forEach var="course" items="${courses}">
+
                             <div class="col-md-3 mb-4">
                                 <div class="card rounded1dot2 p-0 h-100">
                                     <div class="position-relative">
@@ -148,9 +149,10 @@
                                     <div class="card-body position-absolute bottom-0 left-0 p-4 content">
                                         <div class="position-relative">
                                             <h5 class="card-title z-index-9999">${course.title}</h5>
-                                            <p class="card-text my-4 z-index-9999">${course.description}</p>
-                                            <a href="javascript:void(0);" onclick="showQuizzes(${course.courseId}, '${course.title}')" class="btn btn-primary rounded z-index-9999">View Details</a>
-
+                                            <div class="additional-content">
+                                                <p class="card-text my-4 z-index-9999">${course.description}</p>
+                                                <a href="javascript:void(0);" onclick="showQuizzes(${course.courseId}, '${course.title}')" class="btn btn-primary rounded z-index-9999">View Details</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -246,11 +248,18 @@
 
                             const quizButton = document.createElement('button');
                             quizButton.className = 'btn btn-primary btn-sm';
-                            quizButton.innerText = 'Go to Quiz';
-                            quizButton.onclick = () => {
-                                window.location.href = '${pageContext.request.contextPath}/quiz?courseId=' + courseId + '&quizId=' + quiz.quizId;
 
-                            };
+                            if (quiz.userQuizAttempt) {
+                                quizButton.innerText = 'Review';
+                                quizButton.onclick = () => {
+                                    window.location.href = '${pageContext.request.contextPath}/quiz?courseId=' + courseId + '&quizId=' + quiz.quizId;
+                                };
+                            } else {
+                                quizButton.innerText = 'Go to Quiz';
+                                quizButton.onclick = () => {
+                                    window.location.href = '${pageContext.request.contextPath}/quiz?courseId=' + courseId + '&quizId=' + quiz.quizId;
+                                };
+                            }
 
                             listItem.appendChild(quizButton);
                             quizList.appendChild(listItem);

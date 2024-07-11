@@ -10,6 +10,7 @@ public class Quiz {
     private int courseId;
     private String title;
     private String description;
+    private UserQuizAttempt userQuizAttempt; // Nếu muốn lưu thông tin lần thử sức của người dùng
 
     public Quiz() {
     }
@@ -19,6 +20,14 @@ public class Quiz {
         this.courseId = courseId;
         this.title = title;
         this.description = description;
+    }
+
+    public UserQuizAttempt getUserQuizAttempt() {
+        return userQuizAttempt;
+    }
+
+    public void setUserQuizAttempt(UserQuizAttempt userQuizAttempt) {
+        this.userQuizAttempt = userQuizAttempt;
     }
 
     public int getQuizId() {
