@@ -59,27 +59,44 @@
             <div class="row">
                 <div class="col-12 col-md-8 mx-auto text-center mb-5">
                     <p class="text-uppercase text-rounded font-weight-300 mx-auto text-center my-5 text-light">Stocks</p>
-                    <h2 class="title">Strategic </h2>
+                    <h2 class="title">Strong Financial Performance</h2>
                     <p class="sub-title">FPT continues to pursue the larger goal of becoming a digital enterprise and ranking in the Top 50 companies in the world in providing comprehensive digital transformation services and solutions by 2030.</p>
                     </p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="timePeriod">Select Time Period:</label>
-                    <select id="timePeriod">
+
+            <div class="card-invest">
+                <div class="row ">
+                    <div class="col-12 col-md-6">
+                        <div class="card p-4 my-3 rounded-1">
+                            <p class="my-1"> Stock Price Today</p>
+                            <h2 id="stockPriceToday"></h2>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card p-4 my-3 rounded-1">
+                            <p class="my-1"> Percentage Change </p>
+                            <h2 id="percentageChange"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <label class="timePeriodLabel" for="timePeriod">Select Time Period:</label>
+                    <select class="ms-3" id="timePeriod">
                         <option value="1d">1 Day</option>
                         <option value="5d">5 Days</option>
                         <option value="1mo">1 Month</option>
                         <option value="1y">1 Year</option>
+                        <option value="5y" selected>5 Years</option>
                     </select>
-                    <canvas id="stockChart" width="400" height="200"></canvas>
+                    <canvas id="stockChart" ></canvas>
                     <div id="percentageChange"></div>
                 </div>
-                <div class="col-md-6">
-
-                </div>
             </div>
+
+
         </div>
     </section>
 
