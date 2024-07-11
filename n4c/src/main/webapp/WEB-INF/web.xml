@@ -28,6 +28,22 @@
         <servlet-name>Stocks</servlet-name>
         <servlet-class>controller.Stocks</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>User_Register</servlet-name>
+        <servlet-class>controller.User_Register</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>User_Logout</servlet-name>
+        <servlet-class>controller.User_Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>home</servlet-name>
+        <servlet-class>view.home</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Courses</servlet-name>
+        <servlet-class>controller.Courses</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>User_Login</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -55,6 +71,22 @@
     <servlet-mapping>
         <servlet-name>Stocks</servlet-name>
         <url-pattern>/stocks</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>User_Register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>User_Logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Courses</servlet-name>
+        <url-pattern>/courses</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>home</servlet-name>
+        <url-pattern>/home</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

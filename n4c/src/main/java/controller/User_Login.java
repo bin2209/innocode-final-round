@@ -5,14 +5,10 @@ import com.google.gson.JsonObject;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import model.DAO.User_DB;
 import model.User;
 import org.apache.http.client.ClientProtocolException;
@@ -21,9 +17,6 @@ import org.apache.http.client.fluent.Form;
 import util.Constants;
 import util.UserGoogleDto;
 
-/**
- * Servlet implementation class User_Login
- */
 public class User_Login extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -41,8 +34,7 @@ public class User_Login extends HttpServlet {
 
             request.getSession().setAttribute("USER", userInfo);
             session.setAttribute("message", msg);
-//            response.sendRedirect("login?value=loginwithgoogle");
-            request.getRequestDispatcher("test.jsp").forward(request, response);
+            response.sendRedirect("home");
         } else {
             String msg = "Email account has not been created yet! ";
             session.setAttribute("message", msg);
@@ -68,8 +60,7 @@ public class User_Login extends HttpServlet {
     public static UserGoogleDto getUserInfo(final String accessToken) throws ClientProtocolException, IOException {
         String link = Constants.GOOGLE_LINK_GET_USER_INFO + accessToken;
         String response = Request.Get(link).execute().returnContent().asString();
-UserGoogleDto googlePojo = new Gson().fromJson(response, UserGoogleDto.class);
-
+        UserGoogleDto googlePojo = new Gson().fromJson(response, UserGoogleDto.class);
         return googlePojo;
     }
 
@@ -94,7 +85,6 @@ UserGoogleDto googlePojo = new Gson().fromJson(response, UserGoogleDto.class);
         } else {
             request.getRequestDispatcher("/auth/login.jsp").forward(request, response);
         }
-
     }
 
     /**
@@ -105,51 +95,26 @@ UserGoogleDto googlePojo = new Gson().fromJson(response, UserGoogleDto.class);
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        String identify = request.getParameter("identify");
-//        String password = request.getParameter("password");
-//        String rememberMe = request.getParameter("rememberMe");
-//        User user = User.login(identify, password);
-//        User userInfo = User_DB.getUserByEmailorUsername(identify);
-//        HttpSession session = request.getSession();
-//        String message = "";
-//        if (user != null) {
-//
-//            request.getSession().setAttribute("USER", user);
-//            if ("true".equals(rememberMe)) {
-//                Cookie identifyCookie = new Cookie("identify", identify);
-//                Cookie passwordCookie = new Cookie("password", password);
-//                Cookie rememberMeCookie = new Cookie("rememberMe", "true");
-//                int cookieMaxAge = 7 * 24 * 60 * 60; // 7 days in seconds
-//                identifyCookie.setMaxAge(cookieMaxAge);
-//                passwordCookie.setMaxAge(cookieMaxAge);
-//                rememberMeCookie.setMaxAge(cookieMaxAge);
-//                response.addCookie(identifyCookie);
-//                response.addCookie(passwordCookie);
-//                response.addCookie(rememberMeCookie);
-//            } else {
-//                Cookie identifyCookie = new Cookie("identify", "");
-//                Cookie passwordCookie = new Cookie("password", "");
-//                Cookie rememberMeCookie = new Cookie("rememberMe", "");
-//                identifyCookie.setMaxAge(0); // Xóa cookie
-//                passwordCookie.setMaxAge(0); // Xóa cookie
-//                rememberMeCookie.setMaxAge(0); // Xóa cookie
-//                response.addCookie(identifyCookie);
-//                response.addCookie(passwordCookie);
-//                response.addCookie(rememberMeCookie);
-//            }
-//
-//        } else {
-//            String msg = "Invalid email or password";
-//            session.setAttribute("message", msg);
-//            response.sendRedirect("login?value=loginwithgoogle");
-//        }
-    }
+        String email = request.getParameter("loginEmail");
+        String password = request.getParameter("loginPassword");
 
-    @Override
-    public String getServletInfo() {
-        return "User Login Servlet";
+        PrintWriter out = response.getWriter();
+
+        if (email == null || password == null) {
+            out.println("Invalid input!");
+            return;
+        }
+
+        User user = User.login(email, password);
+
+        if (user != null) {
+            HttpSession session = request.getSession();
+            session.setAttribute("USER", user);
+            response.sendRedirect("home");
+        } else {
+            out.println("Invalid email or password!");
+        }
     }
 }

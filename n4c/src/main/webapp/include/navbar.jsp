@@ -4,7 +4,7 @@
     Author     : mac
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" import="model.*" import="model.DAO.*"%>
 
 <nav id="nav" class="navbar navbar-expand-lg overplay-blur shadow">
     <div class="container ">
@@ -23,17 +23,40 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/news">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/achievements">Achievements</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/achievements#achievements">Achievements</a>
                 </li>
-                 <li class="nav-item">
+
+                <li class="nav-item">
                     <a class="nav-link" href="${pageContext.request.contextPath}/stocks">Stocks</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/courses">Major</a>
+
+                </li>
+                <ul class="dropdown-menu" aria-labelledby="majorDropdown">
+                    <c:forEach var="major" items="${majors}">
+                        <li><a class="dropdown-item" href="${pageContext.request.contextPath}/courses?majorId=${major.majorId}">
+                                ${major.title}
+                            </a></li>
+                    </c:forEach>
+                </ul>
             </ul>
             <div class="buttons">
+                <%
+                    User user = (User) session.getAttribute("USER");
+                    if (user != null) {
+                %>
+                <span class="navbar-text">
+                    <%= user.getEmail() %>
+                </span>
+                <a class="btn rounded new-button" href="${pageContext.request.contextPath}/logout">Logout</a>
+                <%
+                    } else {
+                %>
                 <a class="btn rounded new-button" href="${pageContext.request.contextPath}/login?value=login">Log In</a>
-
-                <!--LOGOUT-->
-                <!--<a class="btn rounded new-button" href="${pageContext.request.contextPath}/logout">Logout</a>-->
+                <%
+                    }
+                %>
             </div>
         </div>
     </div>
