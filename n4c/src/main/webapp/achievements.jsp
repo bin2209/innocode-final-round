@@ -131,7 +131,7 @@
         .timeline-content p {
             margin: 10px 0;
         }
-.timeline-content img {
+        .timeline-content img {
             max-width: 100%;
             height: auto;
             border-radius: 6px;
@@ -200,8 +200,8 @@
             margin-left: 530px;
             margin-top: -20px;
         }
-         #title-history{
-             color: rgb(243 168 85);
+        #title-history{
+            color: rgb(243 168 85);
         }
     </style>
     <header class="hero-section text-white d-flex align-items-center justify-content-center">
@@ -210,11 +210,11 @@
             <div class="row px-4">
                 <div class="col-12 col-md-6 mx-auto position-relative p-0">
                     <div class="cel-overlay cel-overlay-hotnews p-0"></div>
-                    <img class="hotnews p-0" src="${pageContext.request.contextPath}/assets/images/namTien.png" class="img-fluid">
+                    <img class="hotnews p-0" src="${pageContext.request.contextPath}/assets/images/1.png" class="img-fluid">
                         <h4 class="hotnews-title position-absolute">Explore Our Achievements</h4>
                         <a class="read-more bottom-0 text-light position-absolute" href="#">Read More 
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
                             </svg>
                         </a>
                 </div>
@@ -222,7 +222,7 @@
                 <div class="col-12 col-md-6 px-4 pt-4">
                     <div class="col-8 ps-2"> 
                         <h1 class="display-4">Visit <span class="">Our Achievements</span></h1>
-                        <p class="lead text-dark">“Thành công là một quá trình, không phải là một kết quả.”.</p>
+                        <p class="lead text-dark">25 years is neither too long nor too short a time for a business to rise from nothing.”.</p>
 
                         <div class="buttons mt-4">
                             <a class="btn new-button rounded" href="#achievements">Achivements</a>
@@ -274,7 +274,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-<h2 id="title-history"class="title text-center">Historic Milestone</h2>
+                    <h2 id="title-history"class="title text-center">Historic Milestone</h2>
                 </div>
                 <div class="col-12">
                     <div class="timeline">
@@ -310,7 +310,7 @@
 
                         <!-- 2017 -->
                         <div class="timeline-item"  style="margin-top: -200px;">
-<div class="timeline-year-left">2017</div>
+                            <div class="timeline-year-left">2017</div>
                             <div class="timeline-content">
                                 <h3>ICT Award, Sao Khuê, QS Star "3-star"</h3>
                                 <p>FPT University gained significant achievements in training and research...</p>
@@ -339,7 +339,7 @@
                         </div>
 
                         <!-- 2007 -->
-<div class="timeline-item"  style="margin-top: -200px;"> 
+                        <div class="timeline-item"  style="margin-top: -200px;"> 
                             <div class="timeline-year-left">2007</div>
                             <div class="timeline-content">
                                 <h3>First Batch With 300 Freshmen</h3>
@@ -363,7 +363,7 @@
                                     <p>At the end of 2006, FPT University embarked on its journey towards trial autonomy. In September 2006, the university received a decision to hold a press conference on October 5, 2006, to announce its admission plan. However, a day before the press conference, the Ministry of Education and Training sent a document not approving the university's request for trial autonomy. Despite this, the university went ahead with the press conference, informing attendees about the Ministry's decision and stating that some details and timelines in the admission plan might change. The university emphasized its continued efforts to explain the trial autonomy to the Ministry and expressed confidence that approval would come. During this challenging phase, FPT University received support from the media and various ministries and agencies, which positively impacted the university’s ability to receive quotas and permission to start admissions in November 2006.</p>
                                     <a class="btn-show-less" style="display: none;">Show less</a>
                                 </div>
-<a class="btn-show-more">Show more</a>
+                                <a class="btn-show-more">Show more</a>
                                 <img src="${pageContext.request.contextPath}/upload/lekhaitruong.jpg" alt="2006 Achievement">
                             </div>
                         </div>
@@ -395,7 +395,7 @@
                                 </div>
                                 <a class="btn-show-more">Show more</a>
                                 <img src="${pageContext.request.contextPath}/upload/fpt1999.jpg" alt="1999 Achievement">
-</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -456,7 +456,7 @@
 
                     if (count < target) {
                         setTimeout(updateCount, 10); // Tốc độ cập nhật (ms)
-} else {
+                    } else {
                         // Hiển thị số + nếu là target cụ thể
                         if (target === 20 || target === 145000) {
                             counter.innerText = target + "+";

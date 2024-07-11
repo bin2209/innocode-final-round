@@ -152,6 +152,19 @@
                         </div>
                     </ul>
                 </li>
+                
+                <%
+                    User user = (User) session.getAttribute("USER");
+                    if (user != null) {
+                %>
+                <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/dashboard">DashBoard</a>
+                </li>
+                <%
+                    }
+                %>
+
+
                 <li class="nav-item">
                     <a id="webcamButton" class="mdc-button mdc-button--raised" data-bs-toggle="modal" data-bs-target="#webcamModal">
                         <span class="mdc-button__ripple"></span>
@@ -182,7 +195,6 @@
             </ul>
             <div class="buttons">
                 <%
-                    User user = (User) session.getAttribute("USER");
                     if (user != null) {
                 %>
                 <span class="navbar-text">
