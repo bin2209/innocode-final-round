@@ -259,7 +259,7 @@
                         </div>
 
                         <!-- 2019 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item" style="margin-top: -200px;">
                             <div class="timeline-year">2019</div>
                             <div class="timeline-content">
                                 <h3>Best Brand in Education Tertiary</h3>
@@ -274,7 +274,7 @@
                         </div>
 
                         <!-- 2017 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item " style="margin-top: -200px;">
                             <div class="timeline-year">2017</div>
                             <div class="timeline-content">
                                 <h3>ICT Award, Sao Khuê, QS Star "3-star"</h3>
@@ -289,7 +289,7 @@
                         </div>
 
                         <!-- 2010 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item" style="margin-top: -200px;">
                             <div class="timeline-year">2010</div>
                             <div class="timeline-content">
                                 <h3>FPT University - Da Nang Campus</h3>
@@ -304,7 +304,7 @@
                         </div>
 
                         <!-- 2007 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item" style="margin-top: -200px;">
                             <div class="timeline-year">2007</div>
                             <div class="timeline-content">
                                 <h3>First Batch With 300 Freshmen</h3>
@@ -319,7 +319,7 @@
                         </div>
 
                         <!-- 2006 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item" style="margin-top: -200px;">
                             <div class="timeline-year">2006</div>
                             <div class="timeline-content">
                                 <h3>The journey to seek trial autonomy</h3>
@@ -334,7 +334,7 @@
                         </div>
 
                         <!-- 2006-1 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item" style="margin-top: -200px;">
                             <div class="timeline-year">2006</div>
                             <div class="timeline-content">
                                 <h3>Started its first course in January 2007</h3>
@@ -349,7 +349,7 @@
                         </div>
 
                         <!-- 1999 -->
-                        <div class="timeline-item">
+                        <div class="timeline-item" style="margin-top: -200px;">
                             <div class="timeline-year">1999</div>
                             <div class="timeline-content">
                                 <h3>Vietnam's First International Standard Software Training</h3>
