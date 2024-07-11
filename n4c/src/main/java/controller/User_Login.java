@@ -27,8 +27,8 @@ public class User_Login extends HttpServlet {
         System.out.println(accessToken);
         UserGoogleDto usergg = getUserInfo(accessToken);
         System.out.println(usergg.getEmail());
-        User_DB udb = new User_DB();
-        User userInfo = udb.getUserByEmail(usergg.getEmail());
+//        User_DB udb = new User_DB();
+        User userInfo = User_DB.getUserByEmail(usergg.getEmail());
         if (userInfo != null) {
             String msg = "Thành công";
 
