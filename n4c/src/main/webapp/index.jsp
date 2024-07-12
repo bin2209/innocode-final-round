@@ -17,10 +17,6 @@
                     <h1 class="display-4">FPT Education's <span class="text-gradient">25th Anniversary</span></h1>
                     <p class="lead">Begin your AI-driven enterprise swiftly - initiate with advanced technology in just
                         a few minutes for enhanced efficiency.</p>
-                    <div class="buttons mt-4">
-                        <a class="btn  new-button" href="#">Demo</a>
-                        <a class="btn" href="#">Demo</a>
-                    </div>
                 </div>
             </div>
         </div>
