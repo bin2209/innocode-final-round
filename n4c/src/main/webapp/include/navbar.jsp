@@ -140,7 +140,8 @@
 
                     </section>
                     <p> 1 finger to turn Dark Mode On </p>
-                    <p> 2 fingers to turn Dark Mode On </p>
+                    <p> 3 fingers to turn Dark Mode Off </p>
+                    <p> 2 fingers to scroll </p>
                     <p> 5 fingers to turn off Camera</p>
 
                 </div>

@@ -100,10 +100,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-//                xhr.open('POST', 'https://yahoo-finance160.p.rapidapi.com/history');
-//xhr.setRequestHeader('x-rapidapi-key', '36e4e0da95msh2e2b0a2d34cf461p1ab7d7jsn5ad67263e90f');
-//xhr.setRequestHeader('x-rapidapi-host', 'yahoo-finance160.p.rapidapi.com');
-//xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.open('POST', 'https://yahoo-finance160.p.rapidapi.com/history');
+xhr.setRequestHeader('x-rapidapi-key', '36e4e0da95msh2e2b0a2d34cf461p1ab7d7jsn5ad67263e90f');
+xhr.setRequestHeader('x-rapidapi-host', 'yahoo-finance160.p.rapidapi.com');
+xhr.setRequestHeader('Content-Type', 'application/json');
 
         xhr.send(data);
     }
